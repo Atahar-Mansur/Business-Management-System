@@ -33,7 +33,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Stock</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownChallan" role="button" data-toggle="dropdown">Challan</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownChallan">
                         <a class="dropdown-item" href="http://localhost:53979/UI/InChallan.aspx">Stock In</a>

@@ -22,7 +22,7 @@
         margin-top:40px;
     }
     .backgroundPAD{
-        background-image:url("http://localhost:53979/UI/Pad.jpg");
+        background-image:url("http://localhost:53979/Pad.jpg");
         height:1555px; 
         width:1100px;
     }
@@ -51,12 +51,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Stock</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownChallan" role="button" data-toggle="dropdown">Challan</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownChallan">
-                        <a class="dropdown-item" href="http://localhost:53979/UI/InChallan.aspx">In Challan</a>
+                        <a class="dropdown-item" href="http://localhost:53979/UI/InChallan.aspx">Stock In</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/OutChallan.aspx">Out Challan</a>
+                        <a class="dropdown-item" href="http://localhost:53979/UI/OutChallan.aspx">Challan/Stock Out</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -77,7 +77,7 @@
                     <div class="col-md-9">
                         <div class="form-group">
                             <label>Challan No:</label>
-                            <asp:TextBox ID="txtChallanNo" runat="server" TextMode="Number"></asp:TextBox>
+                            <asp:Label ID="lblChallanNo" runat="server" CssClass="btn btn-light"></asp:Label>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -97,14 +97,22 @@
                     <div class="col-md-12"><br /></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <asp:TextBox ID="txtDetails" runat="server" TextMode="SingleLine" CssClass="form-control" placeholder="Details"></asp:TextBox>
+                    <div class="col-md-7">
+                        <asp:DropDownList ID="drpDetails" runat="server" TextMode="SingleLine" CssClass="form-control"></asp:DropDownList>
                     </div>
                     <div class="col-md-2">
                         <asp:TextBox ID="txtQuantity" runat="server" TextMode="Number" CssClass="form-control" placeholder="Quantity"></asp:TextBox>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <asp:TextBox ID="txtRemark" runat="server" TextMode="SingleLine" CssClass="form-control" placeholder="Remark"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <asp:TextBox ID="txtPurchNo" runat="server" TextMode="SingleLine" CssClass="form-control" placeholder="Purchase Order/ref. No."></asp:TextBox>
+                    </div>
+                    <div class="col-md-3">
+                        <asp:TextBox ID="txtPurchDate" runat="server" TextMode="Date" CssClass="form-control" placeholder="Purchase Order Date"></asp:TextBox>
                     </div>
                     <div class="col-md-2">
                         <asp:Button ID="btnAdd" runat="server" class="btn btn-info pr-5 pl-5 text-right" Text="ADD" OnClick="btnAdd_Click" />
@@ -122,7 +130,7 @@
                                 <ItemStyle HorizontalAlign="Center" Width="50px" />
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Details" SortExpression="dtls">
+                            <asp:TemplateField HeaderText="Product Name and Details" SortExpression="dtls">
                                 <ItemTemplate>
                                     <asp:Label ID="lblDetails" runat="server" Text='<%# Bind("strDetails") %>'></asp:Label></ItemTemplate>
                                 <ItemStyle HorizontalAlign="Left" Width="600px" />
@@ -148,8 +156,20 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-5"></div>
                     <div class="col-md-4">
+                        <div class="form-group">
+                            <label>LC No:</label>
+                            <asp:TextBox ID="txtLCNo" runat="server" TextMode="SingleLine"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label >Date:</label>
+                            <asp:TextBox ID="txtLCdate" runat="server" TextMode="Date">****</asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
                         <asp:Button ID="btnCreateChallan" runat="server" class="btn btn-success pr-4 pl-4 text-right" Visible="false" Text="Create Challan" OnClick="btnCreateChallan_Click" OnClientClick="return confirm('Are you want to create this Challan');"/>
                     </div>
                 </div>

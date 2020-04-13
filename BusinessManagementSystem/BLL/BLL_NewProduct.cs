@@ -9,6 +9,23 @@ namespace BusinessManagementSystem.BLL
 {
     public class BLL_NewProduct
     {
+        public List<NewProduct> GetUnitData()
+        {
+            tblMeasurementUnitTableAdapter adp = new tblMeasurementUnitTableAdapter();
+            List<NewProduct> showList = new List<NewProduct>();
+
+            foreach (var x in adp.GetUnitData())
+            {
+                NewProduct product = new NewProduct();
+                
+                product.strUnit = x.strMeasurementUnit;
+
+                showList.Add(product);
+            }
+
+            return showList;
+        }
+
         public string PutData(List<NewProduct> records)
         {
             try
@@ -17,8 +34,8 @@ namespace BusinessManagementSystem.BLL
 
                 foreach (var x in records)
                 {
-                    if (x.strProductURL != "") adp.PutData(x.strName, x.strDetails, x.strProductURL);
-                    else adp.PutData(x.strName, x.strDetails, "http://localhost:53979/UI/ProductImage/defaultProduct.jpg");
+                    if (x.strProductURL != "") adp.PutData(x.strName, x.strDetails, x.strUnit, x.strProductURL);
+                    else adp.PutData(x.strName, x.strDetails, x.strUnit, "http://localhost:53979/UI/ProductImage/defaultProduct.jpg");
                 }
 
                 return "New Product Is Added Successfully.";
@@ -30,5 +47,25 @@ namespace BusinessManagementSystem.BLL
 
         }
 
+        public string PutDataStock(List<NewProduct> records)
+        {
+            try
+            {
+                tblStockTableAdapter adp = new tblStockTableAdapter();
+
+                foreach (var x in records)
+                {
+                    adp.PutStockData(x.strName, x.intQuantity, x.strRemark);
+                    adp.PutBalanceData(x.strName, x.intQuantity, x.strRemark);
+                }
+
+                return "New Product Is Added Successfully.";
+            }
+            catch (Exception e)
+            {
+                return "error";
+            }
+
+        }
     }
 }

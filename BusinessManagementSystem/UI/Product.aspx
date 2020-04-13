@@ -45,12 +45,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Stock</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownChallan" role="button" data-toggle="dropdown">Challan</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownChallan">
-                        <a class="dropdown-item" href="http://localhost:53979/UI/InChallan.aspx">In Challan</a>
+                        <a class="dropdown-item" href="http://localhost:53979/UI/InChallan.aspx">Stock In</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/OutChallan.aspx">Out Challan</a>
+                        <a class="dropdown-item" href="http://localhost:53979/UI/OutChallan.aspx">Challan/Stock Out</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -71,14 +71,41 @@
                     <div class="col-md-12"><br /></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <h3 class="text-center text-primary">New Products Entry</h3>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"><br /><br /></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
                         <asp:TextBox ID="txtName" runat="server" TextMode="SingleLine" CssClass="form-control" placeholder="Product Name"></asp:TextBox>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <asp:TextBox ID="txtDetails" runat="server" TextMode="SingleLine" CssClass="form-control" placeholder="Details"></asp:TextBox>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <asp:TextBox ID="txtProductImageURL" runat="server" TextMode="Url" CssClass="form-control" placeholder="Image"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"><br /></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3 class="text-center">First Stock In :</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <asp:TextBox ID="txtQuantity" runat="server" TextMode="Number" CssClass="form-control" placeholder="Quantity"></asp:TextBox>
+                    </div>
+                    <div class="col-md-2">
+                        <asp:DropDownList ID="drpUnit" runat="server" CssClass="form-control" placeholder="Unit"></asp:DropDownList>
+                    </div>
+                    <div class="col-md-3">
+                        <asp:TextBox ID="txtProductRemark" runat="server" TextMode="SingleLine" CssClass="form-control" placeholder="Remark(Bundle/Cartoon)"></asp:TextBox>
                     </div>
                     <div class="col-md-2">
                         <asp:Button ID="btnAdd" runat="server" class="btn btn-info pr-5 pl-5 text-right" Text="ADD" OnClick="btnAdd_Click" />
@@ -96,22 +123,34 @@
                                 <ItemStyle HorizontalAlign="Center" Width="50px" />
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Product Name" SortExpression="dtls">
+                            <asp:TemplateField HeaderText="Product Name" SortExpression="proName">
                                 <ItemTemplate>
                                     <asp:Label ID="lblProductName" runat="server" Text='<%# Bind("strName") %>'></asp:Label></ItemTemplate>
-                                <ItemStyle HorizontalAlign="Left" Width="200px" />
+                                <ItemStyle HorizontalAlign="Left" Width="250px" />
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Details" SortExpression="qnt">
+                            <asp:TemplateField HeaderText="Details" SortExpression="det">
                                 <ItemTemplate>
                                     <asp:Label ID="lblProductDetails" runat="server" Text='<%# Bind("strDetails") %>'></asp:Label></ItemTemplate>
-                                <ItemStyle HorizontalAlign="Left" Width="600px" />
+                                <ItemStyle HorizontalAlign="Left" Width="400px" />
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Image" SortExpression="remark">
+                            <asp:TemplateField HeaderText="Stock In" SortExpression="qnt">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblProductImageURL" runat="server" Text='<%# Bind("strProductURL") %>'></asp:Label></ItemTemplate>
+                                    <asp:Label ID="lblProductQuantity" runat="server" Text='<%# Bind("intQuantity") %>'></asp:Label></ItemTemplate>
                                 <ItemStyle HorizontalAlign="Left" Width="100px" />
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Unit" SortExpression="unit">
+                                <ItemTemplate>
+                                    <asp:Label ID="lblProductUnit" runat="server" Text='<%# Bind("strUnit") %>'></asp:Label></ItemTemplate>
+                                <ItemStyle HorizontalAlign="Left" Width="100px" />
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Remark" SortExpression="remark">
+                                <ItemTemplate>
+                                    <asp:Label ID="lblProductRemark" runat="server" Text='<%# Bind("strRemark") %>'></asp:Label></ItemTemplate>
+                                <ItemStyle HorizontalAlign="Left" Width="150px" />
                             </asp:TemplateField>
 
                             <asp:CommandField ShowDeleteButton="true" ControlStyle-ForeColor="Red" ControlStyle-Font-Bold="true" />

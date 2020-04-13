@@ -18,7 +18,16 @@ namespace BusinessManagementSystem.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
+            {
                 Session["List"] = new List<NewProduct>();
+
+                records = objData.GetUnitData();
+                drpUnit.DataSource = records;
+                drpUnit.DataBind();
+                drpUnit.DataTextField = "strUnit";
+                drpUnit.DataValueField = "strUnit";
+                drpUnit.DataBind();
+            }
         }
 
         protected void dgv_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -42,13 +51,18 @@ namespace BusinessManagementSystem.UI
                 NewProduct aProduct = new NewProduct();
                 aProduct.strName = txtName.Text;
                 aProduct.strDetails = txtDetails.Text;
+                aProduct.strUnit = drpUnit.Text;
                 aProduct.strProductURL = txtProductImageURL.Text;
+                aProduct.intQuantity = Convert.ToInt32(txtQuantity.Text);
+                aProduct.strRemark = txtProductRemark.Text;
                 records.Add(aProduct);
 
                 dgv.DataSource = records;
                 dgv.DataBind();
 
                 if (Session["List"] != null) btnCreateChallan.Visible = true;
+
+                clearData();
             }
             else
             {
@@ -60,6 +74,7 @@ namespace BusinessManagementSystem.UI
         {
             records = (List<NewProduct>)Session["List"];
             string sms = objData.PutData(records);
+            sms = objData.PutDataStock(records);
 
             if (sms != "error")
             {
@@ -70,7 +85,7 @@ namespace BusinessManagementSystem.UI
                 btnCreateChallan.Visible = false;
                 clearData();
             }
-            else sms = "Failed to add the item";
+            else sms = "Failed to add the items";
 
             ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + sms + "')", true);
         }
@@ -79,6 +94,7 @@ namespace BusinessManagementSystem.UI
         {
             if (txtName.Text == "") return false;
             if (txtDetails.Text == "") return false;
+            if (txtQuantity.Text == "") return false;
             return true;
         }
 
@@ -87,6 +103,8 @@ namespace BusinessManagementSystem.UI
             txtName.Text = "";
             txtDetails.Text = "";
             txtProductImageURL.Text = "";
+            txtQuantity.Text = "";
+            txtProductRemark.Text = "";
         }
     }
 }

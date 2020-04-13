@@ -10,5 +10,7 @@ namespace BusinessManagementSystem.Object
         public string strDetails { get; set; }
         public int intQuantity { get; set; }
         public string strRemarks { get; set; }
+        public string strPurchNo { get; set; }
+        public DateTime dtePurchDate { get; set; }
     }
 }

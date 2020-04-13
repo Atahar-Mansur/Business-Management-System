@@ -32,10 +32,12 @@ namespace BusinessManagementSystem.BLL
             try
             {
                 tblChallanInPutDataTableAdapter adp = new tblChallanInPutDataTableAdapter();
+                sprInsertStockRegisterTableAdapter adp2 = new sprInsertStockRegisterTableAdapter();
 
                 foreach (var x in records)
                 {
                     adp.PutData(intChallanID, strPartyName, strAddress, dteDate, x.strDetails, x.intQuantity, x.strRemarks);
+                    adp2.PutBalanceData(1, intChallanID, strPartyName, dteDate, x.strDetails, x.intQuantity, x.strRemarks);
                 }
 
                 return "Challan is stocked in Successfully.";

@@ -48,12 +48,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Stock</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownChallan" role="button" data-toggle="dropdown">Challan</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownChallan">
-                        <a class="dropdown-item" href="http://localhost:53979/UI/InChallan.aspx">In Challan</a>
+                        <a class="dropdown-item" href="http://localhost:53979/UI/InChallan.aspx">Stock In</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/OutChallan.aspx">Out Challan</a>
+                        <a class="dropdown-item" href="http://localhost:53979/UI/OutChallan.aspx">Challan/Stock Out</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -71,11 +71,14 @@
         <div class="card formCard backgroundPAD">
             <form id="frmChallanIn" runat="server">
                 <div class="row">
-                    <div class="col-md-5"></div>
-                    <div class="col-md-2">
-                        <labal class="btn btn-dark  pr-4 pl-4">Stock In</labal>
+                    <div class="col-md-12"><br /></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <h3 class="text-center text-primary">Stock In</h3>
                     </div>
-                    <div class="col-md-5"></div>
+                    <div class="col-md-4"></div>
                 </div>
                 <div class="row">
                     <div class="col-md-12"><br /><br /></div>
