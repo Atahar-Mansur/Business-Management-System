@@ -30,8 +30,13 @@
                         <a class="dropdown-item" href="http://localhost:53979/UI/Product.aspx">Add New Product</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Stock</a>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownStock" role="button" data-toggle="dropdown">Stock</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownStock">
+                        <a class="dropdown-item" href="http://localhost:53979/UI/StockRegister.aspx">Stock Register</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="http://localhost:53979/UI/CurrentBalance.aspx">Current Balance</a>
+                    </div>
                 </li>
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownChallan" role="button" data-toggle="dropdown">Challan</a>

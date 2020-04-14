@@ -61,5 +61,16 @@ namespace BusinessManagementSystem.BLL
             }
 
         }
+
+        public string GetCurrentBalance(string strProductName)
+        {
+            tblStockRegisterTableAdapter adp = new tblStockRegisterTableAdapter();
+            string strCurrentBalance = "";
+            foreach (var x in adp.GetCurrentBalanceData(strProductName))
+            {
+                strCurrentBalance = x.intBalance.ToString();
+            }
+            return strCurrentBalance;
+        }
     }
 }

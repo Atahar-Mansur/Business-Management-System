@@ -30,6 +30,7 @@ namespace BusinessManagementSystem.UI
                 drpDetails.DataTextField = "strName";
                 drpDetails.DataValueField = "strName";
                 drpDetails.DataBind();
+                lblCurrentBalance.Text = objData.GetCurrentBalance(drpDetails.Text);
             }
         }
 
@@ -46,29 +47,36 @@ namespace BusinessManagementSystem.UI
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            if (addButtonVerification())
+            if (Convert.ToInt32(lblCurrentBalance.Text) >= Convert.ToInt32(txtQuantity.Text))
             {
-                if (Session["List"] == null) records = new List<ChallanOut>();
-                else records = (List<ChallanOut>)Session["List"];
+                if (addButtonVerification())
+                {
+                    if (Session["List"] == null) records = new List<ChallanOut>();
+                    else records = (List<ChallanOut>)Session["List"];
 
-                ChallanOut aChallan = new ChallanOut();
-                aChallan.strDetails = drpDetails.Text;
-                aChallan.intQuantity = Convert.ToInt32(txtQuantity.Text);
-                aChallan.strRemarks = txtRemark.Text;
-                aChallan.strPurchNo = txtPurchNo.Text;
-                aChallan.dtePurchDate = DateTime.Parse(txtPurchDate.Text);
-                records.Add(aChallan);
+                    ChallanOut aChallan = new ChallanOut();
+                    aChallan.strDetails = drpDetails.Text;
+                    aChallan.intQuantity = Convert.ToInt32(txtQuantity.Text);
+                    aChallan.strRemarks = txtRemark.Text;
+                    aChallan.strPurchNo = txtPurchNo.Text;
+                    aChallan.dtePurchDate = DateTime.Parse(txtPurchDate.Text);
+                    records.Add(aChallan);
 
-                dgv.DataSource = records;
-                dgv.DataBind();
+                    dgv.DataSource = records;
+                    dgv.DataBind();
 
-                if (Session["List"] != null) btnCreateChallan.Visible = true;
+                    if (Session["List"] != null) btnCreateChallan.Visible = true;
 
-                clearAddData();
+                    clearAddData();
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please fill Details and Quantity fields.')", true);
+                }
             }
             else
             {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please fill Details and Quantity fields.')", true);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You do not have sufficient quantity of the product in stock !!!')", true);
             }
         }
 
@@ -87,7 +95,7 @@ namespace BusinessManagementSystem.UI
                     dgv.DataBind();
                     btnCreateChallan.Visible = false;
                     clearData();
-                    lblChallanNo.Text = (Convert.ToInt32(lblChallanNo.Text)+1).ToString();
+                    lblChallanNo.Text = (Convert.ToInt32(lblChallanNo.Text) + 1).ToString();
                 }
                 else sms = "Failed to create challan";
 
@@ -135,6 +143,11 @@ namespace BusinessManagementSystem.UI
             txtRemark.Text = "";
             txtPurchNo.Text = "";
             txtPurchDate.Text = "";
+        }
+
+        protected void drpDetails_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblCurrentBalance.Text = objData.GetCurrentBalance(drpDetails.Text);
         }
     }
 }

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DAL_CurrentBalance" targetNamespace="http://tempuri.org/DAL_CurrentBalance.xsd" xmlns:mstns="http://tempuri.org/DAL_CurrentBalance.xsd" xmlns="http://tempuri.org/DAL_CurrentBalance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TableAdapterCurrentBalance" GeneratorDataComponentClassName="TableAdapterCurrentBalance" Name="DataTable1" UserDataComponentName="TableAdapterCurrentBalance">
+            <MainSource>
+              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetCurrentBalanceData" GetMethodModifier="Public" GetMethodName="GetCurrentBalanceData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetCurrentBalanceData" UserSourceName="GetCurrentBalanceData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT T1.strDetails, T2.intBalance, T2.intChallanId, T2.strPartyName, T2.strAction, Format(T2.dteChallanDate, 'dd MMM,yyyy') AS dteChallanDate, T2.intQuantity, T2.strRemarks
+FROM     (SELECT MAX(intId) AS intId, strDetails
+                  FROM      tblStockRegister
+                  WHERE   (ysnActive = 1)
+                  GROUP BY strDetails) AS T1 INNER JOIN
+                  tblStockRegister AS T2 ON T1.intId = T2.intId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="strDetails" DataSetColumn="strDetails" />
+              <Mapping SourceColumn="intBalance" DataSetColumn="intBalance" />
+              <Mapping SourceColumn="intChallanId" DataSetColumn="intChallanId" />
+              <Mapping SourceColumn="strPartyName" DataSetColumn="strPartyName" />
+              <Mapping SourceColumn="strAction" DataSetColumn="strAction" />
+              <Mapping SourceColumn="intQuantity" DataSetColumn="intQuantity" />
+              <Mapping SourceColumn="strRemarks" DataSetColumn="strRemarks" />
+              <Mapping SourceColumn="dteChallanDate" DataSetColumn="dteChallanDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DAL_CurrentBalance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DAL_CurrentBalance" msprop:Generator_UserDSName="DAL_CurrentBalance">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="strDetails" msprop:Generator_ColumnVarNameInTable="columnstrDetails" msprop:Generator_ColumnPropNameInRow="strDetails" msprop:Generator_ColumnPropNameInTable="strDetailsColumn" msprop:Generator_UserColumnName="strDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="intBalance" msprop:Generator_ColumnVarNameInTable="columnintBalance" msprop:Generator_ColumnPropNameInRow="intBalance" msprop:Generator_ColumnPropNameInTable="intBalanceColumn" msprop:Generator_UserColumnName="intBalance" type="xs:long" minOccurs="0" />
+              <xs:element name="intChallanId" msprop:Generator_ColumnVarNameInTable="columnintChallanId" msprop:Generator_ColumnPropNameInRow="intChallanId" msprop:Generator_ColumnPropNameInTable="intChallanIdColumn" msprop:Generator_UserColumnName="intChallanId" type="xs:long" />
+              <xs:element name="strPartyName" msprop:Generator_ColumnVarNameInTable="columnstrPartyName" msprop:Generator_ColumnPropNameInRow="strPartyName" msprop:Generator_ColumnPropNameInTable="strPartyNameColumn" msprop:Generator_UserColumnName="strPartyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strAction" msprop:Generator_ColumnVarNameInTable="columnstrAction" msprop:Generator_ColumnPropNameInRow="strAction" msprop:Generator_ColumnPropNameInTable="strActionColumn" msprop:Generator_UserColumnName="strAction" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="intQuantity" msprop:Generator_ColumnVarNameInTable="columnintQuantity" msprop:Generator_ColumnPropNameInRow="intQuantity" msprop:Generator_ColumnPropNameInTable="intQuantityColumn" msprop:Generator_UserColumnName="intQuantity" type="xs:long" minOccurs="0" />
+              <xs:element name="strRemarks" msprop:Generator_ColumnVarNameInTable="columnstrRemarks" msprop:Generator_ColumnPropNameInRow="strRemarks" msprop:Generator_ColumnPropNameInTable="strRemarksColumn" msprop:Generator_UserColumnName="strRemarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dteChallanDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndteChallanDate" msprop:Generator_ColumnPropNameInRow="dteChallanDate" msprop:Generator_ColumnPropNameInTable="dteChallanDateColumn" msprop:Generator_UserColumnName="dteChallanDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

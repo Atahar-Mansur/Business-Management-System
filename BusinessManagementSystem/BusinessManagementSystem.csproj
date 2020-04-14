@@ -68,15 +68,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HomePage.aspx" />
+    <Content Include="UI\CurrentBalance.aspx" />
     <Content Include="UI\InChallan.aspx" />
     <Content Include="UI\OutChallan.aspx" />
     <Content Include="UI\Product.aspx" />
+    <Content Include="UI\StockRegister.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLL_ChallanIn.cs" />
     <Compile Include="BLL\BLL_ChallanOut.cs" />
+    <Compile Include="BLL\BLL_CurrentBalance.cs" />
     <Compile Include="BLL\BLL_NewProduct.cs" />
+    <Compile Include="BLL\BLL_StockRegister.cs" />
     <Compile Include="DAL\DAL_ChallanIn.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,10 +91,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DAL_ChallanOut.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DAL\DAL_CurrentBalance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL_CurrentBalance.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAL\DAL_Products.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DAL_Products.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_StockRegister.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL_StockRegister.xsd</DependentUpon>
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
@@ -103,6 +117,13 @@
     <Compile Include="Object\ChallanOut.cs" />
     <Compile Include="Object\NewProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\CurrentBalance.aspx.cs">
+      <DependentUpon>CurrentBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\CurrentBalance.aspx.designer.cs">
+      <DependentUpon>CurrentBalance.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\InChallan.aspx.cs">
       <DependentUpon>InChallan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,6 +144,13 @@
     </Compile>
     <Compile Include="UI\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StockRegister.aspx.cs">
+      <DependentUpon>StockRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\StockRegister.aspx.designer.cs">
+      <DependentUpon>StockRegister.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +179,17 @@
     <Content Include="DAL\DAL_Products.xsc">
       <DependentUpon>DAL_Products.xsd</DependentUpon>
     </Content>
+    <Content Include="DAL\DAL_CurrentBalance.xsc">
+      <DependentUpon>DAL_CurrentBalance.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\DAL_CurrentBalance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAL_CurrentBalance.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\DAL_CurrentBalance.xss">
+      <DependentUpon>DAL_CurrentBalance.xsd</DependentUpon>
+    </Content>
     <None Include="DAL\DAL_Products.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -158,6 +197,17 @@
     </None>
     <Content Include="DAL\DAL_Products.xss">
       <DependentUpon>DAL_Products.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\DAL_StockRegister.xsc">
+      <DependentUpon>DAL_StockRegister.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\DAL_StockRegister.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAL_StockRegister.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\DAL_StockRegister.xss">
+      <DependentUpon>DAL_StockRegister.xsd</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
