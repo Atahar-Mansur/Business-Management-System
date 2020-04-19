@@ -28,6 +28,23 @@ namespace BusinessManagementSystem.BLL
             return showList;
         }
 
+        public List<NewClient> GetClientData()
+        {
+            tblClientTableAdapter adp = new tblClientTableAdapter();
+            List<NewClient> showList = new List<NewClient>();
+
+            foreach (var x in adp.GetClientData())
+            {
+                NewClient client = new NewClient();
+
+                client.strName = x.strClientName;
+
+                showList.Add(client);
+            }
+
+            return showList;
+        }
+
         public string GetChallanNo()
         {
             tblGetChallanNoTableAdapter adp = new tblGetChallanNoTableAdapter();

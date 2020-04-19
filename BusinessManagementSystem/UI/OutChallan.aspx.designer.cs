@@ -40,13 +40,13 @@ namespace BusinessManagementSystem.UI {
         protected global::System.Web.UI.WebControls.TextBox txtChallanInDate;
         
         /// <summary>
-        /// txtChallanInName control.
+        /// drpChallanInName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtChallanInName;
+        protected global::System.Web.UI.WebControls.DropDownList drpChallanInName;
         
         /// <summary>
         /// txtChallanInAddress control.

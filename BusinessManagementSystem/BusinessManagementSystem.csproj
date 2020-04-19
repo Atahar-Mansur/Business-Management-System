@@ -68,9 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HomePage.aspx" />
+    <Content Include="UI\Client.aspx" />
     <Content Include="UI\CurrentBalance.aspx" />
     <Content Include="UI\InChallan.aspx" />
     <Content Include="UI\OutChallan.aspx" />
+    <Content Include="UI\PrintChallan.aspx" />
     <Content Include="UI\Product.aspx" />
     <Content Include="UI\StockRegister.aspx" />
     <Content Include="Web.config" />
@@ -79,6 +81,7 @@
     <Compile Include="BLL\BLL_ChallanIn.cs" />
     <Compile Include="BLL\BLL_ChallanOut.cs" />
     <Compile Include="BLL\BLL_CurrentBalance.cs" />
+    <Compile Include="BLL\BLL_NewClient.cs" />
     <Compile Include="BLL\BLL_NewProduct.cs" />
     <Compile Include="BLL\BLL_StockRegister.cs" />
     <Compile Include="DAL\DAL_ChallanIn.Designer.cs">
@@ -95,6 +98,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DAL_CurrentBalance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_NewClient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL_NewClient.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL_Products.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -113,10 +121,25 @@
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="Object\ChallanIn.cs" />
     <Compile Include="Object\ChallanOut.cs" />
+    <Compile Include="Object\NewClient.cs" />
     <Compile Include="Object\NewProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Client.aspx.cs">
+      <DependentUpon>Client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Client.aspx.designer.cs">
+      <DependentUpon>Client.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\CurrentBalance.aspx.cs">
       <DependentUpon>CurrentBalance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,6 +160,13 @@
     </Compile>
     <Compile Include="UI\OutChallan.aspx.designer.cs">
       <DependentUpon>OutChallan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PrintChallan.aspx.cs">
+      <DependentUpon>PrintChallan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PrintChallan.aspx.designer.cs">
+      <DependentUpon>PrintChallan.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
@@ -190,6 +220,17 @@
     <Content Include="DAL\DAL_CurrentBalance.xss">
       <DependentUpon>DAL_CurrentBalance.xsd</DependentUpon>
     </Content>
+    <Content Include="DAL\DAL_NewClient.xsc">
+      <DependentUpon>DAL_NewClient.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\DAL_NewClient.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAL_NewClient.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\DAL_NewClient.xss">
+      <DependentUpon>DAL_NewClient.xsd</DependentUpon>
+    </Content>
     <None Include="DAL\DAL_Products.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -209,6 +250,7 @@
     <Content Include="DAL\DAL_StockRegister.xss">
       <DependentUpon>DAL_StockRegister.xsd</DependentUpon>
     </Content>
+    <Content Include="MasterPage.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

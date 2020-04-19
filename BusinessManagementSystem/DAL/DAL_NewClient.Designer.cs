@@ -20,17 +20,17 @@ namespace BusinessManagementSystem.DAL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DAL_StockRegister")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DAL_NewClient")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DAL_StockRegister : global::System.Data.DataSet {
+    public partial class DAL_NewClient : global::System.Data.DataSet {
         
-        private tblStockRegisterDataTable tabletblStockRegister;
+        private tblClientDataTable tabletblClient;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DAL_StockRegister() {
+        public DAL_NewClient() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace BusinessManagementSystem.DAL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DAL_StockRegister(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DAL_NewClient(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace BusinessManagementSystem.DAL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["tblStockRegister"] != null)) {
-                    base.Tables.Add(new tblStockRegisterDataTable(ds.Tables["tblStockRegister"]));
+                if ((ds.Tables["tblClient"] != null)) {
+                    base.Tables.Add(new tblClientDataTable(ds.Tables["tblClient"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace BusinessManagementSystem.DAL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblStockRegisterDataTable tblStockRegister {
+        public tblClientDataTable tblClient {
             get {
-                return this.tabletblStockRegister;
+                return this.tabletblClient;
             }
         }
         
@@ -127,7 +127,7 @@ namespace BusinessManagementSystem.DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DAL_StockRegister cln = ((DAL_StockRegister)(base.Clone()));
+            DAL_NewClient cln = ((DAL_NewClient)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace BusinessManagementSystem.DAL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["tblStockRegister"] != null)) {
-                    base.Tables.Add(new tblStockRegisterDataTable(ds.Tables["tblStockRegister"]));
+                if ((ds.Tables["tblClient"] != null)) {
+                    base.Tables.Add(new tblClientDataTable(ds.Tables["tblClient"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace BusinessManagementSystem.DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabletblStockRegister = ((tblStockRegisterDataTable)(base.Tables["tblStockRegister"]));
+            this.tabletblClient = ((tblClientDataTable)(base.Tables["tblClient"]));
             if ((initTable == true)) {
-                if ((this.tabletblStockRegister != null)) {
-                    this.tabletblStockRegister.InitVars();
+                if ((this.tabletblClient != null)) {
+                    this.tabletblClient.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace BusinessManagementSystem.DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DAL_StockRegister";
+            this.DataSetName = "DAL_NewClient";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DAL_StockRegister.xsd";
+            this.Namespace = "http://tempuri.org/DAL_NewClient.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabletblStockRegister = new tblStockRegisterDataTable();
-            base.Tables.Add(this.tabletblStockRegister);
+            this.tabletblClient = new tblClientDataTable();
+            base.Tables.Add(this.tabletblClient);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializetblStockRegister() {
+        private bool ShouldSerializetblClient() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace BusinessManagementSystem.DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DAL_StockRegister ds = new DAL_StockRegister();
+            DAL_NewClient ds = new DAL_NewClient();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,37 +270,19 @@ namespace BusinessManagementSystem.DAL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void tblStockRegisterRowChangeEventHandler(object sender, tblStockRegisterRowChangeEvent e);
+        public delegate void tblClientRowChangeEventHandler(object sender, tblClientRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tblStockRegisterDataTable : global::System.Data.TypedTableBase<tblStockRegisterRow> {
-            
-            private global::System.Data.DataColumn columnstrPartyName;
-            
-            private global::System.Data.DataColumn columnintReceipts;
-            
-            private global::System.Data.DataColumn columnintChallanNoIn;
-            
-            private global::System.Data.DataColumn columnintQuantity;
-            
-            private global::System.Data.DataColumn columnintChallanNoOut;
-            
-            private global::System.Data.DataColumn columnintBalance;
-            
-            private global::System.Data.DataColumn columnstrRemarks;
-            
-            private global::System.Data.DataColumn columnstrProductName;
-            
-            private global::System.Data.DataColumn columndteDate;
+        public partial class tblClientDataTable : global::System.Data.TypedTableBase<tblClientRow> {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblStockRegisterDataTable() {
-                this.TableName = "tblStockRegister";
+            public tblClientDataTable() {
+                this.TableName = "tblClient";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -308,7 +290,7 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblStockRegisterDataTable(global::System.Data.DataTable table) {
+            internal tblClientDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -325,81 +307,9 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected tblStockRegisterDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tblClientDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn strPartyNameColumn {
-                get {
-                    return this.columnstrPartyName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn intReceiptsColumn {
-                get {
-                    return this.columnintReceipts;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn intChallanNoInColumn {
-                get {
-                    return this.columnintChallanNoIn;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn intQuantityColumn {
-                get {
-                    return this.columnintQuantity;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn intChallanNoOutColumn {
-                get {
-                    return this.columnintChallanNoOut;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn intBalanceColumn {
-                get {
-                    return this.columnintBalance;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn strRemarksColumn {
-                get {
-                    return this.columnstrRemarks;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn strProductNameColumn {
-                get {
-                    return this.columnstrProductName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn dteDateColumn {
-                get {
-                    return this.columndteDate;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -413,53 +323,44 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblStockRegisterRow this[int index] {
+            public tblClientRow this[int index] {
                 get {
-                    return ((tblStockRegisterRow)(this.Rows[index]));
+                    return ((tblClientRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblStockRegisterRowChangeEventHandler tblStockRegisterRowChanging;
+            public event tblClientRowChangeEventHandler tblClientRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblStockRegisterRowChangeEventHandler tblStockRegisterRowChanged;
+            public event tblClientRowChangeEventHandler tblClientRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblStockRegisterRowChangeEventHandler tblStockRegisterRowDeleting;
+            public event tblClientRowChangeEventHandler tblClientRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblStockRegisterRowChangeEventHandler tblStockRegisterRowDeleted;
+            public event tblClientRowChangeEventHandler tblClientRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddtblStockRegisterRow(tblStockRegisterRow row) {
+            public void AddtblClientRow(tblClientRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblStockRegisterRow AddtblStockRegisterRow(string strPartyName, long intReceipts, long intChallanNoIn, long intQuantity, long intChallanNoOut, long intBalance, string strRemarks, string strProductName, string dteDate) {
-                tblStockRegisterRow rowtblStockRegisterRow = ((tblStockRegisterRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        strPartyName,
-                        intReceipts,
-                        intChallanNoIn,
-                        intQuantity,
-                        intChallanNoOut,
-                        intBalance,
-                        strRemarks,
-                        strProductName,
-                        dteDate};
-                rowtblStockRegisterRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtblStockRegisterRow);
-                return rowtblStockRegisterRow;
+            public tblClientRow AddtblClientRow() {
+                tblClientRow rowtblClientRow = ((tblClientRow)(this.NewRow()));
+                object[] columnValuesArray = new object[0];
+                rowtblClientRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblClientRow);
+                return rowtblClientRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tblStockRegisterDataTable cln = ((tblStockRegisterDataTable)(base.Clone()));
+                tblClientDataTable cln = ((tblClientDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -467,79 +368,43 @@ namespace BusinessManagementSystem.DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tblStockRegisterDataTable();
+                return new tblClientDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnstrPartyName = base.Columns["strPartyName"];
-                this.columnintReceipts = base.Columns["intReceipts"];
-                this.columnintChallanNoIn = base.Columns["intChallanNoIn"];
-                this.columnintQuantity = base.Columns["intQuantity"];
-                this.columnintChallanNoOut = base.Columns["intChallanNoOut"];
-                this.columnintBalance = base.Columns["intBalance"];
-                this.columnstrRemarks = base.Columns["strRemarks"];
-                this.columnstrProductName = base.Columns["strProductName"];
-                this.columndteDate = base.Columns["dteDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnstrPartyName = new global::System.Data.DataColumn("strPartyName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstrPartyName);
-                this.columnintReceipts = new global::System.Data.DataColumn("intReceipts", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnintReceipts);
-                this.columnintChallanNoIn = new global::System.Data.DataColumn("intChallanNoIn", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnintChallanNoIn);
-                this.columnintQuantity = new global::System.Data.DataColumn("intQuantity", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnintQuantity);
-                this.columnintChallanNoOut = new global::System.Data.DataColumn("intChallanNoOut", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnintChallanNoOut);
-                this.columnintBalance = new global::System.Data.DataColumn("intBalance", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnintBalance);
-                this.columnstrRemarks = new global::System.Data.DataColumn("strRemarks", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstrRemarks);
-                this.columnstrProductName = new global::System.Data.DataColumn("strProductName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstrProductName);
-                this.columndteDate = new global::System.Data.DataColumn("dteDate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndteDate);
-                this.columnstrPartyName.MaxLength = 1000;
-                this.columnintReceipts.ReadOnly = true;
-                this.columnintChallanNoIn.ReadOnly = true;
-                this.columnintQuantity.ReadOnly = true;
-                this.columnintChallanNoOut.ReadOnly = true;
-                this.columnstrRemarks.MaxLength = 1000;
-                this.columnstrProductName.MaxLength = 1000;
-                this.columndteDate.ReadOnly = true;
-                this.columndteDate.MaxLength = 4000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblStockRegisterRow NewtblStockRegisterRow() {
-                return ((tblStockRegisterRow)(this.NewRow()));
+            public tblClientRow NewtblClientRow() {
+                return ((tblClientRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tblStockRegisterRow(builder);
+                return new tblClientRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tblStockRegisterRow);
+                return typeof(tblClientRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tblStockRegisterRowChanged != null)) {
-                    this.tblStockRegisterRowChanged(this, new tblStockRegisterRowChangeEvent(((tblStockRegisterRow)(e.Row)), e.Action));
+                if ((this.tblClientRowChanged != null)) {
+                    this.tblClientRowChanged(this, new tblClientRowChangeEvent(((tblClientRow)(e.Row)), e.Action));
                 }
             }
             
@@ -547,8 +412,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tblStockRegisterRowChanging != null)) {
-                    this.tblStockRegisterRowChanging(this, new tblStockRegisterRowChangeEvent(((tblStockRegisterRow)(e.Row)), e.Action));
+                if ((this.tblClientRowChanging != null)) {
+                    this.tblClientRowChanging(this, new tblClientRowChangeEvent(((tblClientRow)(e.Row)), e.Action));
                 }
             }
             
@@ -556,8 +421,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tblStockRegisterRowDeleted != null)) {
-                    this.tblStockRegisterRowDeleted(this, new tblStockRegisterRowChangeEvent(((tblStockRegisterRow)(e.Row)), e.Action));
+                if ((this.tblClientRowDeleted != null)) {
+                    this.tblClientRowDeleted(this, new tblClientRowChangeEvent(((tblClientRow)(e.Row)), e.Action));
                 }
             }
             
@@ -565,14 +430,14 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tblStockRegisterRowDeleting != null)) {
-                    this.tblStockRegisterRowDeleting(this, new tblStockRegisterRowChangeEvent(((tblStockRegisterRow)(e.Row)), e.Action));
+                if ((this.tblClientRowDeleting != null)) {
+                    this.tblClientRowDeleting(this, new tblClientRowChangeEvent(((tblClientRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovetblStockRegisterRow(tblStockRegisterRow row) {
+            public void RemovetblClientRow(tblClientRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -581,7 +446,7 @@ namespace BusinessManagementSystem.DAL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DAL_StockRegister ds = new DAL_StockRegister();
+                DAL_NewClient ds = new DAL_NewClient();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -599,7 +464,7 @@ namespace BusinessManagementSystem.DAL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tblStockRegisterDataTable";
+                attribute2.FixedValue = "tblClientDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -643,267 +508,15 @@ namespace BusinessManagementSystem.DAL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tblStockRegisterRow : global::System.Data.DataRow {
+        public partial class tblClientRow : global::System.Data.DataRow {
             
-            private tblStockRegisterDataTable tabletblStockRegister;
+            private tblClientDataTable tabletblClient;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblStockRegisterRow(global::System.Data.DataRowBuilder rb) : 
+            internal tblClientRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletblStockRegister = ((tblStockRegisterDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string strPartyName {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblStockRegister.strPartyNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'strPartyName\' in table \'tblStockRegister\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblStockRegister.strPartyNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public long intReceipts {
-                get {
-                    try {
-                        return ((long)(this[this.tabletblStockRegister.intReceiptsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'intReceipts\' in table \'tblStockRegister\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblStockRegister.intReceiptsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public long intChallanNoIn {
-                get {
-                    try {
-                        return ((long)(this[this.tabletblStockRegister.intChallanNoInColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'intChallanNoIn\' in table \'tblStockRegister\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblStockRegister.intChallanNoInColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public long intQuantity {
-                get {
-                    try {
-                        return ((long)(this[this.tabletblStockRegister.intQuantityColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'intQuantity\' in table \'tblStockRegister\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblStockRegister.intQuantityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public long intChallanNoOut {
-                get {
-                    try {
-                        return ((long)(this[this.tabletblStockRegister.intChallanNoOutColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'intChallanNoOut\' in table \'tblStockRegister\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblStockRegister.intChallanNoOutColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public long intBalance {
-                get {
-                    try {
-                        return ((long)(this[this.tabletblStockRegister.intBalanceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'intBalance\' in table \'tblStockRegister\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblStockRegister.intBalanceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string strRemarks {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblStockRegister.strRemarksColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'strRemarks\' in table \'tblStockRegister\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblStockRegister.strRemarksColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string strProductName {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblStockRegister.strProductNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'strProductName\' in table \'tblStockRegister\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblStockRegister.strProductNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string dteDate {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblStockRegister.dteDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dteDate\' in table \'tblStockRegister\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblStockRegister.dteDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsstrPartyNameNull() {
-                return this.IsNull(this.tabletblStockRegister.strPartyNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetstrPartyNameNull() {
-                this[this.tabletblStockRegister.strPartyNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsintReceiptsNull() {
-                return this.IsNull(this.tabletblStockRegister.intReceiptsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetintReceiptsNull() {
-                this[this.tabletblStockRegister.intReceiptsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsintChallanNoInNull() {
-                return this.IsNull(this.tabletblStockRegister.intChallanNoInColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetintChallanNoInNull() {
-                this[this.tabletblStockRegister.intChallanNoInColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsintQuantityNull() {
-                return this.IsNull(this.tabletblStockRegister.intQuantityColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetintQuantityNull() {
-                this[this.tabletblStockRegister.intQuantityColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsintChallanNoOutNull() {
-                return this.IsNull(this.tabletblStockRegister.intChallanNoOutColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetintChallanNoOutNull() {
-                this[this.tabletblStockRegister.intChallanNoOutColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsintBalanceNull() {
-                return this.IsNull(this.tabletblStockRegister.intBalanceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetintBalanceNull() {
-                this[this.tabletblStockRegister.intBalanceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsstrRemarksNull() {
-                return this.IsNull(this.tabletblStockRegister.strRemarksColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetstrRemarksNull() {
-                this[this.tabletblStockRegister.strRemarksColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsstrProductNameNull() {
-                return this.IsNull(this.tabletblStockRegister.strProductNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetstrProductNameNull() {
-                this[this.tabletblStockRegister.strProductNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsdteDateNull() {
-                return this.IsNull(this.tabletblStockRegister.dteDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetdteDateNull() {
-                this[this.tabletblStockRegister.dteDateColumn] = global::System.Convert.DBNull;
+                this.tabletblClient = ((tblClientDataTable)(this.Table));
             }
         }
         
@@ -911,22 +524,22 @@ namespace BusinessManagementSystem.DAL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class tblStockRegisterRowChangeEvent : global::System.EventArgs {
+        public class tblClientRowChangeEvent : global::System.EventArgs {
             
-            private tblStockRegisterRow eventRow;
+            private tblClientRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblStockRegisterRowChangeEvent(tblStockRegisterRow row, global::System.Data.DataRowAction action) {
+            public tblClientRowChangeEvent(tblClientRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblStockRegisterRow Row {
+            public tblClientRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -942,7 +555,7 @@ namespace BusinessManagementSystem.DAL {
         }
     }
 }
-namespace BusinessManagementSystem.DAL.DAL_StockRegisterTableAdapters {
+namespace BusinessManagementSystem.DAL.DAL_NewClientTableAdapters {
     
     
     /// <summary>
@@ -954,7 +567,7 @@ namespace BusinessManagementSystem.DAL.DAL_StockRegisterTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tblStockRegisterTableAdapter : global::System.ComponentModel.Component {
+    public partial class tblClientTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -968,7 +581,7 @@ namespace BusinessManagementSystem.DAL.DAL_StockRegisterTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public tblStockRegisterTableAdapter() {
+        public tblClientTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1063,19 +676,6 @@ namespace BusinessManagementSystem.DAL.DAL_StockRegisterTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitAdapter() {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tblStockRegister";
-            tableMapping.ColumnMappings.Add("strPartyName", "strPartyName");
-            tableMapping.ColumnMappings.Add("intReceipts", "intReceipts");
-            tableMapping.ColumnMappings.Add("intChallanNoIn", "intChallanNoIn");
-            tableMapping.ColumnMappings.Add("intQuantity", "intQuantity");
-            tableMapping.ColumnMappings.Add("intChallanNoOut", "intChallanNoOut");
-            tableMapping.ColumnMappings.Add("intBalance", "intBalance");
-            tableMapping.ColumnMappings.Add("strRemarks", "strRemarks");
-            tableMapping.ColumnMappings.Add("strProductName", "strProductName");
-            tableMapping.ColumnMappings.Add("dteDate", "dteDate");
-            this._adapter.TableMappings.Add(tableMapping);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1091,43 +691,47 @@ namespace BusinessManagementSystem.DAL.DAL_StockRegisterTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT strDetails AS strProductName, FORMAT(dteChallanDate, 'dd MMM, yyyy ') AS dteDate, strPartyName, CASE WHEN [strAction] = 'IN' THEN [intQuantity] ELSE NULL END AS intReceipts, 
-                  CASE WHEN [strAction] = 'IN' THEN [intChallanId] ELSE NULL END AS intChallanNoIn, CASE WHEN [strAction] = 'OUT' THEN [intQuantity] ELSE NULL END AS intQuantity, CASE WHEN [strAction] = 'OUT' THEN [intChallanId] ELSE NULL 
-                  END AS intChallanNoOut, intBalance, strRemarks
-FROM     tblStockRegister
-WHERE  (ysnActive = 1) AND (strDetails = @strDetails) AND (dteChallanDate BETWEEN @fromDate AND @toDate)
-ORDER BY intId";
+            this._commandCollection[0].CommandText = "INSERT INTO tblClient\r\n                  (strClientName, strEmail, strMobileNo, s" +
+                "trAddress, ysnActive)\r\nVALUES (@strClientName,@strEmail,@strMobileNo,@strAddress" +
+                ", 1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strDetails", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strProductName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fromDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "dteChallanDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@toDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "dteChallanDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strClientName", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strClientName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strEmail", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strEmail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strMobileNo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "strMobileNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strAddress", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DAL_StockRegister.tblStockRegisterDataTable GetData(string strDetails, global::System.Nullable<global::System.DateTime> fromDate, global::System.Nullable<global::System.DateTime> toDate) {
+        public virtual DAL_NewClient.tblClientDataTable PutData(string strClientName, string strEmail, string strMobileNo, string strAddress) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((strDetails == null)) {
+            if ((strClientName == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(strDetails));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(strClientName));
             }
-            if ((fromDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fromDate.Value));
-            }
-            else {
+            if ((strEmail == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((toDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(toDate.Value));
-            }
             else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(strEmail));
+            }
+            if ((strMobileNo == null)) {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            DAL_StockRegister.tblStockRegisterDataTable dataTable = new DAL_StockRegister.tblStockRegisterDataTable();
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strMobileNo));
+            }
+            if ((strAddress == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(strAddress));
+            }
+            DAL_NewClient.tblClientDataTable dataTable = new DAL_NewClient.tblClientDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1201,7 +805,7 @@ ORDER BY intId";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DAL_StockRegister dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DAL_NewClient dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1211,7 +815,7 @@ ORDER BY intId";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DAL_StockRegister dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DAL_NewClient dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1221,7 +825,7 @@ ORDER BY intId";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DAL_StockRegister dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DAL_NewClient dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1255,7 +859,7 @@ ORDER BY intId";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DAL_StockRegister dataSet) {
+        public virtual int UpdateAll(DAL_NewClient dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

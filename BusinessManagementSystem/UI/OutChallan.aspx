@@ -1,80 +1,29 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OutChallan.aspx.cs" Inherits="BusinessManagementSystem.UI.OutChallan" %>
+﻿<%@ Page Title="" MasterPageFile="~/MasterPage.Master" Language="C#" AutoEventWireup="true" CodeBehind="OutChallan.aspx.cs" Inherits="BusinessManagementSystem.UI.OutChallan" %>
 
-<!DOCTYPE html>
+<asp:Content ID="homeHead" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .formCard{
+            padding:20px;
+            padding-top:300px;
+        }
+        .formMargin{
+            margin-top:40px;
+        }
+        .backgroundPAD{
+            background-image:url("http://localhost:53979/Pad.jpg");
+            height:1555px; 
+            width:1100px;
+        }
+        .grdView{
+            padding:20px;
+        }
+        .textSize{
+            font-size:30px;
+        }
+    </style>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Perfect Point BMS</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</head>
-
-<style>
-    .formCard{
-        padding:20px;
-        padding-top:300px;
-    }
-    .formMargin{
-        margin-top:40px;
-    }
-    .backgroundPAD{
-        background-image:url("http://localhost:53979/Pad.jpg");
-        height:1555px; 
-        width:1100px;
-    }
-    .grdView{
-        padding:20px;
-    }
-</style>
-
-<body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a href="http://localhost:53979/HomePage.aspx" class="navbar-brand">Perfect Point</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProduct" role="button" data-toggle="dropdown">Product</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownProduct">
-                        <a class="dropdown-item" href="#">Products Details</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/Product.aspx">Add New Product</a>
-                    </div>
-                </li>
-                <li class="nav-item active dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownStock" role="button" data-toggle="dropdown">Stock</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownStock">
-                        <a class="dropdown-item" href="http://localhost:53979/UI/StockRegister.aspx">Stock Register</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/CurrentBalance.aspx">Current Balance</a>
-                    </div>
-                </li>
-                <li class="nav-item active dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownChallan" role="button" data-toggle="dropdown">Challan</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownChallan">
-                        <a class="dropdown-item" href="http://localhost:53979/UI/InChallan.aspx">Stock In</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/OutChallan.aspx">Challan/Stock Out</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Bill</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Ladger</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
+<asp:Content ID="homeBody" ContentPlaceHolderID="body" runat="server">
     <div class="container">
         <div class="card formCard backgroundPAD">
             <form id="frmChallanIn" runat="server">
@@ -93,9 +42,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <asp:TextBox ID="txtChallanInName" runat="server" TextMode="SingleLine" CssClass="form-control" placeholder="Name"></asp:TextBox>
-                        <asp:TextBox ID="txtChallanInAddress" runat="server" TextMode="SingleLine" CssClass="form-control" placeholder="Address"></asp:TextBox>
+                    <div class="col-md-1">
+                        <label class="text-dark">Name:</label>
+                    </div>
+                    <div class="col-md-11">
+                        <asp:DropDownList ID="drpChallanInName" runat="server" CssClass="form-control"></asp:DropDownList>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        <label class="text-dark">Address:</label>
+                    </div>
+                    <div class="col-md-11">
+                        <asp:TextBox ID="txtChallanInAddress" runat="server" TextMode="SingleLine" CssClass="form-control"></asp:TextBox>
                     </div>
                 </div>
                 <div class="row">
@@ -103,8 +62,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <label class="text-success">This Product Current Stock Balance : </label>
-                        <asp:Label  ID="lblCurrentBalance" runat="server" CssClass="text-success"></asp:Label>
+                        <label class="text-success textSize">Balance Stock : </label>
+                        <asp:Label  ID="lblCurrentBalance" runat="server" CssClass="text-success textSize"></asp:Label>
                     </div>
                 </div>
                 <div class="row">
@@ -159,7 +118,7 @@
                                 <ItemStyle HorizontalAlign="Left" Width="200px" />
                             </asp:TemplateField>
 
-                            <asp:CommandField ShowDeleteButton="true" ControlStyle-ForeColor="Red" ControlStyle-Font-Bold="true" />
+                            <asp:CommandField ShowDeleteButton="true" ControlStyle-ForeColor="Red" ControlStyle-Font-Bold="true"/>
                         </Columns>
                         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                         <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
@@ -188,5 +147,4 @@
             </form>
         </div>
     </div>
-</body>
-</html>
+</asp:Content>

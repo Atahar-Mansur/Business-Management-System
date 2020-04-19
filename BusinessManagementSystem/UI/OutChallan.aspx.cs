@@ -16,6 +16,7 @@ namespace BusinessManagementSystem.UI
         DataTable dt = new DataTable();
         List<ChallanOut> records = new List<ChallanOut>();
         List<NewProduct> products = new List<NewProduct>();
+        List<NewClient> clients = new List<NewClient>();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -30,6 +31,14 @@ namespace BusinessManagementSystem.UI
                 drpDetails.DataTextField = "strName";
                 drpDetails.DataValueField = "strName";
                 drpDetails.DataBind();
+
+                clients = objData.GetClientData();
+                drpChallanInName.DataSource = clients;
+                drpChallanInName.DataBind();
+                drpChallanInName.DataTextField = "strName";
+                drpChallanInName.DataValueField = "strName";
+                drpChallanInName.DataBind();
+
                 lblCurrentBalance.Text = objData.GetCurrentBalance(drpDetails.Text);
             }
         }
@@ -47,9 +56,9 @@ namespace BusinessManagementSystem.UI
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(lblCurrentBalance.Text) >= Convert.ToInt32(txtQuantity.Text))
+            if (addButtonVerification())
             {
-                if (addButtonVerification())
+                if (Convert.ToInt32(lblCurrentBalance.Text) >= Convert.ToInt32(txtQuantity.Text))
                 {
                     if (Session["List"] == null) records = new List<ChallanOut>();
                     else records = (List<ChallanOut>)Session["List"];
@@ -71,12 +80,12 @@ namespace BusinessManagementSystem.UI
                 }
                 else
                 {
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please fill Details and Quantity fields.')", true);
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You do not have sufficient quantity of the product in stock !!!')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You do not have sufficient quantity of the product in stock !!!')", true);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please fill requred fields.')", true);
             }
         }
 
@@ -85,7 +94,7 @@ namespace BusinessManagementSystem.UI
             if (createChallanButtonVerification())
             {
                 records = (List<ChallanOut>)Session["List"];
-                string sms = objData.PutData(records, Convert.ToInt32(lblChallanNo.Text), txtChallanInName.Text, txtChallanInAddress.Text, DateTime.Parse(txtChallanInDate.Text), txtLCNo.Text, DateTime.Parse(txtLCdate.Text));
+                string sms = objData.PutData(records, Convert.ToInt32(lblChallanNo.Text), drpChallanInName.Text, txtChallanInAddress.Text, DateTime.Parse(txtChallanInDate.Text), txtLCNo.Text, DateTime.Parse(txtLCdate.Text));
 
                 if (sms != "error")
                 {
@@ -112,21 +121,21 @@ namespace BusinessManagementSystem.UI
             if (txtQuantity.Text == "") return false;
             if (txtPurchNo.Text == "") return false;
             if (txtPurchDate.Text == "") return false;
+            if (drpDetails.Text == "--Select a Product--") return false;
             return true;
         }
 
         protected Boolean createChallanButtonVerification()
         {
-            if (txtChallanInName.Text == "") return false;
             if (txtChallanInDate.Text == "") return false;
             if (txtLCNo.Text == "") return false;
             if (txtLCdate.Text == "") return false;
+            if (drpChallanInName.Text == "--Select a Client--") return false;
             return true;
         }
 
         protected void clearData()
         {
-            txtChallanInName.Text = "";
             txtChallanInAddress.Text = "";
             txtChallanInDate.Text = "";
             txtQuantity.Text = "";

@@ -97,6 +97,7 @@ namespace BusinessManagementSystem.UI
         protected Boolean addButtonVerification()
         {
             if (txtQuantity.Text == "") return false;
+            if (drpDetails.Text == "--Select a Product--") return false;
             return true;
         }
 
