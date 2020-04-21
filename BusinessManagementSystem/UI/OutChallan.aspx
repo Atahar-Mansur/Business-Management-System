@@ -10,7 +10,7 @@
             margin-top:40px;
         }
         .backgroundPAD{
-            background-image:url("http://localhost:53979/Pad.jpg");
+            background-image:url("http://localhost:53979/ContentImages/Pad.jpg");
             height:1555px; 
             width:1100px;
         }

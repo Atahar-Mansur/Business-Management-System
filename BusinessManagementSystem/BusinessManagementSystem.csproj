@@ -83,6 +83,7 @@
     <Compile Include="BLL\BLL_CurrentBalance.cs" />
     <Compile Include="BLL\BLL_NewClient.cs" />
     <Compile Include="BLL\BLL_NewProduct.cs" />
+    <Compile Include="BLL\BLL_PrintChallan.cs" />
     <Compile Include="BLL\BLL_StockRegister.cs" />
     <Compile Include="DAL\DAL_ChallanIn.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -103,6 +104,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DAL_NewClient.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_PrintChallan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL_PrintChallan.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL_Products.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -231,6 +237,17 @@
     <Content Include="DAL\DAL_NewClient.xss">
       <DependentUpon>DAL_NewClient.xsd</DependentUpon>
     </Content>
+    <Content Include="DAL\DAL_PrintChallan.xsc">
+      <DependentUpon>DAL_PrintChallan.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\DAL_PrintChallan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAL_PrintChallan.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\DAL_PrintChallan.xss">
+      <DependentUpon>DAL_PrintChallan.xsd</DependentUpon>
+    </Content>
     <None Include="DAL\DAL_Products.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -260,6 +277,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ContentImages\" />
     <Folder Include="UI\ProductImage\" />
   </ItemGroup>
   <PropertyGroup>
