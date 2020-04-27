@@ -2,14 +2,15 @@
 <xs:schema id="DAL_PrintChallan" targetNamespace="http://tempuri.org/DAL_PrintChallan.xsd" xmlns:mstns="http://tempuri.org/DAL_PrintChallan.xsd" xmlns="http://tempuri.org/DAL_PrintChallan.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointDBConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointDBConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblChallanOutTableAdapter" GeneratorDataComponentClassName="tblChallanOutTableAdapter" Name="tblChallanOut" UserDataComponentName="tblChallanOutTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblChallanOut" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetChallanBasicData" GetMethodModifier="Public" GetMethodName="GetChallanBasicData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetChallanBasicData" UserSourceName="GetChallanBasicData">
+              <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblChallanOut" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetChallanBasicData" GetMethodModifier="Public" GetMethodName="GetChallanBasicData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetChallanBasicData" UserSourceName="GetChallanBasicData">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [tblChallanOut] ([intChallanId], [strPartyName], [strLCNo], [strPartyAddress]) VALUES (@intChallanId, @strPartyName, @strLCNo, @strPartyAddress)</CommandText>
@@ -117,6 +118,46 @@ GROUP BY dtePurchDate</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="deleteChallanOutDataTableAdapter" GeneratorDataComponentClassName="deleteChallanOutDataTableAdapter" Name="tblChallanOut3" UserDataComponentName="deleteChallanOutDataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblChallanOut" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="DeleteChallanOutData" GetMethodModifier="Public" GetMethodName="DeleteChallanOutData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="DeleteChallanOutData" UserSourceName="DeleteChallanOutData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE tblChallanOut
+SET          ysnActive = 0
+WHERE  (intChallanId = @intChallanId) AND (strPartyName = @strPartyName) AND (strLCNo = @strLCNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="intChallanId" ColumnName="intChallanId" DataSourceName="PerfectPoint.dbo.tblChallanOut" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@intChallanId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="intChallanId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strPartyName" ColumnName="strPartyName" DataSourceName="PerfectPoint.dbo.tblChallanOut" DataTypeServer="varchar(1000)" DbType="AnsiString" Direction="Input" ParameterName="@strPartyName" Precision="0" ProviderType="VarChar" Scale="0" Size="1000" SourceColumn="strPartyName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strLCNo" ColumnName="strLCNo" DataSourceName="PerfectPoint.dbo.tblChallanOut" DataTypeServer="varchar(1000)" DbType="AnsiString" Direction="Input" ParameterName="@strLCNo" Precision="0" ProviderType="VarChar" Scale="0" Size="1000" SourceColumn="strLCNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sprDeleteFromStockRegisterTableAdapter" GeneratorDataComponentClassName="sprDeleteFromStockRegisterTableAdapter" Name="sprDeleteFromStockRegister" UserDataComponentName="sprDeleteFromStockRegisterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.sprDeleteFromStockRegister" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="DeleteStockData" GetMethodModifier="Public" GetMethodName="DeleteStockData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="DeleteStockData" UserSourceName="DeleteStockData">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.sprDeleteFromStockRegister</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@intChallanId" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@strPartyName" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@strDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="1000" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@intQuantity" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -212,6 +253,14 @@ GROUP BY dtePurchDate</CommandText>
                 </xs:simpleType>
               </xs:element>
             </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblChallanOut3" msprop:Generator_TableClassName="tblChallanOut3DataTable" msprop:Generator_TableVarName="tabletblChallanOut3" msprop:Generator_RowChangedName="tblChallanOut3RowChanged" msprop:Generator_TablePropName="tblChallanOut3" msprop:Generator_RowDeletingName="tblChallanOut3RowDeleting" msprop:Generator_RowChangingName="tblChallanOut3RowChanging" msprop:Generator_RowEvHandlerName="tblChallanOut3RowChangeEventHandler" msprop:Generator_RowDeletedName="tblChallanOut3RowDeleted" msprop:Generator_RowClassName="tblChallanOut3Row" msprop:Generator_UserTableName="tblChallanOut3" msprop:Generator_RowEvArgName="tblChallanOut3RowChangeEvent">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sprDeleteFromStockRegister" msprop:Generator_TableClassName="sprDeleteFromStockRegisterDataTable" msprop:Generator_TableVarName="tablesprDeleteFromStockRegister" msprop:Generator_RowChangedName="sprDeleteFromStockRegisterRowChanged" msprop:Generator_TablePropName="sprDeleteFromStockRegister" msprop:Generator_RowDeletingName="sprDeleteFromStockRegisterRowDeleting" msprop:Generator_RowChangingName="sprDeleteFromStockRegisterRowChanging" msprop:Generator_RowEvHandlerName="sprDeleteFromStockRegisterRowChangeEventHandler" msprop:Generator_RowDeletedName="sprDeleteFromStockRegisterRowDeleted" msprop:Generator_RowClassName="sprDeleteFromStockRegisterRow" msprop:Generator_UserTableName="sprDeleteFromStockRegister" msprop:Generator_RowEvArgName="sprDeleteFromStockRegisterRowChangeEvent">
+          <xs:complexType>
           </xs:complexType>
         </xs:element>
       </xs:choice>

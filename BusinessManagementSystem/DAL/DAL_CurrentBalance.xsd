@@ -2,14 +2,15 @@
 <xs:schema id="DAL_CurrentBalance" targetNamespace="http://tempuri.org/DAL_CurrentBalance.xsd" xmlns:mstns="http://tempuri.org/DAL_CurrentBalance.xsd" xmlns="http://tempuri.org/DAL_CurrentBalance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointDBConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointDBConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TableAdapterCurrentBalance" GeneratorDataComponentClassName="TableAdapterCurrentBalance" Name="DataTable1" UserDataComponentName="TableAdapterCurrentBalance">
             <MainSource>
-              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetCurrentBalanceData" GetMethodModifier="Public" GetMethodName="GetCurrentBalanceData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetCurrentBalanceData" UserSourceName="GetCurrentBalanceData">
+              <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetCurrentBalanceData" GetMethodModifier="Public" GetMethodName="GetCurrentBalanceData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetCurrentBalanceData" UserSourceName="GetCurrentBalanceData">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT T1.strDetails, T2.intBalance, T2.intChallanId, T2.strPartyName, T2.strAction, Format(T2.dteChallanDate, 'dd MMM,yyyy') AS dteChallanDate, T2.intQuantity, T2.strRemarks
@@ -17,7 +18,8 @@ FROM     (SELECT MAX(intId) AS intId, strDetails
                   FROM      tblStockRegister
                   WHERE   (ysnActive = 1)
                   GROUP BY strDetails) AS T1 INNER JOIN
-                  tblStockRegister AS T2 ON T1.intId = T2.intId</CommandText>
+                  tblStockRegister AS T2 ON T1.intId = T2.intId
+ORDER BY T1.strDetails</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>

@@ -2,14 +2,15 @@
 <xs:schema id="DAL_Products" targetNamespace="http://tempuri.org/DAL_Products.xsd" xmlns:mstns="http://tempuri.org/DAL_Products.xsd" xmlns="http://tempuri.org/DAL_Products.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointDBConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointDBConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblProductTableAdapter" GeneratorDataComponentClassName="tblProductTableAdapter" Name="tblProduct" UserDataComponentName="tblProductTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblProduct" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="PutData" GetMethodModifier="Public" GetMethodName="PutData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="PutData" UserSourceName="PutData">
+              <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblProduct" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="PutData" GetMethodModifier="Public" GetMethodName="PutData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="PutData" UserSourceName="PutData">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO tblProduct
@@ -30,7 +31,7 @@ VALUES (@strProductName,@strProductDetails,@strMeasurementUnit, GETDATE(), 1,@st
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblMeasurementUnitTableAdapter" GeneratorDataComponentClassName="tblMeasurementUnitTableAdapter" Name="tblMeasurementUnit" UserDataComponentName="tblMeasurementUnitTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblMeasurementUnit" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetUnitData" GetMethodModifier="Public" GetMethodName="GetUnitData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetUnitData" UserSourceName="GetUnitData">
+              <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblMeasurementUnit" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetUnitData" GetMethodModifier="Public" GetMethodName="GetUnitData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetUnitData" UserSourceName="GetUnitData">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [tblMeasurementUnit] ([strMeasurementUnit]) VALUES (@strMeasurementUnit)</CommandText>
@@ -56,7 +57,7 @@ WHERE  (ysnActive = 1)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblStockTableAdapter" GeneratorDataComponentClassName="tblStockTableAdapter" Name="tblStock" UserDataComponentName="tblStockTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblChallanIn" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="PutStockData" GetMethodModifier="Public" GetMethodName="PutStockData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="PutStockData" UserSourceName="PutStockData">
+              <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblChallanIn" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="PutStockData" GetMethodModifier="Public" GetMethodName="PutStockData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="PutStockData" UserSourceName="PutStockData">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO tblChallanIn
@@ -97,11 +98,11 @@ VALUES (01, 'Initial', '2010-01-01', GETDATE(),@strDetails,@intQuantity,@strRema
   <xs:element name="DAL_Products" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DAL_Products" msprop:Generator_UserDSName="DAL_Products">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblProduct" msprop:Generator_TableClassName="tblProductDataTable" msprop:Generator_TableVarName="tabletblProduct" msprop:Generator_RowChangedName="tblProductRowChanged" msprop:Generator_TablePropName="tblProduct" msprop:Generator_RowDeletingName="tblProductRowDeleting" msprop:Generator_RowChangingName="tblProductRowChanging" msprop:Generator_RowEvHandlerName="tblProductRowChangeEventHandler" msprop:Generator_RowDeletedName="tblProductRowDeleted" msprop:Generator_RowClassName="tblProductRow" msprop:Generator_UserTableName="tblProduct" msprop:Generator_RowEvArgName="tblProductRowChangeEvent">
+        <xs:element name="tblProduct" msprop:Generator_TableClassName="tblProductDataTable" msprop:Generator_TableVarName="tabletblProduct" msprop:Generator_TablePropName="tblProduct" msprop:Generator_RowDeletingName="tblProductRowDeleting" msprop:Generator_RowChangingName="tblProductRowChanging" msprop:Generator_RowEvHandlerName="tblProductRowChangeEventHandler" msprop:Generator_RowDeletedName="tblProductRowDeleted" msprop:Generator_UserTableName="tblProduct" msprop:Generator_RowChangedName="tblProductRowChanged" msprop:Generator_RowEvArgName="tblProductRowChangeEvent" msprop:Generator_RowClassName="tblProductRow">
           <xs:complexType>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblMeasurementUnit" msprop:Generator_TableClassName="tblMeasurementUnitDataTable" msprop:Generator_TableVarName="tabletblMeasurementUnit" msprop:Generator_TablePropName="tblMeasurementUnit" msprop:Generator_RowDeletingName="tblMeasurementUnitRowDeleting" msprop:Generator_RowChangingName="tblMeasurementUnitRowChanging" msprop:Generator_RowEvHandlerName="tblMeasurementUnitRowChangeEventHandler" msprop:Generator_RowDeletedName="tblMeasurementUnitRowDeleted" msprop:Generator_UserTableName="tblMeasurementUnit" msprop:Generator_RowChangedName="tblMeasurementUnitRowChanged" msprop:Generator_RowEvArgName="tblMeasurementUnitRowChangeEvent" msprop:Generator_RowClassName="tblMeasurementUnitRow">
+        <xs:element name="tblMeasurementUnit" msprop:Generator_TableClassName="tblMeasurementUnitDataTable" msprop:Generator_TableVarName="tabletblMeasurementUnit" msprop:Generator_RowChangedName="tblMeasurementUnitRowChanged" msprop:Generator_TablePropName="tblMeasurementUnit" msprop:Generator_RowDeletingName="tblMeasurementUnitRowDeleting" msprop:Generator_RowChangingName="tblMeasurementUnitRowChanging" msprop:Generator_RowEvHandlerName="tblMeasurementUnitRowChangeEventHandler" msprop:Generator_RowDeletedName="tblMeasurementUnitRowDeleted" msprop:Generator_RowClassName="tblMeasurementUnitRow" msprop:Generator_UserTableName="tblMeasurementUnit" msprop:Generator_RowEvArgName="tblMeasurementUnitRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="strMeasurementUnit" msprop:Generator_ColumnVarNameInTable="columnstrMeasurementUnit" msprop:Generator_ColumnPropNameInRow="strMeasurementUnit" msprop:Generator_ColumnPropNameInTable="strMeasurementUnitColumn" msprop:Generator_UserColumnName="strMeasurementUnit" minOccurs="0">
@@ -114,7 +115,7 @@ VALUES (01, 'Initial', '2010-01-01', GETDATE(),@strDetails,@intQuantity,@strRema
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblStock" msprop:Generator_TableClassName="tblStockDataTable" msprop:Generator_TableVarName="tabletblStock" msprop:Generator_TablePropName="tblStock" msprop:Generator_RowDeletingName="tblStockRowDeleting" msprop:Generator_RowChangingName="tblStockRowChanging" msprop:Generator_RowEvHandlerName="tblStockRowChangeEventHandler" msprop:Generator_RowDeletedName="tblStockRowDeleted" msprop:Generator_UserTableName="tblStock" msprop:Generator_RowChangedName="tblStockRowChanged" msprop:Generator_RowEvArgName="tblStockRowChangeEvent" msprop:Generator_RowClassName="tblStockRow">
+        <xs:element name="tblStock" msprop:Generator_TableClassName="tblStockDataTable" msprop:Generator_TableVarName="tabletblStock" msprop:Generator_RowChangedName="tblStockRowChanged" msprop:Generator_TablePropName="tblStock" msprop:Generator_RowDeletingName="tblStockRowDeleting" msprop:Generator_RowChangingName="tblStockRowChanging" msprop:Generator_RowEvHandlerName="tblStockRowChangeEventHandler" msprop:Generator_RowDeletedName="tblStockRowDeleted" msprop:Generator_RowClassName="tblStockRow" msprop:Generator_UserTableName="tblStock" msprop:Generator_RowEvArgName="tblStockRowChangeEvent">
           <xs:complexType>
           </xs:complexType>
         </xs:element>

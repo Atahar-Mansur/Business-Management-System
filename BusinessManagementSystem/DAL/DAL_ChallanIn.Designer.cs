@@ -1433,20 +1433,13 @@ namespace BusinessManagementSystem.DAL.DAL_ChallanInTableAdapters {
             tableMapping.ColumnMappings.Add("strProductName", "strProductName");
             tableMapping.ColumnMappings.Add("strProductDetails", "strProductDetails");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [tblProduct] ([strProductName], [strProductDetails]) VALUES (@strProd" +
-                "uctName, @strProductDetails)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strProductName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "strProductName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strProductDetails", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "strProductDetails", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointConnectionString"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointDBConnectionString"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1469,35 +1462,6 @@ namespace BusinessManagementSystem.DAL.DAL_ChallanInTableAdapters {
             DAL_ChallanIn.tblChallanInDataTable dataTable = new DAL_ChallanIn.tblChallanInDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DAL_ChallanIn.tblChallanInDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DAL_ChallanIn dataSet) {
-            return this.Adapter.Update(dataSet, "tblChallanIn");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
         }
     }
     
@@ -1625,7 +1589,7 @@ namespace BusinessManagementSystem.DAL.DAL_ChallanInTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointConnectionString"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointDBConnectionString"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1821,7 +1785,7 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointConnectionString"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointDBConnectionString"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1908,8 +1872,6 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
         
         private UpdateOrderOption _updateOrder;
         
-        private tblChallanInTableAdapter _tblChallanInTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1922,20 +1884,6 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public tblChallanInTableAdapter tblChallanInTableAdapter {
-            get {
-                return this._tblChallanInTableAdapter;
-            }
-            set {
-                this._tblChallanInTableAdapter = value;
             }
         }
         
@@ -1958,10 +1906,6 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._tblChallanInTableAdapter != null) 
-                            && (this._tblChallanInTableAdapter.Connection != null))) {
-                    return this._tblChallanInTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1975,9 +1919,6 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._tblChallanInTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1989,15 +1930,6 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(DAL_ChallanIn dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tblChallanInTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblChallanIn.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblChallanInTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -2008,14 +1940,6 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(DAL_ChallanIn dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tblChallanInTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblChallanIn.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblChallanInTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -2026,14 +1950,6 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(DAL_ChallanIn dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tblChallanInTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblChallanIn.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblChallanInTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -2073,11 +1989,6 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._tblChallanInTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tblChallanInTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -2110,15 +2021,6 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._tblChallanInTableAdapter != null)) {
-                    revertConnections.Add(this._tblChallanInTableAdapter, this._tblChallanInTableAdapter.Connection);
-                    this._tblChallanInTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tblChallanInTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tblChallanInTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tblChallanInTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tblChallanInTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -2176,10 +2078,6 @@ VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._tblChallanInTableAdapter != null)) {
-                    this._tblChallanInTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblChallanInTableAdapter]));
-                    this._tblChallanInTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

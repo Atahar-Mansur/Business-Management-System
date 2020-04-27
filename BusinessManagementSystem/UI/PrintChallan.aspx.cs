@@ -75,16 +75,15 @@ namespace BusinessManagementSystem.UI
             lblPurchaseDate.Text = objData2.GetPurchaseDate(lblChallanInName.Text, lblChallanNo.Text, lblLCNo.Text);
         }
 
-        //protected void btnPrint_Click(object sender, EventArgs e)
-        //{
-        //    inputContainer.Visible = false;
-        //    panelPDF.CssClass = "";
-        //    Page.Title = "Challan_" + lblChallanNo.Text;
-        //}
-
         protected void btnDelete_Click(object sender, EventArgs e)
         {
+            string msg;
+            
+            msg = objData2.DeleteChallan(lblChallanInName.Text, lblChallanNo.Text, lblLCNo.Text);
 
+            backVisible();
+
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('"+ msg +"')", true);
         }
 
         protected Boolean showButtonVerification()

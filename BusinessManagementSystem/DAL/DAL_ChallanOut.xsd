@@ -2,14 +2,15 @@
 <xs:schema id="DAL_ChallanOut" targetNamespace="http://tempuri.org/DAL_ChallanOut.xsd" xmlns:mstns="http://tempuri.org/DAL_ChallanOut.xsd" xmlns="http://tempuri.org/DAL_ChallanOut.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointDBConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointDBConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblChallanOutTableAdapter" GeneratorDataComponentClassName="tblChallanOutTableAdapter" Name="tblChallanOut" UserDataComponentName="tblChallanOutTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblChallanOut" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="PutData" GetMethodModifier="Public" GetMethodName="PutData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="PutData" UserSourceName="PutData">
+              <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblChallanOut" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="PutData" GetMethodModifier="Public" GetMethodName="PutData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="PutData" UserSourceName="PutData">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO tblChallanOut
@@ -37,11 +38,13 @@ VALUES (@intChallanNo,@strPartyName,@strPartyAddress,@dteChallanDate, GETDATE(),
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblGetChallanNoTableAdapter" GeneratorDataComponentClassName="tblGetChallanNoTableAdapter" Name="tblChallanOut1" UserDataComponentName="tblGetChallanNoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblChallanOut" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetChallanNo" GetMethodModifier="Public" GetMethodName="GetChallanNo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetChallanNo" UserSourceName="GetChallanNo">
+              <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblChallanOut" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetChallanNo" GetMethodModifier="Public" GetMethodName="GetChallanNo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetChallanNo" UserSourceName="GetChallanNo">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [tblChallanOut] DEFAULT VALUES</CommandText>
-                    <Parameters />
+                    <CommandText>INSERT INTO [tblChallanOut] ([intChallanId]) VALUES (@intChallanId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@intChallanId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="intChallanId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
@@ -62,7 +65,7 @@ ORDER BY intChallanId DESC</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblStockRegisterTableAdapter" GeneratorDataComponentClassName="tblStockRegisterTableAdapter" Name="tblStockRegister" UserDataComponentName="tblStockRegisterTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblStockRegister" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetCurrentBalanceData" GetMethodModifier="Public" GetMethodName="GetCurrentBalanceData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetCurrentBalanceData" UserSourceName="GetCurrentBalanceData">
+              <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblStockRegister" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetCurrentBalanceData" GetMethodModifier="Public" GetMethodName="GetCurrentBalanceData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetCurrentBalanceData" UserSourceName="GetCurrentBalanceData">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT T2.intBalance
@@ -86,7 +89,7 @@ WHERE  (T1.strDetails = @productName)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblClientTableAdapter" GeneratorDataComponentClassName="tblClientTableAdapter" Name="tblClient" UserDataComponentName="tblClientTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PerfectPointConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblClient" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetClientData" GetMethodModifier="Public" GetMethodName="GetClientData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetClientData" UserSourceName="GetClientData">
+              <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblClient" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetClientData" GetMethodModifier="Public" GetMethodName="GetClientData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetClientData" UserSourceName="GetClientData">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT strClientName
@@ -110,25 +113,25 @@ WHERE  (ysnActive = 1)</CommandText>
   <xs:element name="DAL_ChallanOut" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DAL_ChallanOut" msprop:Generator_UserDSName="DAL_ChallanOut">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblChallanOut" msprop:Generator_TableClassName="tblChallanOutDataTable" msprop:Generator_TableVarName="tabletblChallanOut" msprop:Generator_RowChangedName="tblChallanOutRowChanged" msprop:Generator_TablePropName="tblChallanOut" msprop:Generator_RowDeletingName="tblChallanOutRowDeleting" msprop:Generator_RowChangingName="tblChallanOutRowChanging" msprop:Generator_RowEvHandlerName="tblChallanOutRowChangeEventHandler" msprop:Generator_RowDeletedName="tblChallanOutRowDeleted" msprop:Generator_RowClassName="tblChallanOutRow" msprop:Generator_UserTableName="tblChallanOut" msprop:Generator_RowEvArgName="tblChallanOutRowChangeEvent">
+        <xs:element name="tblChallanOut" msprop:Generator_TableClassName="tblChallanOutDataTable" msprop:Generator_TableVarName="tabletblChallanOut" msprop:Generator_TablePropName="tblChallanOut" msprop:Generator_RowDeletingName="tblChallanOutRowDeleting" msprop:Generator_RowChangingName="tblChallanOutRowChanging" msprop:Generator_RowEvHandlerName="tblChallanOutRowChangeEventHandler" msprop:Generator_RowDeletedName="tblChallanOutRowDeleted" msprop:Generator_UserTableName="tblChallanOut" msprop:Generator_RowChangedName="tblChallanOutRowChanged" msprop:Generator_RowEvArgName="tblChallanOutRowChangeEvent" msprop:Generator_RowClassName="tblChallanOutRow">
           <xs:complexType>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblChallanOut1" msprop:Generator_TableClassName="tblChallanOut1DataTable" msprop:Generator_TableVarName="tabletblChallanOut1" msprop:Generator_RowChangedName="tblChallanOut1RowChanged" msprop:Generator_TablePropName="tblChallanOut1" msprop:Generator_RowDeletingName="tblChallanOut1RowDeleting" msprop:Generator_RowChangingName="tblChallanOut1RowChanging" msprop:Generator_RowEvHandlerName="tblChallanOut1RowChangeEventHandler" msprop:Generator_RowDeletedName="tblChallanOut1RowDeleted" msprop:Generator_RowClassName="tblChallanOut1Row" msprop:Generator_UserTableName="tblChallanOut1" msprop:Generator_RowEvArgName="tblChallanOut1RowChangeEvent">
+        <xs:element name="tblChallanOut1" msprop:Generator_TableClassName="tblChallanOut1DataTable" msprop:Generator_TableVarName="tabletblChallanOut1" msprop:Generator_TablePropName="tblChallanOut1" msprop:Generator_RowDeletingName="tblChallanOut1RowDeleting" msprop:Generator_RowChangingName="tblChallanOut1RowChanging" msprop:Generator_RowEvHandlerName="tblChallanOut1RowChangeEventHandler" msprop:Generator_RowDeletedName="tblChallanOut1RowDeleted" msprop:Generator_UserTableName="tblChallanOut1" msprop:Generator_RowChangedName="tblChallanOut1RowChanged" msprop:Generator_RowEvArgName="tblChallanOut1RowChangeEvent" msprop:Generator_RowClassName="tblChallanOut1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="intChallanId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnintChallanId" msprop:Generator_ColumnPropNameInRow="intChallanId" msprop:Generator_ColumnPropNameInTable="intChallanIdColumn" msprop:Generator_UserColumnName="intChallanId" type="xs:long" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblStockRegister" msprop:Generator_TableClassName="tblStockRegisterDataTable" msprop:Generator_TableVarName="tabletblStockRegister" msprop:Generator_RowChangedName="tblStockRegisterRowChanged" msprop:Generator_TablePropName="tblStockRegister" msprop:Generator_RowDeletingName="tblStockRegisterRowDeleting" msprop:Generator_RowChangingName="tblStockRegisterRowChanging" msprop:Generator_RowEvHandlerName="tblStockRegisterRowChangeEventHandler" msprop:Generator_RowDeletedName="tblStockRegisterRowDeleted" msprop:Generator_RowClassName="tblStockRegisterRow" msprop:Generator_UserTableName="tblStockRegister" msprop:Generator_RowEvArgName="tblStockRegisterRowChangeEvent">
+        <xs:element name="tblStockRegister" msprop:Generator_TableClassName="tblStockRegisterDataTable" msprop:Generator_TableVarName="tabletblStockRegister" msprop:Generator_TablePropName="tblStockRegister" msprop:Generator_RowDeletingName="tblStockRegisterRowDeleting" msprop:Generator_RowChangingName="tblStockRegisterRowChanging" msprop:Generator_RowEvHandlerName="tblStockRegisterRowChangeEventHandler" msprop:Generator_RowDeletedName="tblStockRegisterRowDeleted" msprop:Generator_UserTableName="tblStockRegister" msprop:Generator_RowChangedName="tblStockRegisterRowChanged" msprop:Generator_RowEvArgName="tblStockRegisterRowChangeEvent" msprop:Generator_RowClassName="tblStockRegisterRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="intBalance" msprop:Generator_ColumnVarNameInTable="columnintBalance" msprop:Generator_ColumnPropNameInRow="intBalance" msprop:Generator_ColumnPropNameInTable="intBalanceColumn" msprop:Generator_UserColumnName="intBalance" type="xs:long" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblClient" msprop:Generator_TableClassName="tblClientDataTable" msprop:Generator_TableVarName="tabletblClient" msprop:Generator_TablePropName="tblClient" msprop:Generator_RowDeletingName="tblClientRowDeleting" msprop:Generator_RowChangingName="tblClientRowChanging" msprop:Generator_RowEvHandlerName="tblClientRowChangeEventHandler" msprop:Generator_RowDeletedName="tblClientRowDeleted" msprop:Generator_UserTableName="tblClient" msprop:Generator_RowChangedName="tblClientRowChanged" msprop:Generator_RowEvArgName="tblClientRowChangeEvent" msprop:Generator_RowClassName="tblClientRow">
+        <xs:element name="tblClient" msprop:Generator_TableClassName="tblClientDataTable" msprop:Generator_TableVarName="tabletblClient" msprop:Generator_RowChangedName="tblClientRowChanged" msprop:Generator_TablePropName="tblClient" msprop:Generator_RowDeletingName="tblClientRowDeleting" msprop:Generator_RowChangingName="tblClientRowChanging" msprop:Generator_RowEvHandlerName="tblClientRowChangeEventHandler" msprop:Generator_RowDeletedName="tblClientRowDeleted" msprop:Generator_RowClassName="tblClientRow" msprop:Generator_UserTableName="tblClient" msprop:Generator_RowEvArgName="tblClientRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="strClientName" msprop:Generator_ColumnVarNameInTable="columnstrClientName" msprop:Generator_ColumnPropNameInRow="strClientName" msprop:Generator_ColumnPropNameInTable="strClientNameColumn" msprop:Generator_UserColumnName="strClientName" minOccurs="0">

@@ -1020,7 +1020,7 @@ namespace BusinessManagementSystem.DAL.DAL_CurrentBalanceTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointConnectionString"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointDBConnectionString"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1034,7 +1034,8 @@ FROM     (SELECT MAX(intId) AS intId, strDetails
                   FROM      tblStockRegister
                   WHERE   (ysnActive = 1)
                   GROUP BY strDetails) AS T1 INNER JOIN
-                  tblStockRegister AS T2 ON T1.intId = T2.intId";
+                  tblStockRegister AS T2 ON T1.intId = T2.intId
+ORDER BY T1.strDetails";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BusinessManagementSystem.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Perfect Point BMS</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <asp:Image ID="logo" runat="server" ImageUrl="~/ContentImages/logo.jpg" Height="25px" Width="30px"/>
+        <asp:HyperLink ID="HomePageURL" runat="server" NavigateUrl="~/HomePage.aspx" Text="Perfect Point" CssClass="navbar-brand"></asp:HyperLink>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownClient" role="button" data-toggle="dropdown">Client</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownClient">
+                        <a class="dropdown-item" href="#">Clients Details</a>
+                        <div class="dropdown-divider"></div>
+                        <asp:HyperLink ID="AddClientURL" runat="server" NavigateUrl="~/UI/Client.aspx" Text="Add New Client" CssClass="dropdown-item"></asp:HyperLink>
+                    </div>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProduct" role="button" data-toggle="dropdown">Product</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownProduct">
+                        <a class="dropdown-item" href="#">Products Details</a>
+                        <div class="dropdown-divider"></div>
+                        <asp:HyperLink ID="AddProductURL" runat="server" NavigateUrl="~/UI/Product.aspx" Text="Add New Product" CssClass="dropdown-item"></asp:HyperLink>
+                    </div>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownStock" role="button" data-toggle="dropdown">Stock</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownStock">
+                        <asp:HyperLink ID="StockRegisterURL" runat="server" NavigateUrl="~/UI/StockRegister.aspx" Text="Stock Register" CssClass="dropdown-item"></asp:HyperLink>
+                        <div class="dropdown-divider"></div>
+                        <asp:HyperLink ID="CurrentBalanceURL" runat="server" NavigateUrl="~/UI/CurrentBalance.aspx" Text="Current Balance" CssClass="dropdown-item"></asp:HyperLink>
+                    </div>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownChallan" role="button" data-toggle="dropdown">Challan</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownChallan">
+                        <asp:HyperLink ID="InChallanURL" runat="server" NavigateUrl="~/UI/InChallan.aspx" Text="Stock In" CssClass="dropdown-item"></asp:HyperLink>
+                        <div class="dropdown-divider"></div>
+                        <asp:HyperLink ID="OutChallanURL" runat="server" NavigateUrl="~/UI/OutChallan.aspx" Text="Stock Out" CssClass="dropdown-item"></asp:HyperLink>
+                        <div class="dropdown-divider"></div>
+                        <asp:HyperLink ID="PrintChallanURL" runat="server" NavigateUrl="~/UI/PrintChallan.aspx" Text="Print or Remove" CssClass="dropdown-item"></asp:HyperLink>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bill</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ladger</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>

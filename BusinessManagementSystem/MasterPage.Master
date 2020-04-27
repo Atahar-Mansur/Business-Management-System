@@ -18,8 +18,8 @@
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <asp:Image ID="logo" runat="server" ImageUrl="http://localhost:53979/ContentImages/logo.jpg" Height="25px" Width="30px"/>
-        <a href="http://localhost:53979/HomePage.aspx" class="navbar-brand">Perfect Point</a>
+        <asp:Image ID="logo" runat="server" ImageUrl="~/ContentImages/logo.jpg" Height="25px" Width="30px"/>
+        <asp:HyperLink ID="HomePageURL" runat="server" NavigateUrl="~/HomePage.aspx" Text="Perfect Point" CssClass="navbar-brand"></asp:HyperLink>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,7 +31,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownClient">
                         <a class="dropdown-item" href="#">Clients Details</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/Client.aspx">Add New Client</a>
+                        <asp:HyperLink ID="AddClientURL" runat="server" NavigateUrl="~/UI/Client.aspx" Text="Add New Client" CssClass="dropdown-item"></asp:HyperLink>
                     </div>
                 </li>
                 <li class="nav-item active dropdown">
@@ -39,25 +39,25 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownProduct">
                         <a class="dropdown-item" href="#">Products Details</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/Product.aspx">Add New Product</a>
+                        <asp:HyperLink ID="AddProductURL" runat="server" NavigateUrl="~/UI/Product.aspx" Text="Add New Product" CssClass="dropdown-item"></asp:HyperLink>
                     </div>
                 </li>
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownStock" role="button" data-toggle="dropdown">Stock</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownStock">
-                        <a class="dropdown-item" href="http://localhost:53979/UI/StockRegister.aspx">Stock Register</a>
+                        <asp:HyperLink ID="StockRegisterURL" runat="server" NavigateUrl="~/UI/StockRegister.aspx" Text="Stock Register" CssClass="dropdown-item"></asp:HyperLink>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/CurrentBalance.aspx">Current Balance</a>
+                        <asp:HyperLink ID="CurrentBalanceURL" runat="server" NavigateUrl="~/UI/CurrentBalance.aspx" Text="Current Balance" CssClass="dropdown-item"></asp:HyperLink>
                     </div>
                 </li>
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownChallan" role="button" data-toggle="dropdown">Challan</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownChallan">
-                        <a class="dropdown-item" href="http://localhost:53979/UI/InChallan.aspx">Stock In</a>
+                        <asp:HyperLink ID="InChallanURL" runat="server" NavigateUrl="~/UI/InChallan.aspx" Text="Stock In" CssClass="dropdown-item"></asp:HyperLink>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/OutChallan.aspx">Challan/Stock Out</a>
+                        <asp:HyperLink ID="OutChallanURL" runat="server" NavigateUrl="~/UI/OutChallan.aspx" Text="Stock Out/Challan" CssClass="dropdown-item"></asp:HyperLink>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="http://localhost:53979/UI/PrintChallan.aspx">Print or Remove</a>
+                        <asp:HyperLink ID="PrintChallanURL" runat="server" NavigateUrl="~/UI/PrintChallan.aspx" Text="Print or Remove" CssClass="dropdown-item"></asp:HyperLink>
                     </div>
                 </li>
                 <li class="nav-item">

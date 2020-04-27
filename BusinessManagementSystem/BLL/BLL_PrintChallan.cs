@@ -56,5 +56,28 @@ namespace BusinessManagementSystem.BLL
             }
             return r;
         }
+
+        public string DeleteChallan(string strPartyName, string strChallanNo, string strLCNo)
+        {
+            try
+            {
+                deleteChallanOutDataTableAdapter adp = new deleteChallanOutDataTableAdapter();
+                sprDeleteFromStockRegisterTableAdapter adp2 = new sprDeleteFromStockRegisterTableAdapter();
+                getTableTableAdapter adp3 = new getTableTableAdapter();
+
+                foreach (var x in adp3.GetTableData(strPartyName, Convert.ToInt32(strChallanNo), strLCNo))
+                {
+                    adp2.DeleteStockData(Convert.ToInt32(strChallanNo), strPartyName, x.strDetails, Convert.ToInt32(x.intQuantity));
+                }
+
+                adp.DeleteChallanOutData(Convert.ToInt32(strChallanNo), strPartyName, strLCNo);
+
+                return "Delete Successfully";
+            }
+            catch(Exception e)
+            {
+                return "The Challan is not delete Successfully !!!";
+            }
+        }
     }
 }

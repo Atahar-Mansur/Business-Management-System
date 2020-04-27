@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ContentImages\logo.jpg" />
+    <Content Include="ContentImages\Pad.jpg" />
+    <Content Include="ContentImages\PadWithSignature.jpg" />
+    <Content Include="ContentImages\WaterMark.jpg" />
     <Content Include="HomePage.aspx" />
     <Content Include="UI\Client.aspx" />
     <Content Include="UI\CurrentBalance.aspx" />
@@ -269,6 +273,7 @@
     </Content>
     <Content Include="MasterPage.Master" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -277,7 +282,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ContentImages\" />
     <Folder Include="UI\ProductImage\" />
   </ItemGroup>
   <PropertyGroup>
