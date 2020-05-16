@@ -7,126 +7,144 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BusinessManagementSystem {
+namespace BusinessManagementSystem.UI {
     
     
-    public partial class MasterPage {
+    public partial class Bill {
         
         /// <summary>
-        /// head control.
+        /// frmChallanIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmChallanIn;
         
         /// <summary>
-        /// logo control.
+        /// lblBillNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image logo;
+        protected global::System.Web.UI.WebControls.Label lblBillNo;
         
         /// <summary>
-        /// HomePageURL control.
+        /// txtBillDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HomePageURL;
+        protected global::System.Web.UI.WebControls.TextBox txtBillDate;
         
         /// <summary>
-        /// AddClientURL control.
+        /// txtBOE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AddClientURL;
+        protected global::System.Web.UI.WebControls.TextBox txtBOE;
         
         /// <summary>
-        /// AddProductURL control.
+        /// drpChallanInName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AddProductURL;
+        protected global::System.Web.UI.WebControls.DropDownList drpChallanInName;
         
         /// <summary>
-        /// StockRegisterURL control.
+        /// txtChallanInAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink StockRegisterURL;
+        protected global::System.Web.UI.WebControls.TextBox txtChallanInAddress;
         
         /// <summary>
-        /// CurrentBalanceURL control.
+        /// drpChallanNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CurrentBalanceURL;
+        protected global::System.Web.UI.WebControls.DropDownList drpChallanNo;
         
         /// <summary>
-        /// InChallanURL control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink InChallanURL;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
         
         /// <summary>
-        /// OutChallanURL control.
+        /// hdnChallanNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink OutChallanURL;
+        protected global::System.Web.UI.WebControls.Label hdnChallanNo;
         
         /// <summary>
-        /// PrintChallanURL control.
+        /// dgv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PrintChallanURL;
+        protected global::System.Web.UI.WebControls.GridView dgv;
         
         /// <summary>
-        /// BillURL control.
+        /// divTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink BillURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divTotal;
         
         /// <summary>
-        /// PrintBillURL control.
+        /// lblTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PrintBillURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblTotal;
         
         /// <summary>
-        /// body control.
+        /// drpCurrency control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder body;
+        protected global::System.Web.UI.WebControls.DropDownList drpCurrency;
+        
+        /// <summary>
+        /// txtRemark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRemark;
+        
+        /// <summary>
+        /// btnCreateChallan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCreateChallan;
     }
 }

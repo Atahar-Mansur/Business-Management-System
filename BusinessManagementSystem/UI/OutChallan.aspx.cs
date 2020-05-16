@@ -158,5 +158,10 @@ namespace BusinessManagementSystem.UI
         {
             lblCurrentBalance.Text = objData.GetCurrentBalance(drpDetails.Text);
         }
+
+        protected void drpChallanInName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtChallanInAddress.Text = objData.GetClientAddress(drpChallanInName.Text);
+        }
     }
 }

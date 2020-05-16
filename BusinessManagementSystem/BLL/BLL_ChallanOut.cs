@@ -89,5 +89,16 @@ namespace BusinessManagementSystem.BLL
             }
             return strCurrentBalance;
         }
+
+        public string GetClientAddress(string strPartyName)
+        {
+            getClientAddressTableAdapter adp = new getClientAddressTableAdapter();
+            string strClientAddress = "";
+            foreach (var x in adp.GetAddressData(strPartyName))
+            {
+                strClientAddress = x.strAddress;
+            }
+            return strClientAddress;
+        }
     }
 }

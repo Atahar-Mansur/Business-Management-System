@@ -69,9 +69,11 @@
   <ItemGroup>
     <Content Include="ContentImages\logo.jpg" />
     <Content Include="ContentImages\Pad.jpg" />
+    <Content Include="ContentImages\PadBill.jpg" />
     <Content Include="ContentImages\PadWithSignature.jpg" />
     <Content Include="ContentImages\WaterMark.jpg" />
     <Content Include="HomePage.aspx" />
+    <Content Include="UI\Bill.aspx" />
     <Content Include="UI\Client.aspx" />
     <Content Include="UI\CurrentBalance.aspx" />
     <Content Include="UI\InChallan.aspx" />
@@ -82,6 +84,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL_Bill.cs" />
     <Compile Include="BLL\BLL_ChallanIn.cs" />
     <Compile Include="BLL\BLL_ChallanOut.cs" />
     <Compile Include="BLL\BLL_CurrentBalance.cs" />
@@ -89,6 +92,11 @@
     <Compile Include="BLL\BLL_NewProduct.cs" />
     <Compile Include="BLL\BLL_PrintChallan.cs" />
     <Compile Include="BLL\BLL_StockRegister.cs" />
+    <Compile Include="DAL\DAL_Bill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL_Bill.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAL\DAL_ChallanIn.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,11 +146,19 @@
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="Object\objBill.cs" />
     <Compile Include="Object\ChallanIn.cs" />
     <Compile Include="Object\ChallanOut.cs" />
     <Compile Include="Object\NewClient.cs" />
     <Compile Include="Object\NewProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Bill.aspx.cs">
+      <DependentUpon>Bill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Bill.aspx.designer.cs">
+      <DependentUpon>Bill.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\Client.aspx.cs">
       <DependentUpon>Client.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,6 +212,17 @@
   <ItemGroup>
     <Content Include="DAL\DAL_ChallanIn.xsc">
       <DependentUpon>DAL_ChallanIn.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\DAL_Bill.xsc">
+      <DependentUpon>DAL_Bill.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\DAL_Bill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAL_Bill.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\DAL_Bill.xss">
+      <DependentUpon>DAL_Bill.xsd</DependentUpon>
     </Content>
     <None Include="DAL\DAL_ChallanIn.xsd">
       <SubType>Designer</SubType>

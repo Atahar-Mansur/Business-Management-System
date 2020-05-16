@@ -46,7 +46,7 @@
                         <label class="text-dark">Name:</label>
                     </div>
                     <div class="col-md-11">
-                        <asp:DropDownList ID="drpChallanInName" runat="server" CssClass="form-control"></asp:DropDownList>
+                        <asp:DropDownList ID="drpChallanInName" runat="server" CssClass="form-control" AutoPostBack = "true" OnSelectedIndexChanged="drpChallanInName_SelectedIndexChanged"></asp:DropDownList>
                     </div>
                 </div>
                 <div class="row">
