@@ -20,29 +20,29 @@ namespace BusinessManagementSystem.DAL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DAL_PrintChallan")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DAL_PrintBill")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DAL_PrintChallan : global::System.Data.DataSet {
+    public partial class DAL_PrintBill : global::System.Data.DataSet {
         
-        private tblChallanOutDataTable tabletblChallanOut;
+        private tblBillDataTable tabletblBill;
         
-        private tblChallanOut1DataTable tabletblChallanOut1;
+        private tblBill1DataTable tabletblBill1;
         
-        private tblChallanOut2DataTable tabletblChallanOut2;
+        private tblBill2DataTable tabletblBill2;
+        
+        private tblBill3DataTable tabletblBill3;
         
         private DataTable1DataTable tableDataTable1;
         
-        private tblChallanOut3DataTable tabletblChallanOut3;
+        private tblDeletedBillDataTable tabletblDeletedBill;
         
-        private sprDeleteFromStockRegisterDataTable tablesprDeleteFromStockRegister;
-        
-        private tblDeletedChallanDataTable tabletblDeletedChallan;
+        private tblBill4DataTable tabletblBill4;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DAL_PrintChallan() {
+        public DAL_PrintBill() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -53,7 +53,7 @@ namespace BusinessManagementSystem.DAL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DAL_PrintChallan(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DAL_PrintBill(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -66,26 +66,26 @@ namespace BusinessManagementSystem.DAL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["tblChallanOut"] != null)) {
-                    base.Tables.Add(new tblChallanOutDataTable(ds.Tables["tblChallanOut"]));
+                if ((ds.Tables["tblBill"] != null)) {
+                    base.Tables.Add(new tblBillDataTable(ds.Tables["tblBill"]));
                 }
-                if ((ds.Tables["tblChallanOut1"] != null)) {
-                    base.Tables.Add(new tblChallanOut1DataTable(ds.Tables["tblChallanOut1"]));
+                if ((ds.Tables["tblBill1"] != null)) {
+                    base.Tables.Add(new tblBill1DataTable(ds.Tables["tblBill1"]));
                 }
-                if ((ds.Tables["tblChallanOut2"] != null)) {
-                    base.Tables.Add(new tblChallanOut2DataTable(ds.Tables["tblChallanOut2"]));
+                if ((ds.Tables["tblBill2"] != null)) {
+                    base.Tables.Add(new tblBill2DataTable(ds.Tables["tblBill2"]));
+                }
+                if ((ds.Tables["tblBill3"] != null)) {
+                    base.Tables.Add(new tblBill3DataTable(ds.Tables["tblBill3"]));
                 }
                 if ((ds.Tables["DataTable1"] != null)) {
                     base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
                 }
-                if ((ds.Tables["tblChallanOut3"] != null)) {
-                    base.Tables.Add(new tblChallanOut3DataTable(ds.Tables["tblChallanOut3"]));
+                if ((ds.Tables["tblDeletedBill"] != null)) {
+                    base.Tables.Add(new tblDeletedBillDataTable(ds.Tables["tblDeletedBill"]));
                 }
-                if ((ds.Tables["sprDeleteFromStockRegister"] != null)) {
-                    base.Tables.Add(new sprDeleteFromStockRegisterDataTable(ds.Tables["sprDeleteFromStockRegister"]));
-                }
-                if ((ds.Tables["tblDeletedChallan"] != null)) {
-                    base.Tables.Add(new tblDeletedChallanDataTable(ds.Tables["tblDeletedChallan"]));
+                if ((ds.Tables["tblBill4"] != null)) {
+                    base.Tables.Add(new tblBill4DataTable(ds.Tables["tblBill4"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -109,9 +109,9 @@ namespace BusinessManagementSystem.DAL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblChallanOutDataTable tblChallanOut {
+        public tblBillDataTable tblBill {
             get {
-                return this.tabletblChallanOut;
+                return this.tabletblBill;
             }
         }
         
@@ -119,9 +119,9 @@ namespace BusinessManagementSystem.DAL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblChallanOut1DataTable tblChallanOut1 {
+        public tblBill1DataTable tblBill1 {
             get {
-                return this.tabletblChallanOut1;
+                return this.tabletblBill1;
             }
         }
         
@@ -129,9 +129,19 @@ namespace BusinessManagementSystem.DAL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblChallanOut2DataTable tblChallanOut2 {
+        public tblBill2DataTable tblBill2 {
             get {
-                return this.tabletblChallanOut2;
+                return this.tabletblBill2;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public tblBill3DataTable tblBill3 {
+            get {
+                return this.tabletblBill3;
             }
         }
         
@@ -149,9 +159,9 @@ namespace BusinessManagementSystem.DAL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblChallanOut3DataTable tblChallanOut3 {
+        public tblDeletedBillDataTable tblDeletedBill {
             get {
-                return this.tabletblChallanOut3;
+                return this.tabletblDeletedBill;
             }
         }
         
@@ -159,19 +169,9 @@ namespace BusinessManagementSystem.DAL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public sprDeleteFromStockRegisterDataTable sprDeleteFromStockRegister {
+        public tblBill4DataTable tblBill4 {
             get {
-                return this.tablesprDeleteFromStockRegister;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblDeletedChallanDataTable tblDeletedChallan {
-            get {
-                return this.tabletblDeletedChallan;
+                return this.tabletblBill4;
             }
         }
         
@@ -217,7 +217,7 @@ namespace BusinessManagementSystem.DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DAL_PrintChallan cln = ((DAL_PrintChallan)(base.Clone()));
+            DAL_PrintBill cln = ((DAL_PrintBill)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -242,26 +242,26 @@ namespace BusinessManagementSystem.DAL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["tblChallanOut"] != null)) {
-                    base.Tables.Add(new tblChallanOutDataTable(ds.Tables["tblChallanOut"]));
+                if ((ds.Tables["tblBill"] != null)) {
+                    base.Tables.Add(new tblBillDataTable(ds.Tables["tblBill"]));
                 }
-                if ((ds.Tables["tblChallanOut1"] != null)) {
-                    base.Tables.Add(new tblChallanOut1DataTable(ds.Tables["tblChallanOut1"]));
+                if ((ds.Tables["tblBill1"] != null)) {
+                    base.Tables.Add(new tblBill1DataTable(ds.Tables["tblBill1"]));
                 }
-                if ((ds.Tables["tblChallanOut2"] != null)) {
-                    base.Tables.Add(new tblChallanOut2DataTable(ds.Tables["tblChallanOut2"]));
+                if ((ds.Tables["tblBill2"] != null)) {
+                    base.Tables.Add(new tblBill2DataTable(ds.Tables["tblBill2"]));
+                }
+                if ((ds.Tables["tblBill3"] != null)) {
+                    base.Tables.Add(new tblBill3DataTable(ds.Tables["tblBill3"]));
                 }
                 if ((ds.Tables["DataTable1"] != null)) {
                     base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
                 }
-                if ((ds.Tables["tblChallanOut3"] != null)) {
-                    base.Tables.Add(new tblChallanOut3DataTable(ds.Tables["tblChallanOut3"]));
+                if ((ds.Tables["tblDeletedBill"] != null)) {
+                    base.Tables.Add(new tblDeletedBillDataTable(ds.Tables["tblDeletedBill"]));
                 }
-                if ((ds.Tables["sprDeleteFromStockRegister"] != null)) {
-                    base.Tables.Add(new sprDeleteFromStockRegisterDataTable(ds.Tables["sprDeleteFromStockRegister"]));
-                }
-                if ((ds.Tables["tblDeletedChallan"] != null)) {
-                    base.Tables.Add(new tblDeletedChallanDataTable(ds.Tables["tblDeletedChallan"]));
+                if ((ds.Tables["tblBill4"] != null)) {
+                    base.Tables.Add(new tblBill4DataTable(ds.Tables["tblBill4"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -296,22 +296,28 @@ namespace BusinessManagementSystem.DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabletblChallanOut = ((tblChallanOutDataTable)(base.Tables["tblChallanOut"]));
+            this.tabletblBill = ((tblBillDataTable)(base.Tables["tblBill"]));
             if ((initTable == true)) {
-                if ((this.tabletblChallanOut != null)) {
-                    this.tabletblChallanOut.InitVars();
+                if ((this.tabletblBill != null)) {
+                    this.tabletblBill.InitVars();
                 }
             }
-            this.tabletblChallanOut1 = ((tblChallanOut1DataTable)(base.Tables["tblChallanOut1"]));
+            this.tabletblBill1 = ((tblBill1DataTable)(base.Tables["tblBill1"]));
             if ((initTable == true)) {
-                if ((this.tabletblChallanOut1 != null)) {
-                    this.tabletblChallanOut1.InitVars();
+                if ((this.tabletblBill1 != null)) {
+                    this.tabletblBill1.InitVars();
                 }
             }
-            this.tabletblChallanOut2 = ((tblChallanOut2DataTable)(base.Tables["tblChallanOut2"]));
+            this.tabletblBill2 = ((tblBill2DataTable)(base.Tables["tblBill2"]));
             if ((initTable == true)) {
-                if ((this.tabletblChallanOut2 != null)) {
-                    this.tabletblChallanOut2.InitVars();
+                if ((this.tabletblBill2 != null)) {
+                    this.tabletblBill2.InitVars();
+                }
+            }
+            this.tabletblBill3 = ((tblBill3DataTable)(base.Tables["tblBill3"]));
+            if ((initTable == true)) {
+                if ((this.tabletblBill3 != null)) {
+                    this.tabletblBill3.InitVars();
                 }
             }
             this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
@@ -320,22 +326,16 @@ namespace BusinessManagementSystem.DAL {
                     this.tableDataTable1.InitVars();
                 }
             }
-            this.tabletblChallanOut3 = ((tblChallanOut3DataTable)(base.Tables["tblChallanOut3"]));
+            this.tabletblDeletedBill = ((tblDeletedBillDataTable)(base.Tables["tblDeletedBill"]));
             if ((initTable == true)) {
-                if ((this.tabletblChallanOut3 != null)) {
-                    this.tabletblChallanOut3.InitVars();
+                if ((this.tabletblDeletedBill != null)) {
+                    this.tabletblDeletedBill.InitVars();
                 }
             }
-            this.tablesprDeleteFromStockRegister = ((sprDeleteFromStockRegisterDataTable)(base.Tables["sprDeleteFromStockRegister"]));
+            this.tabletblBill4 = ((tblBill4DataTable)(base.Tables["tblBill4"]));
             if ((initTable == true)) {
-                if ((this.tablesprDeleteFromStockRegister != null)) {
-                    this.tablesprDeleteFromStockRegister.InitVars();
-                }
-            }
-            this.tabletblDeletedChallan = ((tblDeletedChallanDataTable)(base.Tables["tblDeletedChallan"]));
-            if ((initTable == true)) {
-                if ((this.tabletblDeletedChallan != null)) {
-                    this.tabletblDeletedChallan.InitVars();
+                if ((this.tabletblBill4 != null)) {
+                    this.tabletblBill4.InitVars();
                 }
             }
         }
@@ -343,42 +343,48 @@ namespace BusinessManagementSystem.DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DAL_PrintChallan";
+            this.DataSetName = "DAL_PrintBill";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DAL_PrintChallan.xsd";
+            this.Namespace = "http://tempuri.org/DAL_PrintBill.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabletblChallanOut = new tblChallanOutDataTable();
-            base.Tables.Add(this.tabletblChallanOut);
-            this.tabletblChallanOut1 = new tblChallanOut1DataTable();
-            base.Tables.Add(this.tabletblChallanOut1);
-            this.tabletblChallanOut2 = new tblChallanOut2DataTable();
-            base.Tables.Add(this.tabletblChallanOut2);
+            this.tabletblBill = new tblBillDataTable();
+            base.Tables.Add(this.tabletblBill);
+            this.tabletblBill1 = new tblBill1DataTable();
+            base.Tables.Add(this.tabletblBill1);
+            this.tabletblBill2 = new tblBill2DataTable();
+            base.Tables.Add(this.tabletblBill2);
+            this.tabletblBill3 = new tblBill3DataTable();
+            base.Tables.Add(this.tabletblBill3);
             this.tableDataTable1 = new DataTable1DataTable();
             base.Tables.Add(this.tableDataTable1);
-            this.tabletblChallanOut3 = new tblChallanOut3DataTable();
-            base.Tables.Add(this.tabletblChallanOut3);
-            this.tablesprDeleteFromStockRegister = new sprDeleteFromStockRegisterDataTable();
-            base.Tables.Add(this.tablesprDeleteFromStockRegister);
-            this.tabletblDeletedChallan = new tblDeletedChallanDataTable();
-            base.Tables.Add(this.tabletblDeletedChallan);
+            this.tabletblDeletedBill = new tblDeletedBillDataTable();
+            base.Tables.Add(this.tabletblDeletedBill);
+            this.tabletblBill4 = new tblBill4DataTable();
+            base.Tables.Add(this.tabletblBill4);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializetblChallanOut() {
+        private bool ShouldSerializetblBill() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializetblChallanOut1() {
+        private bool ShouldSerializetblBill1() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializetblChallanOut2() {
+        private bool ShouldSerializetblBill2() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializetblBill3() {
             return false;
         }
         
@@ -390,19 +396,13 @@ namespace BusinessManagementSystem.DAL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializetblChallanOut3() {
+        private bool ShouldSerializetblDeletedBill() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializesprDeleteFromStockRegister() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializetblDeletedChallan() {
+        private bool ShouldSerializetblBill4() {
             return false;
         }
         
@@ -417,7 +417,7 @@ namespace BusinessManagementSystem.DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DAL_PrintChallan ds = new DAL_PrintChallan();
+            DAL_PrintBill ds = new DAL_PrintBill();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -462,49 +462,47 @@ namespace BusinessManagementSystem.DAL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void tblChallanOutRowChangeEventHandler(object sender, tblChallanOutRowChangeEvent e);
+        public delegate void tblBillRowChangeEventHandler(object sender, tblBillRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void tblChallanOut1RowChangeEventHandler(object sender, tblChallanOut1RowChangeEvent e);
+        public delegate void tblBill1RowChangeEventHandler(object sender, tblBill1RowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void tblChallanOut2RowChangeEventHandler(object sender, tblChallanOut2RowChangeEvent e);
+        public delegate void tblBill2RowChangeEventHandler(object sender, tblBill2RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void tblBill3RowChangeEventHandler(object sender, tblBill3RowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void tblChallanOut3RowChangeEventHandler(object sender, tblChallanOut3RowChangeEvent e);
+        public delegate void tblDeletedBillRowChangeEventHandler(object sender, tblDeletedBillRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void sprDeleteFromStockRegisterRowChangeEventHandler(object sender, sprDeleteFromStockRegisterRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void tblDeletedChallanRowChangeEventHandler(object sender, tblDeletedChallanRowChangeEvent e);
+        public delegate void tblBill4RowChangeEventHandler(object sender, tblBill4RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tblChallanOutDataTable : global::System.Data.TypedTableBase<tblChallanOutRow> {
+        public partial class tblBillDataTable : global::System.Data.TypedTableBase<tblBillRow> {
             
-            private global::System.Data.DataColumn columnintChallanId;
+            private global::System.Data.DataColumn columnintBillId;
             
             private global::System.Data.DataColumn columnstrPartyName;
             
-            private global::System.Data.DataColumn columnstrLCNo;
+            private global::System.Data.DataColumn columndteBillDate;
             
-            private global::System.Data.DataColumn columndteChallanDate;
+            private global::System.Data.DataColumn columnstrBOE;
             
             private global::System.Data.DataColumn columnstrPartyAddress;
             
-            private global::System.Data.DataColumn columndteLCDate;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOutDataTable() {
-                this.TableName = "tblChallanOut";
+            public tblBillDataTable() {
+                this.TableName = "tblBill";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -512,7 +510,7 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblChallanOutDataTable(global::System.Data.DataTable table) {
+            internal tblBillDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -529,16 +527,16 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected tblChallanOutDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tblBillDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn intChallanIdColumn {
+            public global::System.Data.DataColumn intBillIdColumn {
                 get {
-                    return this.columnintChallanId;
+                    return this.columnintBillId;
                 }
             }
             
@@ -552,17 +550,17 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn strLCNoColumn {
+            public global::System.Data.DataColumn dteBillDateColumn {
                 get {
-                    return this.columnstrLCNo;
+                    return this.columndteBillDate;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn dteChallanDateColumn {
+            public global::System.Data.DataColumn strBOEColumn {
                 get {
-                    return this.columndteChallanDate;
+                    return this.columnstrBOE;
                 }
             }
             
@@ -571,14 +569,6 @@ namespace BusinessManagementSystem.DAL {
             public global::System.Data.DataColumn strPartyAddressColumn {
                 get {
                     return this.columnstrPartyAddress;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn dteLCDateColumn {
-                get {
-                    return this.columndteLCDate;
                 }
             }
             
@@ -593,50 +583,49 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOutRow this[int index] {
+            public tblBillRow this[int index] {
                 get {
-                    return ((tblChallanOutRow)(this.Rows[index]));
+                    return ((tblBillRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOutRowChangeEventHandler tblChallanOutRowChanging;
+            public event tblBillRowChangeEventHandler tblBillRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOutRowChangeEventHandler tblChallanOutRowChanged;
+            public event tblBillRowChangeEventHandler tblBillRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOutRowChangeEventHandler tblChallanOutRowDeleting;
+            public event tblBillRowChangeEventHandler tblBillRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOutRowChangeEventHandler tblChallanOutRowDeleted;
+            public event tblBillRowChangeEventHandler tblBillRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddtblChallanOutRow(tblChallanOutRow row) {
+            public void AddtblBillRow(tblBillRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOutRow AddtblChallanOutRow(long intChallanId, string strPartyName, string strLCNo, string dteChallanDate, string strPartyAddress, string dteLCDate) {
-                tblChallanOutRow rowtblChallanOutRow = ((tblChallanOutRow)(this.NewRow()));
+            public tblBillRow AddtblBillRow(long intBillId, string strPartyName, string dteBillDate, string strBOE, string strPartyAddress) {
+                tblBillRow rowtblBillRow = ((tblBillRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        intChallanId,
+                        intBillId,
                         strPartyName,
-                        strLCNo,
-                        dteChallanDate,
-                        strPartyAddress,
-                        dteLCDate};
-                rowtblChallanOutRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtblChallanOutRow);
-                return rowtblChallanOutRow;
+                        dteBillDate,
+                        strBOE,
+                        strPartyAddress};
+                rowtblBillRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblBillRow);
+                return rowtblBillRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tblChallanOutDataTable cln = ((tblChallanOutDataTable)(base.Clone()));
+                tblBillDataTable cln = ((tblBillDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -644,69 +633,63 @@ namespace BusinessManagementSystem.DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tblChallanOutDataTable();
+                return new tblBillDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnintChallanId = base.Columns["intChallanId"];
+                this.columnintBillId = base.Columns["intBillId"];
                 this.columnstrPartyName = base.Columns["strPartyName"];
-                this.columnstrLCNo = base.Columns["strLCNo"];
-                this.columndteChallanDate = base.Columns["dteChallanDate"];
+                this.columndteBillDate = base.Columns["dteBillDate"];
+                this.columnstrBOE = base.Columns["strBOE"];
                 this.columnstrPartyAddress = base.Columns["strPartyAddress"];
-                this.columndteLCDate = base.Columns["dteLCDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnintChallanId = new global::System.Data.DataColumn("intChallanId", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnintChallanId);
+                this.columnintBillId = new global::System.Data.DataColumn("intBillId", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnintBillId);
                 this.columnstrPartyName = new global::System.Data.DataColumn("strPartyName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstrPartyName);
-                this.columnstrLCNo = new global::System.Data.DataColumn("strLCNo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstrLCNo);
-                this.columndteChallanDate = new global::System.Data.DataColumn("dteChallanDate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndteChallanDate);
+                this.columndteBillDate = new global::System.Data.DataColumn("dteBillDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndteBillDate);
+                this.columnstrBOE = new global::System.Data.DataColumn("strBOE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstrBOE);
                 this.columnstrPartyAddress = new global::System.Data.DataColumn("strPartyAddress", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstrPartyAddress);
-                this.columndteLCDate = new global::System.Data.DataColumn("dteLCDate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndteLCDate);
-                this.columnintChallanId.AllowDBNull = false;
                 this.columnstrPartyName.MaxLength = 1000;
-                this.columnstrLCNo.MaxLength = 1000;
-                this.columndteChallanDate.ReadOnly = true;
-                this.columndteChallanDate.MaxLength = 4000;
+                this.columndteBillDate.ReadOnly = true;
+                this.columndteBillDate.MaxLength = 4000;
+                this.columnstrBOE.MaxLength = 1000;
                 this.columnstrPartyAddress.MaxLength = 1000;
-                this.columndteLCDate.ReadOnly = true;
-                this.columndteLCDate.MaxLength = 4000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOutRow NewtblChallanOutRow() {
-                return ((tblChallanOutRow)(this.NewRow()));
+            public tblBillRow NewtblBillRow() {
+                return ((tblBillRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tblChallanOutRow(builder);
+                return new tblBillRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tblChallanOutRow);
+                return typeof(tblBillRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tblChallanOutRowChanged != null)) {
-                    this.tblChallanOutRowChanged(this, new tblChallanOutRowChangeEvent(((tblChallanOutRow)(e.Row)), e.Action));
+                if ((this.tblBillRowChanged != null)) {
+                    this.tblBillRowChanged(this, new tblBillRowChangeEvent(((tblBillRow)(e.Row)), e.Action));
                 }
             }
             
@@ -714,8 +697,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tblChallanOutRowChanging != null)) {
-                    this.tblChallanOutRowChanging(this, new tblChallanOutRowChangeEvent(((tblChallanOutRow)(e.Row)), e.Action));
+                if ((this.tblBillRowChanging != null)) {
+                    this.tblBillRowChanging(this, new tblBillRowChangeEvent(((tblBillRow)(e.Row)), e.Action));
                 }
             }
             
@@ -723,8 +706,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tblChallanOutRowDeleted != null)) {
-                    this.tblChallanOutRowDeleted(this, new tblChallanOutRowChangeEvent(((tblChallanOutRow)(e.Row)), e.Action));
+                if ((this.tblBillRowDeleted != null)) {
+                    this.tblBillRowDeleted(this, new tblBillRowChangeEvent(((tblBillRow)(e.Row)), e.Action));
                 }
             }
             
@@ -732,14 +715,14 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tblChallanOutRowDeleting != null)) {
-                    this.tblChallanOutRowDeleting(this, new tblChallanOutRowChangeEvent(((tblChallanOutRow)(e.Row)), e.Action));
+                if ((this.tblBillRowDeleting != null)) {
+                    this.tblBillRowDeleting(this, new tblBillRowChangeEvent(((tblBillRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovetblChallanOutRow(tblChallanOutRow row) {
+            public void RemovetblBillRow(tblBillRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -748,7 +731,7 @@ namespace BusinessManagementSystem.DAL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DAL_PrintChallan ds = new DAL_PrintChallan();
+                DAL_PrintBill ds = new DAL_PrintBill();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -766,7 +749,7 @@ namespace BusinessManagementSystem.DAL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tblChallanOutDataTable";
+                attribute2.FixedValue = "tblBillDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -812,18 +795,22 @@ namespace BusinessManagementSystem.DAL {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tblChallanOut1DataTable : global::System.Data.TypedTableBase<tblChallanOut1Row> {
+        public partial class tblBill1DataTable : global::System.Data.TypedTableBase<tblBill1Row> {
+            
+            private global::System.Data.DataColumn columnintChallanId;
             
             private global::System.Data.DataColumn columnstrDetails;
             
             private global::System.Data.DataColumn columnintQuantity;
             
-            private global::System.Data.DataColumn columnstrRemarks;
+            private global::System.Data.DataColumn columnmonPrice;
+            
+            private global::System.Data.DataColumn columnmonTotalPrice;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut1DataTable() {
-                this.TableName = "tblChallanOut1";
+            public tblBill1DataTable() {
+                this.TableName = "tblBill1";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -831,7 +818,7 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblChallanOut1DataTable(global::System.Data.DataTable table) {
+            internal tblBill1DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -848,9 +835,17 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected tblChallanOut1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tblBill1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn intChallanIdColumn {
+                get {
+                    return this.columnintChallanId;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -871,9 +866,17 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn strRemarksColumn {
+            public global::System.Data.DataColumn monPriceColumn {
                 get {
-                    return this.columnstrRemarks;
+                    return this.columnmonPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn monTotalPriceColumn {
+                get {
+                    return this.columnmonTotalPrice;
                 }
             }
             
@@ -888,47 +891,49 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut1Row this[int index] {
+            public tblBill1Row this[int index] {
                 get {
-                    return ((tblChallanOut1Row)(this.Rows[index]));
+                    return ((tblBill1Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut1RowChangeEventHandler tblChallanOut1RowChanging;
+            public event tblBill1RowChangeEventHandler tblBill1RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut1RowChangeEventHandler tblChallanOut1RowChanged;
+            public event tblBill1RowChangeEventHandler tblBill1RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut1RowChangeEventHandler tblChallanOut1RowDeleting;
+            public event tblBill1RowChangeEventHandler tblBill1RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut1RowChangeEventHandler tblChallanOut1RowDeleted;
+            public event tblBill1RowChangeEventHandler tblBill1RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddtblChallanOut1Row(tblChallanOut1Row row) {
+            public void AddtblBill1Row(tblBill1Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut1Row AddtblChallanOut1Row(string strDetails, long intQuantity, string strRemarks) {
-                tblChallanOut1Row rowtblChallanOut1Row = ((tblChallanOut1Row)(this.NewRow()));
+            public tblBill1Row AddtblBill1Row(long intChallanId, string strDetails, long intQuantity, double monPrice, double monTotalPrice) {
+                tblBill1Row rowtblBill1Row = ((tblBill1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        intChallanId,
                         strDetails,
                         intQuantity,
-                        strRemarks};
-                rowtblChallanOut1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtblChallanOut1Row);
-                return rowtblChallanOut1Row;
+                        monPrice,
+                        monTotalPrice};
+                rowtblBill1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblBill1Row);
+                return rowtblBill1Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tblChallanOut1DataTable cln = ((tblChallanOut1DataTable)(base.Clone()));
+                tblBill1DataTable cln = ((tblBill1DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -936,54 +941,60 @@ namespace BusinessManagementSystem.DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tblChallanOut1DataTable();
+                return new tblBill1DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
+                this.columnintChallanId = base.Columns["intChallanId"];
                 this.columnstrDetails = base.Columns["strDetails"];
                 this.columnintQuantity = base.Columns["intQuantity"];
-                this.columnstrRemarks = base.Columns["strRemarks"];
+                this.columnmonPrice = base.Columns["monPrice"];
+                this.columnmonTotalPrice = base.Columns["monTotalPrice"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
+                this.columnintChallanId = new global::System.Data.DataColumn("intChallanId", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnintChallanId);
                 this.columnstrDetails = new global::System.Data.DataColumn("strDetails", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstrDetails);
                 this.columnintQuantity = new global::System.Data.DataColumn("intQuantity", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnintQuantity);
-                this.columnstrRemarks = new global::System.Data.DataColumn("strRemarks", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstrRemarks);
+                this.columnmonPrice = new global::System.Data.DataColumn("monPrice", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmonPrice);
+                this.columnmonTotalPrice = new global::System.Data.DataColumn("monTotalPrice", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmonTotalPrice);
+                this.columnintChallanId.AllowDBNull = false;
                 this.columnstrDetails.MaxLength = 1000;
-                this.columnstrRemarks.MaxLength = 1000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut1Row NewtblChallanOut1Row() {
-                return ((tblChallanOut1Row)(this.NewRow()));
+            public tblBill1Row NewtblBill1Row() {
+                return ((tblBill1Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tblChallanOut1Row(builder);
+                return new tblBill1Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tblChallanOut1Row);
+                return typeof(tblBill1Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tblChallanOut1RowChanged != null)) {
-                    this.tblChallanOut1RowChanged(this, new tblChallanOut1RowChangeEvent(((tblChallanOut1Row)(e.Row)), e.Action));
+                if ((this.tblBill1RowChanged != null)) {
+                    this.tblBill1RowChanged(this, new tblBill1RowChangeEvent(((tblBill1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -991,8 +1002,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tblChallanOut1RowChanging != null)) {
-                    this.tblChallanOut1RowChanging(this, new tblChallanOut1RowChangeEvent(((tblChallanOut1Row)(e.Row)), e.Action));
+                if ((this.tblBill1RowChanging != null)) {
+                    this.tblBill1RowChanging(this, new tblBill1RowChangeEvent(((tblBill1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -1000,8 +1011,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tblChallanOut1RowDeleted != null)) {
-                    this.tblChallanOut1RowDeleted(this, new tblChallanOut1RowChangeEvent(((tblChallanOut1Row)(e.Row)), e.Action));
+                if ((this.tblBill1RowDeleted != null)) {
+                    this.tblBill1RowDeleted(this, new tblBill1RowChangeEvent(((tblBill1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -1009,14 +1020,14 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tblChallanOut1RowDeleting != null)) {
-                    this.tblChallanOut1RowDeleting(this, new tblChallanOut1RowChangeEvent(((tblChallanOut1Row)(e.Row)), e.Action));
+                if ((this.tblBill1RowDeleting != null)) {
+                    this.tblBill1RowDeleting(this, new tblBill1RowChangeEvent(((tblBill1Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovetblChallanOut1Row(tblChallanOut1Row row) {
+            public void RemovetblBill1Row(tblBill1Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -1025,7 +1036,7 @@ namespace BusinessManagementSystem.DAL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DAL_PrintChallan ds = new DAL_PrintChallan();
+                DAL_PrintBill ds = new DAL_PrintBill();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1043,7 +1054,7 @@ namespace BusinessManagementSystem.DAL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tblChallanOut1DataTable";
+                attribute2.FixedValue = "tblBill1DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1089,14 +1100,14 @@ namespace BusinessManagementSystem.DAL {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tblChallanOut2DataTable : global::System.Data.TypedTableBase<tblChallanOut2Row> {
+        public partial class tblBill2DataTable : global::System.Data.TypedTableBase<tblBill2Row> {
             
-            private global::System.Data.DataColumn columnstrPurchNo;
+            private global::System.Data.DataColumn columnstrCurrency;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut2DataTable() {
-                this.TableName = "tblChallanOut2";
+            public tblBill2DataTable() {
+                this.TableName = "tblBill2";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1104,7 +1115,7 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblChallanOut2DataTable(global::System.Data.DataTable table) {
+            internal tblBill2DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1121,16 +1132,16 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected tblChallanOut2DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tblBill2DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn strPurchNoColumn {
+            public global::System.Data.DataColumn strCurrencyColumn {
                 get {
-                    return this.columnstrPurchNo;
+                    return this.columnstrCurrency;
                 }
             }
             
@@ -1145,45 +1156,45 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut2Row this[int index] {
+            public tblBill2Row this[int index] {
                 get {
-                    return ((tblChallanOut2Row)(this.Rows[index]));
+                    return ((tblBill2Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut2RowChangeEventHandler tblChallanOut2RowChanging;
+            public event tblBill2RowChangeEventHandler tblBill2RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut2RowChangeEventHandler tblChallanOut2RowChanged;
+            public event tblBill2RowChangeEventHandler tblBill2RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut2RowChangeEventHandler tblChallanOut2RowDeleting;
+            public event tblBill2RowChangeEventHandler tblBill2RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut2RowChangeEventHandler tblChallanOut2RowDeleted;
+            public event tblBill2RowChangeEventHandler tblBill2RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddtblChallanOut2Row(tblChallanOut2Row row) {
+            public void AddtblBill2Row(tblBill2Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut2Row AddtblChallanOut2Row(string strPurchNo) {
-                tblChallanOut2Row rowtblChallanOut2Row = ((tblChallanOut2Row)(this.NewRow()));
+            public tblBill2Row AddtblBill2Row(string strCurrency) {
+                tblBill2Row rowtblBill2Row = ((tblBill2Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        strPurchNo};
-                rowtblChallanOut2Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtblChallanOut2Row);
-                return rowtblChallanOut2Row;
+                        strCurrency};
+                rowtblBill2Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblBill2Row);
+                return rowtblBill2Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tblChallanOut2DataTable cln = ((tblChallanOut2DataTable)(base.Clone()));
+                tblBill2DataTable cln = ((tblBill2DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1191,47 +1202,47 @@ namespace BusinessManagementSystem.DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tblChallanOut2DataTable();
+                return new tblBill2DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnstrPurchNo = base.Columns["strPurchNo"];
+                this.columnstrCurrency = base.Columns["strCurrency"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnstrPurchNo = new global::System.Data.DataColumn("strPurchNo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstrPurchNo);
-                this.columnstrPurchNo.MaxLength = 1000;
+                this.columnstrCurrency = new global::System.Data.DataColumn("strCurrency", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstrCurrency);
+                this.columnstrCurrency.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut2Row NewtblChallanOut2Row() {
-                return ((tblChallanOut2Row)(this.NewRow()));
+            public tblBill2Row NewtblBill2Row() {
+                return ((tblBill2Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tblChallanOut2Row(builder);
+                return new tblBill2Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tblChallanOut2Row);
+                return typeof(tblBill2Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tblChallanOut2RowChanged != null)) {
-                    this.tblChallanOut2RowChanged(this, new tblChallanOut2RowChangeEvent(((tblChallanOut2Row)(e.Row)), e.Action));
+                if ((this.tblBill2RowChanged != null)) {
+                    this.tblBill2RowChanged(this, new tblBill2RowChangeEvent(((tblBill2Row)(e.Row)), e.Action));
                 }
             }
             
@@ -1239,8 +1250,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tblChallanOut2RowChanging != null)) {
-                    this.tblChallanOut2RowChanging(this, new tblChallanOut2RowChangeEvent(((tblChallanOut2Row)(e.Row)), e.Action));
+                if ((this.tblBill2RowChanging != null)) {
+                    this.tblBill2RowChanging(this, new tblBill2RowChangeEvent(((tblBill2Row)(e.Row)), e.Action));
                 }
             }
             
@@ -1248,8 +1259,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tblChallanOut2RowDeleted != null)) {
-                    this.tblChallanOut2RowDeleted(this, new tblChallanOut2RowChangeEvent(((tblChallanOut2Row)(e.Row)), e.Action));
+                if ((this.tblBill2RowDeleted != null)) {
+                    this.tblBill2RowDeleted(this, new tblBill2RowChangeEvent(((tblBill2Row)(e.Row)), e.Action));
                 }
             }
             
@@ -1257,14 +1268,14 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tblChallanOut2RowDeleting != null)) {
-                    this.tblChallanOut2RowDeleting(this, new tblChallanOut2RowChangeEvent(((tblChallanOut2Row)(e.Row)), e.Action));
+                if ((this.tblBill2RowDeleting != null)) {
+                    this.tblBill2RowDeleting(this, new tblBill2RowChangeEvent(((tblBill2Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovetblChallanOut2Row(tblChallanOut2Row row) {
+            public void RemovetblBill2Row(tblBill2Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -1273,7 +1284,7 @@ namespace BusinessManagementSystem.DAL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DAL_PrintChallan ds = new DAL_PrintChallan();
+                DAL_PrintBill ds = new DAL_PrintBill();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1291,7 +1302,255 @@ namespace BusinessManagementSystem.DAL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tblChallanOut2DataTable";
+                attribute2.FixedValue = "tblBill2DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class tblBill3DataTable : global::System.Data.TypedTableBase<tblBill3Row> {
+            
+            private global::System.Data.DataColumn columnintChallanId;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tblBill3DataTable() {
+                this.TableName = "tblBill3";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal tblBill3DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected tblBill3DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn intChallanIdColumn {
+                get {
+                    return this.columnintChallanId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tblBill3Row this[int index] {
+                get {
+                    return ((tblBill3Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tblBill3RowChangeEventHandler tblBill3RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tblBill3RowChangeEventHandler tblBill3RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tblBill3RowChangeEventHandler tblBill3RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tblBill3RowChangeEventHandler tblBill3RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddtblBill3Row(tblBill3Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tblBill3Row AddtblBill3Row(long intChallanId) {
+                tblBill3Row rowtblBill3Row = ((tblBill3Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        intChallanId};
+                rowtblBill3Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblBill3Row);
+                return rowtblBill3Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                tblBill3DataTable cln = ((tblBill3DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new tblBill3DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnintChallanId = base.Columns["intChallanId"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnintChallanId = new global::System.Data.DataColumn("intChallanId", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnintChallanId);
+                this.columnintChallanId.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tblBill3Row NewtblBill3Row() {
+                return ((tblBill3Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new tblBill3Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(tblBill3Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.tblBill3RowChanged != null)) {
+                    this.tblBill3RowChanged(this, new tblBill3RowChangeEvent(((tblBill3Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.tblBill3RowChanging != null)) {
+                    this.tblBill3RowChanging(this, new tblBill3RowChangeEvent(((tblBill3Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.tblBill3RowDeleted != null)) {
+                    this.tblBill3RowDeleted(this, new tblBill3RowChangeEvent(((tblBill3Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.tblBill3RowDeleting != null)) {
+                    this.tblBill3RowDeleting(this, new tblBill3RowChangeEvent(((tblBill3Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemovetblBill3Row(tblBill3Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DAL_PrintBill ds = new DAL_PrintBill();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "tblBill3DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1339,7 +1598,7 @@ namespace BusinessManagementSystem.DAL {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columndtePurchDate;
+            private global::System.Data.DataColumn columndteChallanDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -1376,9 +1635,9 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn dtePurchDateColumn {
+            public global::System.Data.DataColumn dteChallanDateColumn {
                 get {
-                    return this.columndtePurchDate;
+                    return this.columndteChallanDate;
                 }
             }
             
@@ -1419,10 +1678,10 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string dtePurchDate) {
+            public DataTable1Row AddDataTable1Row(string dteChallanDate) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        dtePurchDate};
+                        dteChallanDate};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -1445,16 +1704,16 @@ namespace BusinessManagementSystem.DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columndtePurchDate = base.Columns["dtePurchDate"];
+                this.columndteChallanDate = base.Columns["dteChallanDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columndtePurchDate = new global::System.Data.DataColumn("dtePurchDate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndtePurchDate);
-                this.columndtePurchDate.ReadOnly = true;
-                this.columndtePurchDate.MaxLength = 4000;
+                this.columndteChallanDate = new global::System.Data.DataColumn("dteChallanDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndteChallanDate);
+                this.columndteChallanDate.ReadOnly = true;
+                this.columndteChallanDate.MaxLength = 4000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1522,7 +1781,7 @@ namespace BusinessManagementSystem.DAL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DAL_PrintChallan ds = new DAL_PrintChallan();
+                DAL_PrintBill ds = new DAL_PrintBill();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1586,12 +1845,12 @@ namespace BusinessManagementSystem.DAL {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tblChallanOut3DataTable : global::System.Data.TypedTableBase<tblChallanOut3Row> {
+        public partial class tblDeletedBillDataTable : global::System.Data.TypedTableBase<tblDeletedBillRow> {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut3DataTable() {
-                this.TableName = "tblChallanOut3";
+            public tblDeletedBillDataTable() {
+                this.TableName = "tblDeletedBill";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1599,7 +1858,7 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblChallanOut3DataTable(global::System.Data.DataTable table) {
+            internal tblDeletedBillDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1616,7 +1875,7 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected tblChallanOut3DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tblDeletedBillDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1632,44 +1891,44 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut3Row this[int index] {
+            public tblDeletedBillRow this[int index] {
                 get {
-                    return ((tblChallanOut3Row)(this.Rows[index]));
+                    return ((tblDeletedBillRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut3RowChangeEventHandler tblChallanOut3RowChanging;
+            public event tblDeletedBillRowChangeEventHandler tblDeletedBillRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut3RowChangeEventHandler tblChallanOut3RowChanged;
+            public event tblDeletedBillRowChangeEventHandler tblDeletedBillRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut3RowChangeEventHandler tblChallanOut3RowDeleting;
+            public event tblDeletedBillRowChangeEventHandler tblDeletedBillRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblChallanOut3RowChangeEventHandler tblChallanOut3RowDeleted;
+            public event tblDeletedBillRowChangeEventHandler tblDeletedBillRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddtblChallanOut3Row(tblChallanOut3Row row) {
+            public void AddtblDeletedBillRow(tblDeletedBillRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut3Row AddtblChallanOut3Row() {
-                tblChallanOut3Row rowtblChallanOut3Row = ((tblChallanOut3Row)(this.NewRow()));
+            public tblDeletedBillRow AddtblDeletedBillRow() {
+                tblDeletedBillRow rowtblDeletedBillRow = ((tblDeletedBillRow)(this.NewRow()));
                 object[] columnValuesArray = new object[0];
-                rowtblChallanOut3Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtblChallanOut3Row);
-                return rowtblChallanOut3Row;
+                rowtblDeletedBillRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblDeletedBillRow);
+                return rowtblDeletedBillRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tblChallanOut3DataTable cln = ((tblChallanOut3DataTable)(base.Clone()));
+                tblDeletedBillDataTable cln = ((tblDeletedBillDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1677,7 +1936,7 @@ namespace BusinessManagementSystem.DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tblChallanOut3DataTable();
+                return new tblDeletedBillDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1692,28 +1951,28 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut3Row NewtblChallanOut3Row() {
-                return ((tblChallanOut3Row)(this.NewRow()));
+            public tblDeletedBillRow NewtblDeletedBillRow() {
+                return ((tblDeletedBillRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tblChallanOut3Row(builder);
+                return new tblDeletedBillRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tblChallanOut3Row);
+                return typeof(tblDeletedBillRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tblChallanOut3RowChanged != null)) {
-                    this.tblChallanOut3RowChanged(this, new tblChallanOut3RowChangeEvent(((tblChallanOut3Row)(e.Row)), e.Action));
+                if ((this.tblDeletedBillRowChanged != null)) {
+                    this.tblDeletedBillRowChanged(this, new tblDeletedBillRowChangeEvent(((tblDeletedBillRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1721,8 +1980,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tblChallanOut3RowChanging != null)) {
-                    this.tblChallanOut3RowChanging(this, new tblChallanOut3RowChangeEvent(((tblChallanOut3Row)(e.Row)), e.Action));
+                if ((this.tblDeletedBillRowChanging != null)) {
+                    this.tblDeletedBillRowChanging(this, new tblDeletedBillRowChangeEvent(((tblDeletedBillRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1730,8 +1989,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tblChallanOut3RowDeleted != null)) {
-                    this.tblChallanOut3RowDeleted(this, new tblChallanOut3RowChangeEvent(((tblChallanOut3Row)(e.Row)), e.Action));
+                if ((this.tblDeletedBillRowDeleted != null)) {
+                    this.tblDeletedBillRowDeleted(this, new tblDeletedBillRowChangeEvent(((tblDeletedBillRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1739,14 +1998,14 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tblChallanOut3RowDeleting != null)) {
-                    this.tblChallanOut3RowDeleting(this, new tblChallanOut3RowChangeEvent(((tblChallanOut3Row)(e.Row)), e.Action));
+                if ((this.tblDeletedBillRowDeleting != null)) {
+                    this.tblDeletedBillRowDeleting(this, new tblDeletedBillRowChangeEvent(((tblDeletedBillRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovetblChallanOut3Row(tblChallanOut3Row row) {
+            public void RemovetblDeletedBillRow(tblDeletedBillRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1755,7 +2014,7 @@ namespace BusinessManagementSystem.DAL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DAL_PrintChallan ds = new DAL_PrintChallan();
+                DAL_PrintBill ds = new DAL_PrintBill();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1773,7 +2032,7 @@ namespace BusinessManagementSystem.DAL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tblChallanOut3DataTable";
+                attribute2.FixedValue = "tblDeletedBillDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1819,12 +2078,12 @@ namespace BusinessManagementSystem.DAL {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class sprDeleteFromStockRegisterDataTable : global::System.Data.TypedTableBase<sprDeleteFromStockRegisterRow> {
+        public partial class tblBill4DataTable : global::System.Data.TypedTableBase<tblBill4Row> {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sprDeleteFromStockRegisterDataTable() {
-                this.TableName = "sprDeleteFromStockRegister";
+            public tblBill4DataTable() {
+                this.TableName = "tblBill4";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1832,7 +2091,7 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal sprDeleteFromStockRegisterDataTable(global::System.Data.DataTable table) {
+            internal tblBill4DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1849,7 +2108,7 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected sprDeleteFromStockRegisterDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tblBill4DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1865,44 +2124,44 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sprDeleteFromStockRegisterRow this[int index] {
+            public tblBill4Row this[int index] {
                 get {
-                    return ((sprDeleteFromStockRegisterRow)(this.Rows[index]));
+                    return ((tblBill4Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sprDeleteFromStockRegisterRowChangeEventHandler sprDeleteFromStockRegisterRowChanging;
+            public event tblBill4RowChangeEventHandler tblBill4RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sprDeleteFromStockRegisterRowChangeEventHandler sprDeleteFromStockRegisterRowChanged;
+            public event tblBill4RowChangeEventHandler tblBill4RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sprDeleteFromStockRegisterRowChangeEventHandler sprDeleteFromStockRegisterRowDeleting;
+            public event tblBill4RowChangeEventHandler tblBill4RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sprDeleteFromStockRegisterRowChangeEventHandler sprDeleteFromStockRegisterRowDeleted;
+            public event tblBill4RowChangeEventHandler tblBill4RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddsprDeleteFromStockRegisterRow(sprDeleteFromStockRegisterRow row) {
+            public void AddtblBill4Row(tblBill4Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sprDeleteFromStockRegisterRow AddsprDeleteFromStockRegisterRow() {
-                sprDeleteFromStockRegisterRow rowsprDeleteFromStockRegisterRow = ((sprDeleteFromStockRegisterRow)(this.NewRow()));
+            public tblBill4Row AddtblBill4Row() {
+                tblBill4Row rowtblBill4Row = ((tblBill4Row)(this.NewRow()));
                 object[] columnValuesArray = new object[0];
-                rowsprDeleteFromStockRegisterRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowsprDeleteFromStockRegisterRow);
-                return rowsprDeleteFromStockRegisterRow;
+                rowtblBill4Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblBill4Row);
+                return rowtblBill4Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                sprDeleteFromStockRegisterDataTable cln = ((sprDeleteFromStockRegisterDataTable)(base.Clone()));
+                tblBill4DataTable cln = ((tblBill4DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1910,7 +2169,7 @@ namespace BusinessManagementSystem.DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new sprDeleteFromStockRegisterDataTable();
+                return new tblBill4DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1925,28 +2184,28 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sprDeleteFromStockRegisterRow NewsprDeleteFromStockRegisterRow() {
-                return ((sprDeleteFromStockRegisterRow)(this.NewRow()));
+            public tblBill4Row NewtblBill4Row() {
+                return ((tblBill4Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new sprDeleteFromStockRegisterRow(builder);
+                return new tblBill4Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(sprDeleteFromStockRegisterRow);
+                return typeof(tblBill4Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.sprDeleteFromStockRegisterRowChanged != null)) {
-                    this.sprDeleteFromStockRegisterRowChanged(this, new sprDeleteFromStockRegisterRowChangeEvent(((sprDeleteFromStockRegisterRow)(e.Row)), e.Action));
+                if ((this.tblBill4RowChanged != null)) {
+                    this.tblBill4RowChanged(this, new tblBill4RowChangeEvent(((tblBill4Row)(e.Row)), e.Action));
                 }
             }
             
@@ -1954,8 +2213,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.sprDeleteFromStockRegisterRowChanging != null)) {
-                    this.sprDeleteFromStockRegisterRowChanging(this, new sprDeleteFromStockRegisterRowChangeEvent(((sprDeleteFromStockRegisterRow)(e.Row)), e.Action));
+                if ((this.tblBill4RowChanging != null)) {
+                    this.tblBill4RowChanging(this, new tblBill4RowChangeEvent(((tblBill4Row)(e.Row)), e.Action));
                 }
             }
             
@@ -1963,8 +2222,8 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.sprDeleteFromStockRegisterRowDeleted != null)) {
-                    this.sprDeleteFromStockRegisterRowDeleted(this, new sprDeleteFromStockRegisterRowChangeEvent(((sprDeleteFromStockRegisterRow)(e.Row)), e.Action));
+                if ((this.tblBill4RowDeleted != null)) {
+                    this.tblBill4RowDeleted(this, new tblBill4RowChangeEvent(((tblBill4Row)(e.Row)), e.Action));
                 }
             }
             
@@ -1972,14 +2231,14 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.sprDeleteFromStockRegisterRowDeleting != null)) {
-                    this.sprDeleteFromStockRegisterRowDeleting(this, new sprDeleteFromStockRegisterRowChangeEvent(((sprDeleteFromStockRegisterRow)(e.Row)), e.Action));
+                if ((this.tblBill4RowDeleting != null)) {
+                    this.tblBill4RowDeleting(this, new tblBill4RowChangeEvent(((tblBill4Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovesprDeleteFromStockRegisterRow(sprDeleteFromStockRegisterRow row) {
+            public void RemovetblBill4Row(tblBill4Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -1988,7 +2247,7 @@ namespace BusinessManagementSystem.DAL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DAL_PrintChallan ds = new DAL_PrintChallan();
+                DAL_PrintBill ds = new DAL_PrintBill();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2006,240 +2265,7 @@ namespace BusinessManagementSystem.DAL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "sprDeleteFromStockRegisterDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tblDeletedChallanDataTable : global::System.Data.TypedTableBase<tblDeletedChallanRow> {
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblDeletedChallanDataTable() {
-                this.TableName = "tblDeletedChallan";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblDeletedChallanDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected tblDeletedChallanDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblDeletedChallanRow this[int index] {
-                get {
-                    return ((tblDeletedChallanRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblDeletedChallanRowChangeEventHandler tblDeletedChallanRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblDeletedChallanRowChangeEventHandler tblDeletedChallanRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblDeletedChallanRowChangeEventHandler tblDeletedChallanRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tblDeletedChallanRowChangeEventHandler tblDeletedChallanRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddtblDeletedChallanRow(tblDeletedChallanRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblDeletedChallanRow AddtblDeletedChallanRow() {
-                tblDeletedChallanRow rowtblDeletedChallanRow = ((tblDeletedChallanRow)(this.NewRow()));
-                object[] columnValuesArray = new object[0];
-                rowtblDeletedChallanRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtblDeletedChallanRow);
-                return rowtblDeletedChallanRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                tblDeletedChallanDataTable cln = ((tblDeletedChallanDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new tblDeletedChallanDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblDeletedChallanRow NewtblDeletedChallanRow() {
-                return ((tblDeletedChallanRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tblDeletedChallanRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(tblDeletedChallanRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.tblDeletedChallanRowChanged != null)) {
-                    this.tblDeletedChallanRowChanged(this, new tblDeletedChallanRowChangeEvent(((tblDeletedChallanRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.tblDeletedChallanRowChanging != null)) {
-                    this.tblDeletedChallanRowChanging(this, new tblDeletedChallanRowChangeEvent(((tblDeletedChallanRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.tblDeletedChallanRowDeleted != null)) {
-                    this.tblDeletedChallanRowDeleted(this, new tblDeletedChallanRowChangeEvent(((tblDeletedChallanRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.tblDeletedChallanRowDeleting != null)) {
-                    this.tblDeletedChallanRowDeleting(this, new tblDeletedChallanRowChangeEvent(((tblDeletedChallanRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovetblDeletedChallanRow(tblDeletedChallanRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DAL_PrintChallan ds = new DAL_PrintChallan();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tblDeletedChallanDataTable";
+                attribute2.FixedValue = "tblBill4DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2283,25 +2309,30 @@ namespace BusinessManagementSystem.DAL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tblChallanOutRow : global::System.Data.DataRow {
+        public partial class tblBillRow : global::System.Data.DataRow {
             
-            private tblChallanOutDataTable tabletblChallanOut;
+            private tblBillDataTable tabletblBill;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblChallanOutRow(global::System.Data.DataRowBuilder rb) : 
+            internal tblBillRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletblChallanOut = ((tblChallanOutDataTable)(this.Table));
+                this.tabletblBill = ((tblBillDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public long intChallanId {
+            public long intBillId {
                 get {
-                    return ((long)(this[this.tabletblChallanOut.intChallanIdColumn]));
+                    try {
+                        return ((long)(this[this.tabletblBill.intBillIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'intBillId\' in table \'tblBill\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tabletblChallanOut.intChallanIdColumn] = value;
+                    this[this.tabletblBill.intBillIdColumn] = value;
                 }
             }
             
@@ -2310,46 +2341,46 @@ namespace BusinessManagementSystem.DAL {
             public string strPartyName {
                 get {
                     try {
-                        return ((string)(this[this.tabletblChallanOut.strPartyNameColumn]));
+                        return ((string)(this[this.tabletblBill.strPartyNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'strPartyName\' in table \'tblChallanOut\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'strPartyName\' in table \'tblBill\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletblChallanOut.strPartyNameColumn] = value;
+                    this[this.tabletblBill.strPartyNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string strLCNo {
+            public string dteBillDate {
                 get {
                     try {
-                        return ((string)(this[this.tabletblChallanOut.strLCNoColumn]));
+                        return ((string)(this[this.tabletblBill.dteBillDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'strLCNo\' in table \'tblChallanOut\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'dteBillDate\' in table \'tblBill\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletblChallanOut.strLCNoColumn] = value;
+                    this[this.tabletblBill.dteBillDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string dteChallanDate {
+            public string strBOE {
                 get {
                     try {
-                        return ((string)(this[this.tabletblChallanOut.dteChallanDateColumn]));
+                        return ((string)(this[this.tabletblBill.strBOEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dteChallanDate\' in table \'tblChallanOut\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'strBOE\' in table \'tblBill\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletblChallanOut.dteChallanDateColumn] = value;
+                    this[this.tabletblBill.strBOEColumn] = value;
                 }
             }
             
@@ -2358,106 +2389,101 @@ namespace BusinessManagementSystem.DAL {
             public string strPartyAddress {
                 get {
                     try {
-                        return ((string)(this[this.tabletblChallanOut.strPartyAddressColumn]));
+                        return ((string)(this[this.tabletblBill.strPartyAddressColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'strPartyAddress\' in table \'tblChallanOut\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'strPartyAddress\' in table \'tblBill\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletblChallanOut.strPartyAddressColumn] = value;
+                    this[this.tabletblBill.strPartyAddressColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string dteLCDate {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblChallanOut.dteLCDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dteLCDate\' in table \'tblChallanOut\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblChallanOut.dteLCDateColumn] = value;
-                }
+            public bool IsintBillIdNull() {
+                return this.IsNull(this.tabletblBill.intBillIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetintBillIdNull() {
+                this[this.tabletblBill.intBillIdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsstrPartyNameNull() {
-                return this.IsNull(this.tabletblChallanOut.strPartyNameColumn);
+                return this.IsNull(this.tabletblBill.strPartyNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetstrPartyNameNull() {
-                this[this.tabletblChallanOut.strPartyNameColumn] = global::System.Convert.DBNull;
+                this[this.tabletblBill.strPartyNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsstrLCNoNull() {
-                return this.IsNull(this.tabletblChallanOut.strLCNoColumn);
+            public bool IsdteBillDateNull() {
+                return this.IsNull(this.tabletblBill.dteBillDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetstrLCNoNull() {
-                this[this.tabletblChallanOut.strLCNoColumn] = global::System.Convert.DBNull;
+            public void SetdteBillDateNull() {
+                this[this.tabletblBill.dteBillDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsdteChallanDateNull() {
-                return this.IsNull(this.tabletblChallanOut.dteChallanDateColumn);
+            public bool IsstrBOENull() {
+                return this.IsNull(this.tabletblBill.strBOEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetdteChallanDateNull() {
-                this[this.tabletblChallanOut.dteChallanDateColumn] = global::System.Convert.DBNull;
+            public void SetstrBOENull() {
+                this[this.tabletblBill.strBOEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsstrPartyAddressNull() {
-                return this.IsNull(this.tabletblChallanOut.strPartyAddressColumn);
+                return this.IsNull(this.tabletblBill.strPartyAddressColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetstrPartyAddressNull() {
-                this[this.tabletblChallanOut.strPartyAddressColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsdteLCDateNull() {
-                return this.IsNull(this.tabletblChallanOut.dteLCDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetdteLCDateNull() {
-                this[this.tabletblChallanOut.dteLCDateColumn] = global::System.Convert.DBNull;
+                this[this.tabletblBill.strPartyAddressColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tblChallanOut1Row : global::System.Data.DataRow {
+        public partial class tblBill1Row : global::System.Data.DataRow {
             
-            private tblChallanOut1DataTable tabletblChallanOut1;
+            private tblBill1DataTable tabletblBill1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblChallanOut1Row(global::System.Data.DataRowBuilder rb) : 
+            internal tblBill1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletblChallanOut1 = ((tblChallanOut1DataTable)(this.Table));
+                this.tabletblBill1 = ((tblBill1DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public long intChallanId {
+                get {
+                    return ((long)(this[this.tabletblBill1.intChallanIdColumn]));
+                }
+                set {
+                    this[this.tabletblBill1.intChallanIdColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2465,14 +2491,14 @@ namespace BusinessManagementSystem.DAL {
             public string strDetails {
                 get {
                     try {
-                        return ((string)(this[this.tabletblChallanOut1.strDetailsColumn]));
+                        return ((string)(this[this.tabletblBill1.strDetailsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'strDetails\' in table \'tblChallanOut1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'strDetails\' in table \'tblBill1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletblChallanOut1.strDetailsColumn] = value;
+                    this[this.tabletblBill1.strDetailsColumn] = value;
                 }
             }
             
@@ -2481,110 +2507,164 @@ namespace BusinessManagementSystem.DAL {
             public long intQuantity {
                 get {
                     try {
-                        return ((long)(this[this.tabletblChallanOut1.intQuantityColumn]));
+                        return ((long)(this[this.tabletblBill1.intQuantityColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'intQuantity\' in table \'tblChallanOut1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'intQuantity\' in table \'tblBill1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletblChallanOut1.intQuantityColumn] = value;
+                    this[this.tabletblBill1.intQuantityColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string strRemarks {
+            public double monPrice {
                 get {
                     try {
-                        return ((string)(this[this.tabletblChallanOut1.strRemarksColumn]));
+                        return ((double)(this[this.tabletblBill1.monPriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'strRemarks\' in table \'tblChallanOut1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'monPrice\' in table \'tblBill1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletblChallanOut1.strRemarksColumn] = value;
+                    this[this.tabletblBill1.monPriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double monTotalPrice {
+                get {
+                    try {
+                        return ((double)(this[this.tabletblBill1.monTotalPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'monTotalPrice\' in table \'tblBill1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblBill1.monTotalPriceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsstrDetailsNull() {
-                return this.IsNull(this.tabletblChallanOut1.strDetailsColumn);
+                return this.IsNull(this.tabletblBill1.strDetailsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetstrDetailsNull() {
-                this[this.tabletblChallanOut1.strDetailsColumn] = global::System.Convert.DBNull;
+                this[this.tabletblBill1.strDetailsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsintQuantityNull() {
-                return this.IsNull(this.tabletblChallanOut1.intQuantityColumn);
+                return this.IsNull(this.tabletblBill1.intQuantityColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetintQuantityNull() {
-                this[this.tabletblChallanOut1.intQuantityColumn] = global::System.Convert.DBNull;
+                this[this.tabletblBill1.intQuantityColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsstrRemarksNull() {
-                return this.IsNull(this.tabletblChallanOut1.strRemarksColumn);
+            public bool IsmonPriceNull() {
+                return this.IsNull(this.tabletblBill1.monPriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetstrRemarksNull() {
-                this[this.tabletblChallanOut1.strRemarksColumn] = global::System.Convert.DBNull;
+            public void SetmonPriceNull() {
+                this[this.tabletblBill1.monPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsmonTotalPriceNull() {
+                return this.IsNull(this.tabletblBill1.monTotalPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetmonTotalPriceNull() {
+                this[this.tabletblBill1.monTotalPriceColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tblChallanOut2Row : global::System.Data.DataRow {
+        public partial class tblBill2Row : global::System.Data.DataRow {
             
-            private tblChallanOut2DataTable tabletblChallanOut2;
+            private tblBill2DataTable tabletblBill2;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblChallanOut2Row(global::System.Data.DataRowBuilder rb) : 
+            internal tblBill2Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletblChallanOut2 = ((tblChallanOut2DataTable)(this.Table));
+                this.tabletblBill2 = ((tblBill2DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string strPurchNo {
+            public string strCurrency {
                 get {
                     try {
-                        return ((string)(this[this.tabletblChallanOut2.strPurchNoColumn]));
+                        return ((string)(this[this.tabletblBill2.strCurrencyColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'strPurchNo\' in table \'tblChallanOut2\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'strCurrency\' in table \'tblBill2\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletblChallanOut2.strPurchNoColumn] = value;
+                    this[this.tabletblBill2.strCurrencyColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsstrPurchNoNull() {
-                return this.IsNull(this.tabletblChallanOut2.strPurchNoColumn);
+            public bool IsstrCurrencyNull() {
+                return this.IsNull(this.tabletblBill2.strCurrencyColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetstrPurchNoNull() {
-                this[this.tabletblChallanOut2.strPurchNoColumn] = global::System.Convert.DBNull;
+            public void SetstrCurrencyNull() {
+                this[this.tabletblBill2.strCurrencyColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class tblBill3Row : global::System.Data.DataRow {
+            
+            private tblBill3DataTable tabletblBill3;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal tblBill3Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabletblBill3 = ((tblBill3DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public long intChallanId {
+                get {
+                    return ((long)(this[this.tabletblBill3.intChallanIdColumn]));
+                }
+                set {
+                    this[this.tabletblBill3.intChallanIdColumn] = value;
+                }
             }
         }
         
@@ -2604,75 +2684,60 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string dtePurchDate {
+            public string dteChallanDate {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.dtePurchDateColumn]));
+                        return ((string)(this[this.tableDataTable1.dteChallanDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dtePurchDate\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'dteChallanDate\' in table \'DataTable1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.dtePurchDateColumn] = value;
+                    this[this.tableDataTable1.dteChallanDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsdtePurchDateNull() {
-                return this.IsNull(this.tableDataTable1.dtePurchDateColumn);
+            public bool IsdteChallanDateNull() {
+                return this.IsNull(this.tableDataTable1.dteChallanDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetdtePurchDateNull() {
-                this[this.tableDataTable1.dtePurchDateColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class tblChallanOut3Row : global::System.Data.DataRow {
-            
-            private tblChallanOut3DataTable tabletblChallanOut3;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblChallanOut3Row(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tabletblChallanOut3 = ((tblChallanOut3DataTable)(this.Table));
+            public void SetdteChallanDateNull() {
+                this[this.tableDataTable1.dteChallanDateColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class sprDeleteFromStockRegisterRow : global::System.Data.DataRow {
+        public partial class tblDeletedBillRow : global::System.Data.DataRow {
             
-            private sprDeleteFromStockRegisterDataTable tablesprDeleteFromStockRegister;
+            private tblDeletedBillDataTable tabletblDeletedBill;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal sprDeleteFromStockRegisterRow(global::System.Data.DataRowBuilder rb) : 
+            internal tblDeletedBillRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablesprDeleteFromStockRegister = ((sprDeleteFromStockRegisterDataTable)(this.Table));
+                this.tabletblDeletedBill = ((tblDeletedBillDataTable)(this.Table));
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tblDeletedChallanRow : global::System.Data.DataRow {
+        public partial class tblBill4Row : global::System.Data.DataRow {
             
-            private tblDeletedChallanDataTable tabletblDeletedChallan;
+            private tblBill4DataTable tabletblBill4;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tblDeletedChallanRow(global::System.Data.DataRowBuilder rb) : 
+            internal tblBill4Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletblDeletedChallan = ((tblDeletedChallanDataTable)(this.Table));
+                this.tabletblBill4 = ((tblBill4DataTable)(this.Table));
             }
         }
         
@@ -2680,22 +2745,22 @@ namespace BusinessManagementSystem.DAL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class tblChallanOutRowChangeEvent : global::System.EventArgs {
+        public class tblBillRowChangeEvent : global::System.EventArgs {
             
-            private tblChallanOutRow eventRow;
+            private tblBillRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOutRowChangeEvent(tblChallanOutRow row, global::System.Data.DataRowAction action) {
+            public tblBillRowChangeEvent(tblBillRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOutRow Row {
+            public tblBillRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2714,22 +2779,22 @@ namespace BusinessManagementSystem.DAL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class tblChallanOut1RowChangeEvent : global::System.EventArgs {
+        public class tblBill1RowChangeEvent : global::System.EventArgs {
             
-            private tblChallanOut1Row eventRow;
+            private tblBill1Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut1RowChangeEvent(tblChallanOut1Row row, global::System.Data.DataRowAction action) {
+            public tblBill1RowChangeEvent(tblBill1Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut1Row Row {
+            public tblBill1Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -2748,22 +2813,56 @@ namespace BusinessManagementSystem.DAL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class tblChallanOut2RowChangeEvent : global::System.EventArgs {
+        public class tblBill2RowChangeEvent : global::System.EventArgs {
             
-            private tblChallanOut2Row eventRow;
+            private tblBill2Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut2RowChangeEvent(tblChallanOut2Row row, global::System.Data.DataRowAction action) {
+            public tblBill2RowChangeEvent(tblBill2Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut2Row Row {
+            public tblBill2Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class tblBill3RowChangeEvent : global::System.EventArgs {
+            
+            private tblBill3Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tblBill3RowChangeEvent(tblBill3Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tblBill3Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -2816,22 +2915,22 @@ namespace BusinessManagementSystem.DAL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class tblChallanOut3RowChangeEvent : global::System.EventArgs {
+        public class tblDeletedBillRowChangeEvent : global::System.EventArgs {
             
-            private tblChallanOut3Row eventRow;
+            private tblDeletedBillRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut3RowChangeEvent(tblChallanOut3Row row, global::System.Data.DataRowAction action) {
+            public tblDeletedBillRowChangeEvent(tblDeletedBillRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblChallanOut3Row Row {
+            public tblDeletedBillRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2850,56 +2949,22 @@ namespace BusinessManagementSystem.DAL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class sprDeleteFromStockRegisterRowChangeEvent : global::System.EventArgs {
+        public class tblBill4RowChangeEvent : global::System.EventArgs {
             
-            private sprDeleteFromStockRegisterRow eventRow;
+            private tblBill4Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sprDeleteFromStockRegisterRowChangeEvent(sprDeleteFromStockRegisterRow row, global::System.Data.DataRowAction action) {
+            public tblBill4RowChangeEvent(tblBill4Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sprDeleteFromStockRegisterRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class tblDeletedChallanRowChangeEvent : global::System.EventArgs {
-            
-            private tblDeletedChallanRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblDeletedChallanRowChangeEvent(tblDeletedChallanRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tblDeletedChallanRow Row {
+            public tblBill4Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -2915,7 +2980,7 @@ namespace BusinessManagementSystem.DAL {
         }
     }
 }
-namespace BusinessManagementSystem.DAL.DAL_PrintChallanTableAdapters {
+namespace BusinessManagementSystem.DAL.DAL_PrintBillTableAdapters {
     
     
     /// <summary>
@@ -2927,7 +2992,7 @@ namespace BusinessManagementSystem.DAL.DAL_PrintChallanTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tblChallanOutTableAdapter : global::System.ComponentModel.Component {
+    public partial class tblBillTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2941,7 +3006,7 @@ namespace BusinessManagementSystem.DAL.DAL_PrintChallanTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public tblChallanOutTableAdapter() {
+        public tblBillTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3038,23 +3103,13 @@ namespace BusinessManagementSystem.DAL.DAL_PrintChallanTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tblChallanOut";
-            tableMapping.ColumnMappings.Add("intChallanId", "intChallanId");
+            tableMapping.DataSetTable = "tblBill";
+            tableMapping.ColumnMappings.Add("intBillId", "intBillId");
             tableMapping.ColumnMappings.Add("strPartyName", "strPartyName");
-            tableMapping.ColumnMappings.Add("strLCNo", "strLCNo");
-            tableMapping.ColumnMappings.Add("dteChallanDate", "dteChallanDate");
+            tableMapping.ColumnMappings.Add("dteBillDate", "dteBillDate");
+            tableMapping.ColumnMappings.Add("strBOE", "strBOE");
             tableMapping.ColumnMappings.Add("strPartyAddress", "strPartyAddress");
-            tableMapping.ColumnMappings.Add("dteLCDate", "dteLCDate");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [tblChallanOut] ([intChallanId], [strPartyName], [strLCNo], [strParty" +
-                "Address]) VALUES (@intChallanId, @strPartyName, @strLCNo, @strPartyAddress)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intChallanId", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "intChallanId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "strPartyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strLCNo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "strLCNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "strPartyAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3070,22 +3125,22 @@ namespace BusinessManagementSystem.DAL.DAL_PrintChallanTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT intChallanId, strPartyName, Format(dteChallanDate, 'dd MMM,yyyy') AS dteChallanDate, strLCNo, strPartyAddress, Format(dteLCDate, 'dd MMM,yyyy') AS dteLCDate
-FROM     tblChallanOut
-WHERE  (strPartyName LIKE '%' + @strPartyName + '%') AND (intChallanId LIKE '%' + CAST(@strChallanId AS varchar(100)) + '%') AND (strLCNo LIKE '%' + @strLCNo + '%') AND (ysnActive = 1)
-GROUP BY intChallanId, strPartyName, dteChallanDate, strLCNo, strPartyAddress, dteLCDate
-ORDER BY intChallanId";
+            this._commandCollection[0].CommandText = @"SELECT intBillId, strPartyName, Format(dteDate, 'dd MMM,yyyy') AS dteBillDate, strBOE, strPartyAddress
+FROM     tblBill
+WHERE  (strPartyName LIKE '%' + @strPartyName + '%') AND (intBillId LIKE '%' + CAST(@strBillId AS varchar(100)) + '%') AND (strBOE LIKE '%' + @strBOE + '%') AND (ysnActive = 1)
+GROUP BY intBillId, strPartyName, dteDate, strBOE, strPartyAddress
+ORDER BY intBillId";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyName", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strPartyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strChallanId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intChallanId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strLCNo", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strLCNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strBillId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intBillId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strBOE", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strBOE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DAL_PrintChallan.tblChallanOutDataTable GetChallanBasicData(string strPartyName, long strChallanId, string strLCNo) {
+        public virtual DAL_PrintBill.tblBillDataTable GetBillList(string strPartyName, global::System.Nullable<long> strBillId, string strBOE) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((strPartyName == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -3093,14 +3148,211 @@ ORDER BY intChallanId";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(strPartyName));
             }
-            this.Adapter.SelectCommand.Parameters[1].Value = ((long)(strChallanId));
-            if ((strLCNo == null)) {
+            if ((strBillId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((long)(strBillId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((strBOE == null)) {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strLCNo));
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strBOE));
             }
-            DAL_PrintChallan.tblChallanOutDataTable dataTable = new DAL_PrintChallan.tblChallanOutDataTable();
+            DAL_PrintBill.tblBillDataTable dataTable = new DAL_PrintBill.tblBillDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class tblGetTableDataTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public tblGetTableDataTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "tblBill1";
+            tableMapping.ColumnMappings.Add("intChallanId", "intChallanId");
+            tableMapping.ColumnMappings.Add("strDetails", "strDetails");
+            tableMapping.ColumnMappings.Add("intQuantity", "intQuantity");
+            tableMapping.ColumnMappings.Add("monPrice", "monPrice");
+            tableMapping.ColumnMappings.Add("monTotalPrice", "monTotalPrice");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [tblBill] ([intChallanId], [strDetails], [intQuantity], [monPrice], [" +
+                "monTotalPrice]) VALUES (@intChallanId, @strDetails, @intQuantity, @monPrice, @mo" +
+                "nTotalPrice)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intChallanId", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "intChallanId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strDetails", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "strDetails", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intQuantity", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "intQuantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@monPrice", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "monPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@monTotalPrice", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "monTotalPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointDBConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT intChallanId, strDetails, intQuantity, monPrice, monTotalPrice\r\nFROM     t" +
+                "blBill\r\nWHERE  (strPartyName = @strPartyName) AND (intBillId = @intBillId) AND (" +
+                "strBOE = @strBOE) AND (ysnActive = 1)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyName", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strPartyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intBillId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intBillId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strBOE", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strBOE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DAL_PrintBill.tblBill1DataTable GetTableData(string strPartyName, global::System.Nullable<long> intBillId, string strBOE) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((strPartyName == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(strPartyName));
+            }
+            if ((intBillId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((long)(intBillId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((strBOE == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strBOE));
+            }
+            DAL_PrintBill.tblBill1DataTable dataTable = new DAL_PrintBill.tblBill1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3108,15 +3360,15 @@ ORDER BY intChallanId";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DAL_PrintChallan.tblChallanOutDataTable dataTable) {
+        public virtual int Update(DAL_PrintBill.tblBill1DataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DAL_PrintChallan dataSet) {
-            return this.Adapter.Update(dataSet, "tblChallanOut");
+        public virtual int Update(DAL_PrintBill dataSet) {
+            return this.Adapter.Update(dataSet, "tblBill1");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3144,7 +3396,7 @@ ORDER BY intChallanId";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class getTableTableAdapter : global::System.ComponentModel.Component {
+    public partial class tblGetCurrencyTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3158,7 +3410,7 @@ ORDER BY intChallanId";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public getTableTableAdapter() {
+        public tblGetCurrencyTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3255,10 +3507,8 @@ ORDER BY intChallanId";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tblChallanOut1";
-            tableMapping.ColumnMappings.Add("strDetails", "strDetails");
-            tableMapping.ColumnMappings.Add("intQuantity", "intQuantity");
-            tableMapping.ColumnMappings.Add("strRemarks", "strRemarks");
+            tableMapping.DataSetTable = "tblBill2";
+            tableMapping.ColumnMappings.Add("strCurrency", "strCurrency");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -3275,20 +3525,19 @@ ORDER BY intChallanId";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT strDetails, intQuantity, strRemarks\r\nFROM     tblChallanOut\r\nWHERE  (strPa" +
-                "rtyName = @strPartyName) AND (intChallanId = @intChallanId) AND (strLCNo = @strL" +
-                "CNo) AND (ysnActive = 1)";
+            this._commandCollection[0].CommandText = "SELECT strCurrency\r\nFROM     tblBill\r\nWHERE  (strPartyName = @strPartyName) AND (" +
+                "intBillId = @intBillId) AND (strBOE = @strBOE) AND (ysnActive = 1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyName", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strPartyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intChallanId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intChallanId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strLCNo", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strLCNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intBillId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intBillId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strBOE", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strBOE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DAL_PrintChallan.tblChallanOut1DataTable GetTableData(string strPartyName, long intChallanId, string strLCNo) {
+        public virtual DAL_PrintBill.tblBill2DataTable GetCurrency(string strPartyName, global::System.Nullable<long> intBillId, string strBOE) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((strPartyName == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -3296,14 +3545,19 @@ ORDER BY intChallanId";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(strPartyName));
             }
-            this.Adapter.SelectCommand.Parameters[1].Value = ((long)(intChallanId));
-            if ((strLCNo == null)) {
+            if ((intBillId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((long)(intBillId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((strBOE == null)) {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strLCNo));
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strBOE));
             }
-            DAL_PrintChallan.tblChallanOut1DataTable dataTable = new DAL_PrintChallan.tblChallanOut1DataTable();
+            DAL_PrintBill.tblBill2DataTable dataTable = new DAL_PrintBill.tblBill2DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3318,7 +3572,7 @@ ORDER BY intChallanId";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class getPurchaseNoTableAdapter : global::System.ComponentModel.Component {
+    public partial class tblGetChallansNoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3332,7 +3586,7 @@ ORDER BY intChallanId";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public getPurchaseNoTableAdapter() {
+        public tblGetChallansNoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3429,9 +3683,14 @@ ORDER BY intChallanId";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tblChallanOut2";
-            tableMapping.ColumnMappings.Add("strPurchNo", "strPurchNo");
+            tableMapping.DataSetTable = "tblBill3";
+            tableMapping.ColumnMappings.Add("intChallanId", "intChallanId");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [tblBill] ([intChallanId]) VALUES (@intChallanId)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intChallanId", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "intChallanId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3447,20 +3706,20 @@ ORDER BY intChallanId";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT strPurchNo\r\nFROM     tblChallanOut\r\nWHERE  (strPartyName = @strPartyName) " +
-                "AND (intChallanId = @intChallanId) AND (strLCNo = @strLCNo) AND (ysnActive = 1)\r" +
-                "\nGROUP BY strPurchNo\r\nORDER BY MAX(intId)";
+            this._commandCollection[0].CommandText = "SELECT intChallanId\r\nFROM     tblBill\r\nWHERE  (strPartyName = @strPartyName) AND " +
+                "(intBillId = @intBillId) AND (strBOE = @strBOE) AND (ysnActive = 1)\r\nGROUP BY in" +
+                "tChallanId\r\nORDER BY MAX(intId)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyName", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strPartyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intChallanId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intChallanId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strLCNo", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strLCNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intBillId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intBillId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strBOE", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strBOE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DAL_PrintChallan.tblChallanOut2DataTable GetPurchaseNo(string strPartyName, long intChallanId, string strLCNo) {
+        public virtual DAL_PrintBill.tblBill3DataTable GetChallansNo(string strPartyName, global::System.Nullable<long> intBillId, string strBOE) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((strPartyName == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -3468,16 +3727,50 @@ ORDER BY intChallanId";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(strPartyName));
             }
-            this.Adapter.SelectCommand.Parameters[1].Value = ((long)(intChallanId));
-            if ((strLCNo == null)) {
+            if ((intBillId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((long)(intBillId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((strBOE == null)) {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strLCNo));
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strBOE));
             }
-            DAL_PrintChallan.tblChallanOut2DataTable dataTable = new DAL_PrintChallan.tblChallanOut2DataTable();
+            DAL_PrintBill.tblBill3DataTable dataTable = new DAL_PrintBill.tblBill3DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DAL_PrintBill.tblBill3DataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DAL_PrintBill dataSet) {
+            return this.Adapter.Update(dataSet, "tblBill3");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
         }
     }
     
@@ -3490,7 +3783,7 @@ ORDER BY intChallanId";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class getPurchaseDateTableAdapter : global::System.ComponentModel.Component {
+    public partial class tblGetChallansDateTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3504,7 +3797,7 @@ ORDER BY intChallanId";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public getPurchaseDateTableAdapter() {
+        public tblGetChallansDateTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3602,7 +3895,7 @@ ORDER BY intChallanId";
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTable1";
-            tableMapping.ColumnMappings.Add("dtePurchDate", "dtePurchDate");
+            tableMapping.ColumnMappings.Add("dteChallanDate", "dteChallanDate");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -3619,21 +3912,23 @@ ORDER BY intChallanId";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Format(dtePurchDate, \'dd MMM-yyyy\') AS dtePurchDate\r\nFROM     tblChallanOu" +
-                "t\r\nWHERE  (strPartyName = @strPartyName) AND (intChallanId = @intChallanId) AND " +
-                "(strLCNo = @strLCNo) AND (ysnActive = 1)\r\nGROUP BY dtePurchDate\r\nORDER BY MAX(in" +
-                "tId)";
+            this._commandCollection[0].CommandText = @"SELECT Format(C.dteChallanDate, 'dd MMM-yyyy') AS dteChallanDate
+FROM     tblBill AS B INNER JOIN
+                  tblChallanOut AS C ON B.intChallanId = C.intChallanId
+WHERE  (B.strPartyName = @strPartyName) AND (B.intBillId = @intBillId) AND (B.strBOE = @strBOE) AND (B.ysnActive = 1)
+GROUP BY C.dteChallanDate
+ORDER BY MAX(B.intId)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyName", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strPartyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intChallanId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intChallanId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strLCNo", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strLCNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intBillId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intBillId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strBOE", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strBOE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DAL_PrintChallan.DataTable1DataTable GetPurchaseDate(string strPartyName, long intChallanId, string strLCNo) {
+        public virtual DAL_PrintBill.DataTable1DataTable GetChallansDate(string strPartyName, global::System.Nullable<long> intBillId, string strBOE) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((strPartyName == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -3641,358 +3936,19 @@ ORDER BY intChallanId";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(strPartyName));
             }
-            this.Adapter.SelectCommand.Parameters[1].Value = ((long)(intChallanId));
-            if ((strLCNo == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strLCNo));
-            }
-            DAL_PrintChallan.DataTable1DataTable dataTable = new DAL_PrintChallan.DataTable1DataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class deleteChallanOutDataTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public deleteChallanOutDataTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointDBConnectionString"].ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "UPDATE tblChallanOut\r\nSET          ysnActive = 0\r\nWHERE  (intChallanId = @intChal" +
-                "lanId) AND (strPartyName = @strPartyName) AND (strLCNo = @strLCNo)";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intChallanId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intChallanId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyName", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strPartyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strLCNo", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strLCNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DAL_PrintChallan.tblChallanOut3DataTable DeleteChallanOutData(long intChallanId, string strPartyName, string strLCNo) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(intChallanId));
-            if ((strPartyName == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(strPartyName));
-            }
-            if ((strLCNo == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strLCNo));
-            }
-            DAL_PrintChallan.tblChallanOut3DataTable dataTable = new DAL_PrintChallan.tblChallanOut3DataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class sprDeleteFromStockRegisterTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public sprDeleteFromStockRegisterTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointDBConnectionString"].ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.sprDeleteFromStockRegister";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intChallanId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyName", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strDetails", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intQuantity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DAL_PrintChallan.sprDeleteFromStockRegisterDataTable DeleteStockData(global::System.Nullable<int> intChallanId, string strPartyName, string strDetails, global::System.Nullable<int> intQuantity) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((intChallanId.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(intChallanId.Value));
+            if ((intBillId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((long)(intBillId.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((strPartyName == null)) {
+            if ((strBOE == null)) {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strPartyName));
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strBOE));
             }
-            if ((strDetails == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(strDetails));
-            }
-            if ((intQuantity.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(intQuantity.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            DAL_PrintChallan.sprDeleteFromStockRegisterDataTable dataTable = new DAL_PrintChallan.sprDeleteFromStockRegisterDataTable();
+            DAL_PrintBill.DataTable1DataTable dataTable = new DAL_PrintBill.DataTable1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4007,7 +3963,7 @@ ORDER BY intChallanId";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tblDeletedChallanTableAdapter : global::System.ComponentModel.Component {
+    public partial class tblDeletedBillTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4021,7 +3977,7 @@ ORDER BY intChallanId";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public tblDeletedChallanTableAdapter() {
+        public tblDeletedBillTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4131,10 +4087,10 @@ ORDER BY intChallanId";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "INSERT INTO tblDeletedChallan\r\n                  (intChallanID, strReason, ysnAct" +
-                "ive)\r\nVALUES (@intChallanID,@strReason, 1)";
+            this._commandCollection[0].CommandText = "INSERT INTO tblDeletedBill\r\n                  (intBillID, strReason, ysnActive)\r\n" +
+                "VALUES (@intBillID,@strReason, 1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intChallanID", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intChallanID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intBillID", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intBillID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strReason", global::System.Data.SqlDbType.VarChar, 5000, global::System.Data.ParameterDirection.Input, 0, 0, "strReason", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -4142,10 +4098,10 @@ ORDER BY intChallanId";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DAL_PrintChallan.tblDeletedChallanDataTable InsertDeleteReason(global::System.Nullable<long> intChallanID, string strReason) {
+        public virtual DAL_PrintBill.tblDeletedBillDataTable InsertDeleteReason(global::System.Nullable<long> intBillID, string strReason) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((intChallanID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((long)(intChallanID.Value));
+            if ((intBillID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((long)(intBillID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4156,7 +4112,178 @@ ORDER BY intChallanId";
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(strReason));
             }
-            DAL_PrintChallan.tblDeletedChallanDataTable dataTable = new DAL_PrintChallan.tblDeletedChallanDataTable();
+            DAL_PrintBill.tblDeletedBillDataTable dataTable = new DAL_PrintBill.tblDeletedBillDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class tblDeleteBillTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public tblDeleteBillTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PerfectPointDBConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "UPDATE tblBill\r\nSET          ysnActive = 0\r\nWHERE  (intBillId = @intBillId) AND (" +
+                "strPartyName = @strPartyName) AND (strBOE = @strBOE)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intBillId", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "intBillId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyName", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strPartyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strBOE", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strBOE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DAL_PrintBill.tblBill4DataTable DeleteBillData(global::System.Nullable<long> intBillId, string strPartyName, string strBOE) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((intBillId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((long)(intBillId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((strPartyName == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(strPartyName));
+            }
+            if ((strBOE == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(strBOE));
+            }
+            DAL_PrintBill.tblBill4DataTable dataTable = new DAL_PrintBill.tblBill4DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4174,7 +4301,9 @@ ORDER BY intChallanId";
         
         private UpdateOrderOption _updateOrder;
         
-        private tblChallanOutTableAdapter _tblChallanOutTableAdapter;
+        private tblGetTableDataTableAdapter _tblGetTableDataTableAdapter;
+        
+        private tblGetChallansNoTableAdapter _tblGetChallansNoTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -4196,12 +4325,26 @@ ORDER BY intChallanId";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tblChallanOutTableAdapter tblChallanOutTableAdapter {
+        public tblGetTableDataTableAdapter tblGetTableDataTableAdapter {
             get {
-                return this._tblChallanOutTableAdapter;
+                return this._tblGetTableDataTableAdapter;
             }
             set {
-                this._tblChallanOutTableAdapter = value;
+                this._tblGetTableDataTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public tblGetChallansNoTableAdapter tblGetChallansNoTableAdapter {
+            get {
+                return this._tblGetChallansNoTableAdapter;
+            }
+            set {
+                this._tblGetChallansNoTableAdapter = value;
             }
         }
         
@@ -4224,9 +4367,13 @@ ORDER BY intChallanId";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._tblChallanOutTableAdapter != null) 
-                            && (this._tblChallanOutTableAdapter.Connection != null))) {
-                    return this._tblChallanOutTableAdapter.Connection;
+                if (((this._tblGetTableDataTableAdapter != null) 
+                            && (this._tblGetTableDataTableAdapter.Connection != null))) {
+                    return this._tblGetTableDataTableAdapter.Connection;
+                }
+                if (((this._tblGetChallansNoTableAdapter != null) 
+                            && (this._tblGetChallansNoTableAdapter.Connection != null))) {
+                    return this._tblGetChallansNoTableAdapter.Connection;
                 }
                 return null;
             }
@@ -4241,7 +4388,10 @@ ORDER BY intChallanId";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._tblChallanOutTableAdapter != null)) {
+                if ((this._tblGetTableDataTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._tblGetChallansNoTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -4253,14 +4403,23 @@ ORDER BY intChallanId";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DAL_PrintChallan dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DAL_PrintBill dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tblChallanOutTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblChallanOut.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tblGetTableDataTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblBill1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tblChallanOutTableAdapter.Update(updatedRows));
+                    result = (result + this._tblGetTableDataTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblGetChallansNoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblBill3.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblGetChallansNoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4272,13 +4431,21 @@ ORDER BY intChallanId";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DAL_PrintChallan dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DAL_PrintBill dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tblChallanOutTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblChallanOut.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tblGetTableDataTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblBill1.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tblChallanOutTableAdapter.Update(addedRows));
+                    result = (result + this._tblGetTableDataTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblGetChallansNoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblBill3.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblGetChallansNoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4290,13 +4457,21 @@ ORDER BY intChallanId";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DAL_PrintChallan dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DAL_PrintBill dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tblChallanOutTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblChallanOut.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tblGetChallansNoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblBill3.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tblChallanOutTableAdapter.Update(deletedRows));
+                    result = (result + this._tblGetChallansNoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblGetTableDataTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblBill1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblGetTableDataTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -4332,15 +4507,20 @@ ORDER BY intChallanId";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DAL_PrintChallan dataSet) {
+        public virtual int UpdateAll(DAL_PrintBill dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._tblChallanOutTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tblChallanOutTableAdapter.Connection) == false))) {
+            if (((this._tblGetTableDataTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tblGetTableDataTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._tblGetChallansNoTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tblGetChallansNoTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -4376,13 +4556,22 @@ ORDER BY intChallanId";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._tblChallanOutTableAdapter != null)) {
-                    revertConnections.Add(this._tblChallanOutTableAdapter, this._tblChallanOutTableAdapter.Connection);
-                    this._tblChallanOutTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tblChallanOutTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tblChallanOutTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tblChallanOutTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tblChallanOutTableAdapter.Adapter);
+                if ((this._tblGetTableDataTableAdapter != null)) {
+                    revertConnections.Add(this._tblGetTableDataTableAdapter, this._tblGetTableDataTableAdapter.Connection);
+                    this._tblGetTableDataTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tblGetTableDataTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tblGetTableDataTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tblGetTableDataTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tblGetTableDataTableAdapter.Adapter);
+                    }
+                }
+                if ((this._tblGetChallansNoTableAdapter != null)) {
+                    revertConnections.Add(this._tblGetChallansNoTableAdapter, this._tblGetChallansNoTableAdapter.Connection);
+                    this._tblGetChallansNoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tblGetChallansNoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tblGetChallansNoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tblGetChallansNoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tblGetChallansNoTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -4443,9 +4632,13 @@ ORDER BY intChallanId";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._tblChallanOutTableAdapter != null)) {
-                    this._tblChallanOutTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblChallanOutTableAdapter]));
-                    this._tblChallanOutTableAdapter.Transaction = null;
+                if ((this._tblGetTableDataTableAdapter != null)) {
+                    this._tblGetTableDataTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblGetTableDataTableAdapter]));
+                    this._tblGetTableDataTableAdapter.Transaction = null;
+                }
+                if ((this._tblGetChallansNoTableAdapter != null)) {
+                    this._tblGetChallansNoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblGetChallansNoTableAdapter]));
+                    this._tblGetChallansNoTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

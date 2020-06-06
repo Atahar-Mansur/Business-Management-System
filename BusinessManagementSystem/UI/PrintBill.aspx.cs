@@ -3,7 +3,6 @@ using BusinessManagementSystem.Object;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,23 +10,21 @@ using System.Web.UI.WebControls;
 
 namespace BusinessManagementSystem.UI
 {
-    public partial class PrintChallan : System.Web.UI.Page
+    public partial class PrintBill : System.Web.UI.Page
     {
         BLL_ChallanOut objData = new BLL_ChallanOut();
-        BLL_PrintChallan objData2 = new BLL_PrintChallan();
+        BLL_PrintBill objData2 = new BLL_PrintBill();
         DataTable dt = new DataTable();
         List<NewClient> clients = new List<NewClient>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                clients = objData.GetClientData();
-                drpPartyName.DataSource = clients;
-                drpPartyName.DataBind();
-                drpPartyName.DataTextField = "strName";
-                drpPartyName.DataValueField = "strName";
-                drpPartyName.DataBind();
-            } 
+            clients = objData.GetClientData();
+            drpPartyName.DataSource = clients;
+            drpPartyName.DataBind();
+            drpPartyName.DataTextField = "strName";
+            drpPartyName.DataValueField = "strName";
+            drpPartyName.DataBind();
         }
 
         protected void btnShow_Click(object sender, EventArgs e)
@@ -40,7 +37,7 @@ namespace BusinessManagementSystem.UI
                 string partyName = drpPartyName.Text;
                 if (partyName == "--Select a Client--") partyName = "";
 
-                dt = objData2.GetChallanBasicData(partyName, txtChallanNo.Text, txtLCNo.Text);
+                dt = objData2.GetChallanBasicData(partyName, txtBillNo.Text, txtBOENo.Text);
 
                 dgv.DataSource = dt;
                 dgv.DataBind();
@@ -58,21 +55,23 @@ namespace BusinessManagementSystem.UI
             string partyName = drpPartyName.Text;
             if (partyName == "--Select a Client--") partyName = "";
 
-            dt = objData2.GetChallanBasicData(partyName, txtChallanNo.Text, txtLCNo.Text);
+            dt = objData2.GetChallanBasicData(partyName, txtBillNo.Text, txtBOENo.Text);
 
-            lblChallanNo.Text = dt.Rows[e.RowIndex].Field<long>("intChallanId").ToString();
-            lblChallanDate.Text = dt.Rows[e.RowIndex].Field<string>("dteChallanDate");
-            lblChallanInName.Text = dt.Rows[e.RowIndex].Field<string>("strPartyName");
-            lblChallanInAddress.Text = dt.Rows[e.RowIndex].Field<string>("strPartyAddress");
-            lblLCNo.Text = dt.Rows[e.RowIndex].Field<string>("strLCNo").ToString();
-            lblLCdate.Text = dt.Rows[e.RowIndex].Field<string>("dteLCDate");
+            lblBillNo.Text = dt.Rows[e.RowIndex].Field<long>("intBillId").ToString();
+            lblBillDate.Text = dt.Rows[e.RowIndex].Field<string>("dteBillDate");
+            lblPartyName.Text = dt.Rows[e.RowIndex].Field<string>("strPartyName");
+            lblPartyAddress.Text = dt.Rows[e.RowIndex].Field<string>("strPartyAddress");
+            lblBOENo.Text = dt.Rows[e.RowIndex].Field<string>("strBOE").ToString();
 
-            dt = objData2.GetTableData(lblChallanInName.Text, lblChallanNo.Text, lblLCNo.Text);
+            dt = objData2.GetTableData(lblPartyName.Text, lblBillNo.Text, lblBOENo.Text);
             dgv2.DataSource = dt;
             dgv2.DataBind();
 
-            lblPurchaseOrder.Text = objData2.GetPurchaseNo(lblChallanInName.Text, lblChallanNo.Text, lblLCNo.Text);
-            lblPurchaseDate.Text = objData2.GetPurchaseDate(lblChallanInName.Text, lblChallanNo.Text, lblLCNo.Text);
+            lblTotal.InnerText = objData2.GetTotal(lblPartyName.Text, lblBillNo.Text, lblBOENo.Text).ToString();
+            lblCurrency.InnerText = objData2.GetCurrency(lblPartyName.Text, lblBillNo.Text, lblBOENo.Text);
+
+            lblChallans.Text = objData2.GetChallansNo(lblPartyName.Text, lblBillNo.Text, lblBOENo.Text);
+            lblChallansDate.Text = objData2.GetChallansDate(lblPartyName.Text, lblBillNo.Text, lblBOENo.Text);
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
@@ -86,7 +85,7 @@ namespace BusinessManagementSystem.UI
         {
             string msg;
 
-            msg = objData2.DeleteChallan(lblChallanInName.Text, lblChallanNo.Text, lblLCNo.Text, txtDeleteReason.Text);
+            msg = objData2.DeleteChallan(lblPartyName.Text, lblBillNo.Text, lblBOENo.Text, txtDeleteReason.Text);
 
             backVisible();
 

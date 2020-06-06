@@ -57,13 +57,14 @@ namespace BusinessManagementSystem.BLL
             return r;
         }
 
-        public string DeleteChallan(string strPartyName, string strChallanNo, string strLCNo)
+        public string DeleteChallan(string strPartyName, string strChallanNo, string strLCNo, string strReason)
         {
             try
             {
                 deleteChallanOutDataTableAdapter adp = new deleteChallanOutDataTableAdapter();
                 sprDeleteFromStockRegisterTableAdapter adp2 = new sprDeleteFromStockRegisterTableAdapter();
                 getTableTableAdapter adp3 = new getTableTableAdapter();
+                tblDeletedChallanTableAdapter adp4 = new tblDeletedChallanTableAdapter();
 
                 foreach (var x in adp3.GetTableData(strPartyName, Convert.ToInt32(strChallanNo), strLCNo))
                 {
@@ -71,6 +72,8 @@ namespace BusinessManagementSystem.BLL
                 }
 
                 adp.DeleteChallanOutData(Convert.ToInt32(strChallanNo), strPartyName, strLCNo);
+
+                adp4.InsertDeleteReason(Convert.ToInt32(strChallanNo), strReason);
 
                 return "Delete Successfully";
             }

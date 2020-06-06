@@ -10,7 +10,7 @@
 namespace BusinessManagementSystem.UI {
     
     
-    public partial class PrintChallan {
+    public partial class PrintBill {
         
         /// <summary>
         /// style control.
@@ -58,22 +58,22 @@ namespace BusinessManagementSystem.UI {
         protected global::System.Web.UI.WebControls.DropDownList drpPartyName;
         
         /// <summary>
-        /// txtChallanNo control.
+        /// txtBillNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtChallanNo;
+        protected global::System.Web.UI.WebControls.TextBox txtBillNo;
         
         /// <summary>
-        /// txtLCNo control.
+        /// txtBOENo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLCNo;
+        protected global::System.Web.UI.WebControls.TextBox txtBOENo;
         
         /// <summary>
         /// btnShow control.
@@ -148,40 +148,49 @@ namespace BusinessManagementSystem.UI {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl containerPrint;
         
         /// <summary>
-        /// lblChallanNo control.
+        /// lblBillNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChallanNo;
+        protected global::System.Web.UI.WebControls.Label lblBillNo;
         
         /// <summary>
-        /// lblChallanDate control.
+        /// lblBillDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChallanDate;
+        protected global::System.Web.UI.WebControls.Label lblBillDate;
         
         /// <summary>
-        /// lblChallanInName control.
+        /// lblBOENo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChallanInName;
+        protected global::System.Web.UI.WebControls.Label lblBOENo;
         
         /// <summary>
-        /// lblChallanInAddress control.
+        /// lblPartyName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChallanInAddress;
+        protected global::System.Web.UI.WebControls.Label lblPartyName;
+        
+        /// <summary>
+        /// lblPartyAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPartyAddress;
         
         /// <summary>
         /// dgv2 control.
@@ -193,40 +202,49 @@ namespace BusinessManagementSystem.UI {
         protected global::System.Web.UI.WebControls.GridView dgv2;
         
         /// <summary>
-        /// lblPurchaseOrder control.
+        /// divTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPurchaseOrder;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divTotal;
         
         /// <summary>
-        /// lblPurchaseDate control.
+        /// lblTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPurchaseDate;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblTotal;
         
         /// <summary>
-        /// lblLCNo control.
+        /// lblCurrency control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLCNo;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCurrency;
         
         /// <summary>
-        /// lblLCdate control.
+        /// lblChallans control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLCdate;
+        protected global::System.Web.UI.WebControls.Label lblChallans;
+        
+        /// <summary>
+        /// lblChallansDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblChallansDate;
         
         /// <summary>
         /// bootstrap control.

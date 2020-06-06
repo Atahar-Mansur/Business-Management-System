@@ -70,6 +70,7 @@
     <Content Include="ContentImages\logo.jpg" />
     <Content Include="ContentImages\Pad.jpg" />
     <Content Include="ContentImages\PadBill.jpg" />
+    <Content Include="ContentImages\PadBillWithSignature.jpg" />
     <Content Include="ContentImages\PadWithSignature.jpg" />
     <Content Include="ContentImages\WaterMark.jpg" />
     <Content Include="HomePage.aspx" />
@@ -78,6 +79,7 @@
     <Content Include="UI\CurrentBalance.aspx" />
     <Content Include="UI\InChallan.aspx" />
     <Content Include="UI\OutChallan.aspx" />
+    <Content Include="UI\PrintBill.aspx" />
     <Content Include="UI\PrintChallan.aspx" />
     <Content Include="UI\Product.aspx" />
     <Content Include="UI\StockRegister.aspx" />
@@ -90,6 +92,7 @@
     <Compile Include="BLL\BLL_CurrentBalance.cs" />
     <Compile Include="BLL\BLL_NewClient.cs" />
     <Compile Include="BLL\BLL_NewProduct.cs" />
+    <Compile Include="BLL\BLL_PrintBill.cs" />
     <Compile Include="BLL\BLL_PrintChallan.cs" />
     <Compile Include="BLL\BLL_StockRegister.cs" />
     <Compile Include="DAL\DAL_Bill.Designer.cs">
@@ -116,6 +119,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DAL_NewClient.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_PrintBill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL_PrintBill.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL_PrintChallan.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -186,6 +194,13 @@
     </Compile>
     <Compile Include="UI\OutChallan.aspx.designer.cs">
       <DependentUpon>OutChallan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PrintBill.aspx.cs">
+      <DependentUpon>PrintBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PrintBill.aspx.designer.cs">
+      <DependentUpon>PrintBill.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\PrintChallan.aspx.cs">
       <DependentUpon>PrintChallan.aspx</DependentUpon>
@@ -270,6 +285,17 @@
     </Content>
     <Content Include="DAL\DAL_PrintChallan.xsc">
       <DependentUpon>DAL_PrintChallan.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\DAL_PrintBill.xsc">
+      <DependentUpon>DAL_PrintBill.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\DAL_PrintBill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAL_PrintBill.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\DAL_PrintBill.xss">
+      <DependentUpon>DAL_PrintBill.xsd</DependentUpon>
     </Content>
     <None Include="DAL\DAL_PrintChallan.xsd">
       <SubType>Designer</SubType>
