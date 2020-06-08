@@ -35,6 +35,12 @@ namespace BusinessManagementSystem.BLL
             {
                 total += x.monTotalPrice;
             }
+
+            Int64 amount_int = (Int64)total;
+            Int64 amount_dec = (Int64)Math.Round((total - (double)(amount_int)) * 100);
+
+            total = amount_int + ((double)(amount_dec) / 100);
+
             return total;
         }
 

@@ -10,10 +10,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/BusinessManagementSystem.dll">
-      <publishTime>04/28/2020 03:04:23</publishTime>
+      <publishTime>06/08/2020 13:40:07</publishTime>
     </File>
     <File Include="bin/BusinessManagementSystem.pdb">
-      <publishTime>04/28/2020 03:04:23</publishTime>
+      <publishTime>06/08/2020 13:40:07</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/24/2018 13:38:22</publishTime>
@@ -162,11 +162,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="ContentImages/Pad.jpg">
       <publishTime>04/28/2020 00:15:45</publishTime>
     </File>
+    <File Include="ContentImages/PadBill.jpg">
+      <publishTime>05/06/2020 01:13:50</publishTime>
+    </File>
+    <File Include="ContentImages/PadBillWithSignature.jpg">
+      <publishTime>06/06/2020 16:20:43</publishTime>
+    </File>
     <File Include="ContentImages/PadWithSignature.jpg">
       <publishTime>04/28/2020 00:15:45</publishTime>
     </File>
     <File Include="ContentImages/WaterMark.jpg">
       <publishTime>04/28/2020 00:15:45</publishTime>
+    </File>
+    <File Include="DAL/DAL_Bill.xsc">
+      <publishTime>05/16/2020 10:40:42</publishTime>
+    </File>
+    <File Include="DAL/DAL_Bill.xss">
+      <publishTime>05/16/2020 10:40:41</publishTime>
     </File>
     <File Include="DAL/DAL_ChallanIn.xsc">
       <publishTime>04/28/2020 03:01:15</publishTime>
@@ -175,10 +187,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/28/2020 03:01:15</publishTime>
     </File>
     <File Include="DAL/DAL_ChallanOut.xsc">
-      <publishTime>04/28/2020 03:02:21</publishTime>
+      <publishTime>05/16/2020 10:25:19</publishTime>
     </File>
     <File Include="DAL/DAL_ChallanOut.xss">
-      <publishTime>04/28/2020 03:02:21</publishTime>
+      <publishTime>05/16/2020 10:25:19</publishTime>
     </File>
     <File Include="DAL/DAL_CurrentBalance.xsc">
       <publishTime>04/28/2020 03:02:41</publishTime>
@@ -192,11 +204,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="DAL/DAL_NewClient.xss">
       <publishTime>04/28/2020 03:02:59</publishTime>
     </File>
+    <File Include="DAL/DAL_PrintBill.xsc">
+      <publishTime>06/07/2020 00:08:23</publishTime>
+    </File>
+    <File Include="DAL/DAL_PrintBill.xss">
+      <publishTime>06/07/2020 00:08:23</publishTime>
+    </File>
     <File Include="DAL/DAL_PrintChallan.xsc">
-      <publishTime>04/28/2020 03:03:47</publishTime>
+      <publishTime>06/07/2020 00:08:23</publishTime>
     </File>
     <File Include="DAL/DAL_PrintChallan.xss">
-      <publishTime>04/28/2020 03:03:47</publishTime>
+      <publishTime>06/07/2020 00:08:23</publishTime>
     </File>
     <File Include="DAL/DAL_Products.xsc">
       <publishTime>04/28/2020 02:59:55</publishTime>
@@ -214,7 +232,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/19/2020 17:36:21</publishTime>
     </File>
     <File Include="MasterPage.Master">
-      <publishTime>04/28/2020 00:43:38</publishTime>
+      <publishTime>05/17/2020 01:34:53</publishTime>
+    </File>
+    <File Include="UI/Bill.aspx">
+      <publishTime>06/08/2020 13:34:57</publishTime>
     </File>
     <File Include="UI/Client.aspx">
       <publishTime>04/20/2020 00:15:28</publishTime>
@@ -226,10 +247,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/19/2020 17:57:51</publishTime>
     </File>
     <File Include="UI/OutChallan.aspx">
-      <publishTime>04/28/2020 01:11:14</publishTime>
+      <publishTime>05/16/2020 10:10:30</publishTime>
+    </File>
+    <File Include="UI/PrintBill.aspx">
+      <publishTime>06/08/2020 13:33:06</publishTime>
     </File>
     <File Include="UI/PrintChallan.aspx">
-      <publishTime>04/28/2020 01:12:32</publishTime>
+      <publishTime>06/07/2020 00:12:01</publishTime>
     </File>
     <File Include="UI/Product.aspx">
       <publishTime>04/19/2020 17:39:36</publishTime>

@@ -154,6 +154,7 @@
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="Object\ConvertNumberToWord.cs" />
     <Compile Include="Object\objBill.cs" />
     <Compile Include="Object\ChallanIn.cs" />
     <Compile Include="Object\ChallanOut.cs" />

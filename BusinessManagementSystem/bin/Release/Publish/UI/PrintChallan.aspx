@@ -145,7 +145,16 @@
                     <asp:Button ID="btnPrint" runat="server" class="btn btn-success pr-4 pl-4 text-right" Text="Print" Visible="false" OnClientClick="return printPage();"/>
                 </div>
                 <div class="col-md-1">
-                    <asp:Button ID="btnDelete" runat="server" class="btn btn-danger pr-3 pl-3 text-right" Text="Delete" OnClick="btnDelete_Click" Visible="false" OnClientClick="return confirm('Are you want to delete this challan ?');"/>
+                    <asp:Button ID="btnDelete" runat="server" class="btn btn-danger pr-3 pl-3 text-right" Text="Delete" OnClick="btnDelete_Click" Visible="false"/>
+                </div>
+            </div>
+            <div class="row"><br /></div>
+            <div class="row">
+                <div class="col-md-10">
+                    <asp:TextBox ID="txtDeleteReason" runat="server" CssClass="form-control" placeholder="Reason" Visible="false"></asp:TextBox>
+                </div>
+                <div class="col-md-2">
+                     <asp:Button ID="btnConfirm" runat="server" class="btn btn-danger pr-3 pl-3 text-right" Text="Confirm Delete" Visible="false" OnClick="btnConfirm_Click" OnClientClick="return confirm('Are you sure to delete this challan ?');"/>
                 </div>
             </div>
         </div>

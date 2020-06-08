@@ -55,13 +55,18 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownChallan">
                         <asp:HyperLink ID="InChallanURL" runat="server" NavigateUrl="~/UI/InChallan.aspx" Text="Stock In" CssClass="dropdown-item"></asp:HyperLink>
                         <div class="dropdown-divider"></div>
-                        <asp:HyperLink ID="OutChallanURL" runat="server" NavigateUrl="~/UI/OutChallan.aspx" Text="Stock Out" CssClass="dropdown-item"></asp:HyperLink>
+                        <asp:HyperLink ID="OutChallanURL" runat="server" NavigateUrl="~/UI/OutChallan.aspx" Text="Stock Out/Challan" CssClass="dropdown-item"></asp:HyperLink>
                         <div class="dropdown-divider"></div>
                         <asp:HyperLink ID="PrintChallanURL" runat="server" NavigateUrl="~/UI/PrintChallan.aspx" Text="Print or Remove" CssClass="dropdown-item"></asp:HyperLink>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Bill</a>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBill" role="button" data-toggle="dropdown">Bill</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownBill">
+                        <asp:HyperLink ID="BillURL" runat="server" NavigateUrl="~/UI/Bill.aspx" Text="Create Bill" CssClass="dropdown-item"></asp:HyperLink>
+                        <div class="dropdown-divider"></div>
+                        <asp:HyperLink ID="PrintBillURL" runat="server" NavigateUrl="~/UI/PrintBill.aspx" Text="Print or Remove" CssClass="dropdown-item"></asp:HyperLink>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Ladger</a>

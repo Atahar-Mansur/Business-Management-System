@@ -14,6 +14,7 @@ namespace BusinessManagementSystem.UI
     {
         BLL_ChallanOut objData = new BLL_ChallanOut();
         BLL_PrintBill objData2 = new BLL_PrintBill();
+        ConvertNumberToWord objdata3 = new ConvertNumberToWord();
         DataTable dt = new DataTable();
         List<NewClient> clients = new List<NewClient>();
 
@@ -69,6 +70,7 @@ namespace BusinessManagementSystem.UI
 
             lblTotal.InnerText = objData2.GetTotal(lblPartyName.Text, lblBillNo.Text, lblBOENo.Text).ToString();
             lblCurrency.InnerText = objData2.GetCurrency(lblPartyName.Text, lblBillNo.Text, lblBOENo.Text);
+            lblPiW.InnerText = objdata3.ConvertAmount(Convert.ToDouble(lblTotal.InnerText)) + " " + lblCurrency.InnerText + " Only.";
 
             lblChallans.Text = objData2.GetChallansNo(lblPartyName.Text, lblBillNo.Text, lblBOENo.Text);
             lblChallansDate.Text = objData2.GetChallansDate(lblPartyName.Text, lblBillNo.Text, lblBOENo.Text);
