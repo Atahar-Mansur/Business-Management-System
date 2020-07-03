@@ -75,6 +75,7 @@
     <Content Include="ContentImages\WaterMark.jpg" />
     <Content Include="HomePage.aspx" />
     <Content Include="UI\Bill.aspx" />
+    <Content Include="UI\CashMemo.aspx" />
     <Content Include="UI\Client.aspx" />
     <Content Include="UI\CurrentBalance.aspx" />
     <Content Include="UI\InChallan.aspx" />
@@ -87,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLL_Bill.cs" />
+    <Compile Include="BLL\BLL_CashMemo.cs" />
     <Compile Include="BLL\BLL_ChallanIn.cs" />
     <Compile Include="BLL\BLL_ChallanOut.cs" />
     <Compile Include="BLL\BLL_CurrentBalance.cs" />
@@ -99,6 +101,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DAL_Bill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_CashMemo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL_CashMemo.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL_ChallanIn.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -160,6 +167,7 @@
     <Compile Include="Object\ChallanOut.cs" />
     <Compile Include="Object\NewClient.cs" />
     <Compile Include="Object\NewProduct.cs" />
+    <Compile Include="Object\objCashMemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\Bill.aspx.cs">
       <DependentUpon>Bill.aspx</DependentUpon>
@@ -167,6 +175,13 @@
     </Compile>
     <Compile Include="UI\Bill.aspx.designer.cs">
       <DependentUpon>Bill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CashMemo.aspx.cs">
+      <DependentUpon>CashMemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\CashMemo.aspx.designer.cs">
+      <DependentUpon>CashMemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Client.aspx.cs">
       <DependentUpon>Client.aspx</DependentUpon>
@@ -239,6 +254,17 @@
     </None>
     <Content Include="DAL\DAL_Bill.xss">
       <DependentUpon>DAL_Bill.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\DAL_CashMemo.xsc">
+      <DependentUpon>DAL_CashMemo.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\DAL_CashMemo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAL_CashMemo.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\DAL_CashMemo.xss">
+      <DependentUpon>DAL_CashMemo.xsd</DependentUpon>
     </Content>
     <None Include="DAL\DAL_ChallanIn.xsd">
       <SubType>Designer</SubType>

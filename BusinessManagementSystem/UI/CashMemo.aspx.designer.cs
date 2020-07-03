@@ -7,135 +7,180 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BusinessManagementSystem {
+namespace BusinessManagementSystem.UI {
     
     
-    public partial class MasterPage {
+    public partial class CashMemo {
         
         /// <summary>
-        /// head control.
+        /// frmChallanIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmChallanIn;
         
         /// <summary>
-        /// logo control.
+        /// txtReceiptNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image logo;
+        protected global::System.Web.UI.WebControls.TextBox txtReceiptNo;
         
         /// <summary>
-        /// HomePageURL control.
+        /// txtCashMemoDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HomePageURL;
+        protected global::System.Web.UI.WebControls.TextBox txtCashMemoDate;
         
         /// <summary>
-        /// AddClientURL control.
+        /// drpPartyName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AddClientURL;
+        protected global::System.Web.UI.WebControls.DropDownList drpPartyName;
         
         /// <summary>
-        /// AddProductURL control.
+        /// txtPartyAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AddProductURL;
+        protected global::System.Web.UI.WebControls.TextBox txtPartyAddress;
         
         /// <summary>
-        /// StockRegisterURL control.
+        /// drpPayType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink StockRegisterURL;
+        protected global::System.Web.UI.WebControls.DropDownList drpPayType;
         
         /// <summary>
-        /// CurrentBalanceURL control.
+        /// divCheckNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CurrentBalanceURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCheckNo;
         
         /// <summary>
-        /// InChallanURL control.
+        /// lblCheckNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink InChallanURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCheckNo;
         
         /// <summary>
-        /// OutChallanURL control.
+        /// txtCheckNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink OutChallanURL;
+        protected global::System.Web.UI.WebControls.TextBox txtCheckNo;
         
         /// <summary>
-        /// PrintChallanURL control.
+        /// divCheckDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PrintChallanURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCheckDate;
         
         /// <summary>
-        /// BillURL control.
+        /// txtCheckDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink BillURL;
+        protected global::System.Web.UI.WebControls.TextBox txtCheckDate;
         
         /// <summary>
-        /// PrintBillURL control.
+        /// drpBill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PrintBillURL;
+        protected global::System.Web.UI.WebControls.DropDownList drpBill;
         
         /// <summary>
-        /// CashMemoURL control.
+        /// lblDueBalance control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CashMemoURL;
+        protected global::System.Web.UI.WebControls.Label lblDueBalance;
         
         /// <summary>
-        /// body control.
+        /// txtPaidAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder body;
+        protected global::System.Web.UI.WebControls.TextBox txtPaidAmount;
+        
+        /// <summary>
+        /// txtTAX control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTAX;
+        
+        /// <summary>
+        /// drpDiscount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpDiscount;
+        
+        /// <summary>
+        /// btnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdd;
+        
+        /// <summary>
+        /// dgv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgv;
+        
+        /// <summary>
+        /// btnCreateCashMemo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCreateCashMemo;
     }
 }

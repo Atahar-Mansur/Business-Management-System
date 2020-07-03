@@ -74,12 +74,15 @@ namespace BusinessManagementSystem.BLL
             adp.UpdateTableRow(monUnitPrice, monPrice, Convert.ToInt32(strChallanNo), strDetails);
         }
 
-        public string UpdateBill(objBill aBill, string challans)
+        public string UpdateBill(objBill aBill, string challans, string total)
         {
             try
             {
                 updateBillTableAdapter adp = new updateBillTableAdapter();
+                insertToCashMemoTableAdapter adp2 = new insertToCashMemoTableAdapter();
+
                 adp.UpdateBill(aBill.intBillId, aBill.dteDate, aBill.strBOE, aBill.strPartyAddress, aBill.strCurrency, aBill.strRemark, challans);
+                adp2.InsertToCashMemo(aBill.intBillId, aBill.strPartyName, Convert.ToDouble(total));
 
                 return "Bill is created successfully.";
             }

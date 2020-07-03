@@ -69,7 +69,7 @@ namespace BusinessManagementSystem.UI
                 aBill.strCurrency = drpCurrency.Text;
                 aBill.strRemark = txtRemark.Text;
 
-                sms = objBill.UpdateBill(aBill, hdnChallanNo.Text);
+                sms = objBill.UpdateBill(aBill, hdnChallanNo.Text, lblTotal.InnerText);
 
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + sms + "')", true);
 

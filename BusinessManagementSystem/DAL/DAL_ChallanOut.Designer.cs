@@ -1153,6 +1153,8 @@ namespace BusinessManagementSystem.DAL {
             
             private global::System.Data.DataColumn columnstrClientName;
             
+            private global::System.Data.DataColumn columnintID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public tblClientDataTable() {
@@ -1196,6 +1198,14 @@ namespace BusinessManagementSystem.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn intIDColumn {
+                get {
+                    return this.columnintID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1234,7 +1244,8 @@ namespace BusinessManagementSystem.DAL {
             public tblClientRow AddtblClientRow(string strClientName) {
                 tblClientRow rowtblClientRow = ((tblClientRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        strClientName};
+                        strClientName,
+                        null};
                 rowtblClientRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblClientRow);
                 return rowtblClientRow;
@@ -1258,6 +1269,7 @@ namespace BusinessManagementSystem.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnstrClientName = base.Columns["strClientName"];
+                this.columnintID = base.Columns["intID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1265,7 +1277,14 @@ namespace BusinessManagementSystem.DAL {
             private void InitClass() {
                 this.columnstrClientName = new global::System.Data.DataColumn("strClientName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstrClientName);
+                this.columnintID = new global::System.Data.DataColumn("intID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnintID);
                 this.columnstrClientName.MaxLength = 1000;
+                this.columnintID.AutoIncrement = true;
+                this.columnintID.AutoIncrementSeed = -1;
+                this.columnintID.AutoIncrementStep = -1;
+                this.columnintID.AllowDBNull = false;
+                this.columnintID.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1751,6 +1770,17 @@ namespace BusinessManagementSystem.DAL {
                 }
                 set {
                     this[this.tabletblClient.strClientNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int intID {
+                get {
+                    return ((int)(this[this.tabletblClient.intIDColumn]));
+                }
+                set {
+                    this[this.tabletblClient.intIDColumn] = value;
                 }
             }
             
@@ -2684,6 +2714,7 @@ WHERE  (T1.strDetails = @productName)";
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "tblClient";
             tableMapping.ColumnMappings.Add("strClientName", "strClientName");
+            tableMapping.ColumnMappings.Add("intID", "intID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2700,7 +2731,7 @@ WHERE  (T1.strDetails = @productName)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT strClientName\r\nFROM     tblClient\r\nWHERE  (ysnActive = 1)";
+            this._commandCollection[0].CommandText = "SELECT strClientName, intID\r\nFROM     tblClient\r\nWHERE  (ysnActive = 1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

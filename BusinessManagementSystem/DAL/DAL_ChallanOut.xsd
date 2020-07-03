@@ -91,7 +91,7 @@ WHERE  (T1.strDetails = @productName)</CommandText>
               <DbSource ConnectionRef="PerfectPointDBConnectionString (Web.config)" DbObjectName="PerfectPoint.dbo.tblClient" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetClientData" GetMethodModifier="Public" GetMethodName="GetClientData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetClientData" UserSourceName="GetClientData">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT strClientName
+                    <CommandText>SELECT strClientName, intID
 FROM     tblClient
 WHERE  (ysnActive = 1)</CommandText>
                     <Parameters />
@@ -101,6 +101,7 @@ WHERE  (ysnActive = 1)</CommandText>
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="strClientName" DataSetColumn="strClientName" />
+              <Mapping SourceColumn="intID" DataSetColumn="intID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -132,25 +133,25 @@ WHERE  (strClientName = @strClientName)</CommandText>
   <xs:element name="DAL_ChallanOut" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DAL_ChallanOut" msprop:Generator_UserDSName="DAL_ChallanOut">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblChallanOut" msprop:Generator_TableClassName="tblChallanOutDataTable" msprop:Generator_TableVarName="tabletblChallanOut" msprop:Generator_TablePropName="tblChallanOut" msprop:Generator_RowDeletingName="tblChallanOutRowDeleting" msprop:Generator_RowChangingName="tblChallanOutRowChanging" msprop:Generator_RowEvHandlerName="tblChallanOutRowChangeEventHandler" msprop:Generator_RowDeletedName="tblChallanOutRowDeleted" msprop:Generator_UserTableName="tblChallanOut" msprop:Generator_RowChangedName="tblChallanOutRowChanged" msprop:Generator_RowEvArgName="tblChallanOutRowChangeEvent" msprop:Generator_RowClassName="tblChallanOutRow">
+        <xs:element name="tblChallanOut" msprop:Generator_TableClassName="tblChallanOutDataTable" msprop:Generator_TableVarName="tabletblChallanOut" msprop:Generator_RowChangedName="tblChallanOutRowChanged" msprop:Generator_TablePropName="tblChallanOut" msprop:Generator_RowDeletingName="tblChallanOutRowDeleting" msprop:Generator_RowChangingName="tblChallanOutRowChanging" msprop:Generator_RowEvHandlerName="tblChallanOutRowChangeEventHandler" msprop:Generator_RowDeletedName="tblChallanOutRowDeleted" msprop:Generator_RowClassName="tblChallanOutRow" msprop:Generator_UserTableName="tblChallanOut" msprop:Generator_RowEvArgName="tblChallanOutRowChangeEvent">
           <xs:complexType>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblChallanOut1" msprop:Generator_TableClassName="tblChallanOut1DataTable" msprop:Generator_TableVarName="tabletblChallanOut1" msprop:Generator_TablePropName="tblChallanOut1" msprop:Generator_RowDeletingName="tblChallanOut1RowDeleting" msprop:Generator_RowChangingName="tblChallanOut1RowChanging" msprop:Generator_RowEvHandlerName="tblChallanOut1RowChangeEventHandler" msprop:Generator_RowDeletedName="tblChallanOut1RowDeleted" msprop:Generator_UserTableName="tblChallanOut1" msprop:Generator_RowChangedName="tblChallanOut1RowChanged" msprop:Generator_RowEvArgName="tblChallanOut1RowChangeEvent" msprop:Generator_RowClassName="tblChallanOut1Row">
+        <xs:element name="tblChallanOut1" msprop:Generator_TableClassName="tblChallanOut1DataTable" msprop:Generator_TableVarName="tabletblChallanOut1" msprop:Generator_RowChangedName="tblChallanOut1RowChanged" msprop:Generator_TablePropName="tblChallanOut1" msprop:Generator_RowDeletingName="tblChallanOut1RowDeleting" msprop:Generator_RowChangingName="tblChallanOut1RowChanging" msprop:Generator_RowEvHandlerName="tblChallanOut1RowChangeEventHandler" msprop:Generator_RowDeletedName="tblChallanOut1RowDeleted" msprop:Generator_RowClassName="tblChallanOut1Row" msprop:Generator_UserTableName="tblChallanOut1" msprop:Generator_RowEvArgName="tblChallanOut1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="intChallanId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnintChallanId" msprop:Generator_ColumnPropNameInRow="intChallanId" msprop:Generator_ColumnPropNameInTable="intChallanIdColumn" msprop:Generator_UserColumnName="intChallanId" type="xs:long" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblStockRegister" msprop:Generator_TableClassName="tblStockRegisterDataTable" msprop:Generator_TableVarName="tabletblStockRegister" msprop:Generator_TablePropName="tblStockRegister" msprop:Generator_RowDeletingName="tblStockRegisterRowDeleting" msprop:Generator_RowChangingName="tblStockRegisterRowChanging" msprop:Generator_RowEvHandlerName="tblStockRegisterRowChangeEventHandler" msprop:Generator_RowDeletedName="tblStockRegisterRowDeleted" msprop:Generator_UserTableName="tblStockRegister" msprop:Generator_RowChangedName="tblStockRegisterRowChanged" msprop:Generator_RowEvArgName="tblStockRegisterRowChangeEvent" msprop:Generator_RowClassName="tblStockRegisterRow">
+        <xs:element name="tblStockRegister" msprop:Generator_TableClassName="tblStockRegisterDataTable" msprop:Generator_TableVarName="tabletblStockRegister" msprop:Generator_RowChangedName="tblStockRegisterRowChanged" msprop:Generator_TablePropName="tblStockRegister" msprop:Generator_RowDeletingName="tblStockRegisterRowDeleting" msprop:Generator_RowChangingName="tblStockRegisterRowChanging" msprop:Generator_RowEvHandlerName="tblStockRegisterRowChangeEventHandler" msprop:Generator_RowDeletedName="tblStockRegisterRowDeleted" msprop:Generator_RowClassName="tblStockRegisterRow" msprop:Generator_UserTableName="tblStockRegister" msprop:Generator_RowEvArgName="tblStockRegisterRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="intBalance" msprop:Generator_ColumnVarNameInTable="columnintBalance" msprop:Generator_ColumnPropNameInRow="intBalance" msprop:Generator_ColumnPropNameInTable="intBalanceColumn" msprop:Generator_UserColumnName="intBalance" type="xs:long" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblClient" msprop:Generator_TableClassName="tblClientDataTable" msprop:Generator_TableVarName="tabletblClient" msprop:Generator_RowChangedName="tblClientRowChanged" msprop:Generator_TablePropName="tblClient" msprop:Generator_RowDeletingName="tblClientRowDeleting" msprop:Generator_RowChangingName="tblClientRowChanging" msprop:Generator_RowEvHandlerName="tblClientRowChangeEventHandler" msprop:Generator_RowDeletedName="tblClientRowDeleted" msprop:Generator_RowClassName="tblClientRow" msprop:Generator_UserTableName="tblClient" msprop:Generator_RowEvArgName="tblClientRowChangeEvent">
+        <xs:element name="tblClient" msprop:Generator_TableClassName="tblClientDataTable" msprop:Generator_TableVarName="tabletblClient" msprop:Generator_TablePropName="tblClient" msprop:Generator_RowDeletingName="tblClientRowDeleting" msprop:Generator_RowChangingName="tblClientRowChanging" msprop:Generator_RowEvHandlerName="tblClientRowChangeEventHandler" msprop:Generator_RowDeletedName="tblClientRowDeleted" msprop:Generator_UserTableName="tblClient" msprop:Generator_RowChangedName="tblClientRowChanged" msprop:Generator_RowEvArgName="tblClientRowChangeEvent" msprop:Generator_RowClassName="tblClientRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="strClientName" msprop:Generator_ColumnVarNameInTable="columnstrClientName" msprop:Generator_ColumnPropNameInRow="strClientName" msprop:Generator_ColumnPropNameInTable="strClientNameColumn" msprop:Generator_UserColumnName="strClientName" minOccurs="0">
@@ -160,10 +161,11 @@ WHERE  (strClientName = @strClientName)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="intID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnintID" msprop:Generator_ColumnPropNameInRow="intID" msprop:Generator_ColumnPropNameInTable="intIDColumn" msprop:Generator_UserColumnName="intID" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblClient1" msprop:Generator_TableClassName="tblClient1DataTable" msprop:Generator_TableVarName="tabletblClient1" msprop:Generator_TablePropName="tblClient1" msprop:Generator_RowDeletingName="tblClient1RowDeleting" msprop:Generator_RowChangingName="tblClient1RowChanging" msprop:Generator_RowEvHandlerName="tblClient1RowChangeEventHandler" msprop:Generator_RowDeletedName="tblClient1RowDeleted" msprop:Generator_UserTableName="tblClient1" msprop:Generator_RowChangedName="tblClient1RowChanged" msprop:Generator_RowEvArgName="tblClient1RowChangeEvent" msprop:Generator_RowClassName="tblClient1Row">
+        <xs:element name="tblClient1" msprop:Generator_TableClassName="tblClient1DataTable" msprop:Generator_TableVarName="tabletblClient1" msprop:Generator_RowChangedName="tblClient1RowChanged" msprop:Generator_TablePropName="tblClient1" msprop:Generator_RowDeletingName="tblClient1RowDeleting" msprop:Generator_RowChangingName="tblClient1RowChanging" msprop:Generator_RowEvHandlerName="tblClient1RowChangeEventHandler" msprop:Generator_RowDeletedName="tblClient1RowDeleted" msprop:Generator_RowClassName="tblClient1Row" msprop:Generator_UserTableName="tblClient1" msprop:Generator_RowEvArgName="tblClient1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="strAddress" msprop:Generator_ColumnVarNameInTable="columnstrAddress" msprop:Generator_ColumnPropNameInRow="strAddress" msprop:Generator_ColumnPropNameInTable="strAddressColumn" msprop:Generator_UserColumnName="strAddress" minOccurs="0">

@@ -11,6 +11,9 @@
         .backgroundPAD{
             width:1100px;
         }
+        .textAlignCenter{
+            text-align:center;
+        }
         .grdView{
             padding:20px;
         }
@@ -77,7 +80,7 @@
                         CellPadding="1" ForeColor="Black" GridLines="Vertical" OnRowDeleting="dgv_RowDeleting">
                         <AlternatingRowStyle BackColor="#CCCCCC" />
                         <Columns>
-                            <asp:TemplateField HeaderText="SL.">
+                            <asp:TemplateField HeaderText="SL." HeaderStyle-CssClass="textAlignCenter">
                                 <ItemTemplate><%# Container.DataItemIndex + 1 %><asp:HiddenField ID="hdnitmid" runat="server" Value='<%# Bind("strDetails") %>' />
                                 </ItemTemplate>
                                 <ItemStyle HorizontalAlign="Center" Width="50px" />
@@ -89,13 +92,13 @@
                                 <ItemStyle HorizontalAlign="Left" Width="600px" />
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Quantity" SortExpression="qnt">
+                            <asp:TemplateField HeaderText="Quantity" SortExpression="qnt" HeaderStyle-CssClass="textAlignCenter">
                                 <ItemTemplate>
                                     <asp:Label ID="lblQuantity" runat="server" Text='<%# Bind("intQuantity") %>'></asp:Label></ItemTemplate>
                                 <ItemStyle HorizontalAlign="Right" Width="100px" />
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Remarks" SortExpression="remark">
+                            <asp:TemplateField HeaderText="Remarks" SortExpression="remark" HeaderStyle-CssClass="textAlignCenter">
                                 <ItemTemplate>
                                     <asp:Label ID="lblRemarks" runat="server" Text='<%# Bind("strRemarks") %>'></asp:Label></ItemTemplate>
                                 <ItemStyle HorizontalAlign="Left" Width="200px" />

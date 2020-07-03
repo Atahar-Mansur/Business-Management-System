@@ -66,6 +66,8 @@
                         <asp:HyperLink ID="BillURL" runat="server" NavigateUrl="~/UI/Bill.aspx" Text="Create Bill" CssClass="dropdown-item"></asp:HyperLink>
                         <div class="dropdown-divider"></div>
                         <asp:HyperLink ID="PrintBillURL" runat="server" NavigateUrl="~/UI/PrintBill.aspx" Text="Print or Remove" CssClass="dropdown-item"></asp:HyperLink>
+                        <div class="dropdown-divider"></div>
+                        <asp:HyperLink ID="CashMemoURL" runat="server" NavigateUrl="~/UI/CashMemo.aspx" Text="Cash Memo" CssClass="dropdown-item"></asp:HyperLink>
                     </div>
                 </li>
                 <li class="nav-item">

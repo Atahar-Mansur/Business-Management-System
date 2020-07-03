@@ -38,6 +38,7 @@ namespace BusinessManagementSystem.BLL
                 NewClient client = new NewClient();
 
                 client.strName = x.strClientName;
+                client.intClientId = x.intID;
 
                 showList.Add(client);
             }
