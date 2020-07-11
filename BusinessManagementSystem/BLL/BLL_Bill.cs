@@ -80,9 +80,11 @@ namespace BusinessManagementSystem.BLL
             {
                 updateBillTableAdapter adp = new updateBillTableAdapter();
                 insertToCashMemoTableAdapter adp2 = new insertToCashMemoTableAdapter();
+                insertIntoLedgerTableAdapter adp3 = new insertIntoLedgerTableAdapter();
 
                 adp.UpdateBill(aBill.intBillId, aBill.dteDate, aBill.strBOE, aBill.strPartyAddress, aBill.strCurrency, aBill.strRemark, challans);
                 adp2.InsertToCashMemo(aBill.intBillId, aBill.strPartyName, Convert.ToDouble(total));
+                adp3.InsertIntoLedger(aBill.intBillId, aBill.strPartyName, aBill.dteDate, Convert.ToDouble(total), "BILL");
 
                 return "Bill is created successfully.";
             }

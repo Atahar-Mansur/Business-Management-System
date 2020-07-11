@@ -79,6 +79,7 @@
     <Content Include="UI\Client.aspx" />
     <Content Include="UI\CurrentBalance.aspx" />
     <Content Include="UI\InChallan.aspx" />
+    <Content Include="UI\Ledger.aspx" />
     <Content Include="UI\OutChallan.aspx" />
     <Content Include="UI\PrintBill.aspx" />
     <Content Include="UI\PrintChallan.aspx" />
@@ -92,6 +93,7 @@
     <Compile Include="BLL\BLL_ChallanIn.cs" />
     <Compile Include="BLL\BLL_ChallanOut.cs" />
     <Compile Include="BLL\BLL_CurrentBalance.cs" />
+    <Compile Include="BLL\BLL_Ledger.cs" />
     <Compile Include="BLL\BLL_NewClient.cs" />
     <Compile Include="BLL\BLL_NewProduct.cs" />
     <Compile Include="BLL\BLL_PrintBill.cs" />
@@ -121,6 +123,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DAL_CurrentBalance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_Ledger.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL_Ledger.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL_NewClient.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -203,6 +210,13 @@
     </Compile>
     <Compile Include="UI\InChallan.aspx.designer.cs">
       <DependentUpon>InChallan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ledger.aspx.cs">
+      <DependentUpon>Ledger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Ledger.aspx.designer.cs">
+      <DependentUpon>Ledger.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\OutChallan.aspx.cs">
       <DependentUpon>OutChallan.aspx</DependentUpon>
@@ -301,6 +315,17 @@
     </Content>
     <Content Include="DAL\DAL_NewClient.xsc">
       <DependentUpon>DAL_NewClient.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\DAL_Ledger.xsc">
+      <DependentUpon>DAL_Ledger.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\DAL_Ledger.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAL_Ledger.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\DAL_Ledger.xss">
+      <DependentUpon>DAL_Ledger.xsd</DependentUpon>
     </Content>
     <None Include="DAL\DAL_NewClient.xsd">
       <SubType>Designer</SubType>

@@ -7,144 +7,189 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BusinessManagementSystem {
+namespace BusinessManagementSystem.UI {
     
     
-    public partial class MasterPage {
+    public partial class Ledger {
         
         /// <summary>
-        /// head control.
+        /// frmStockRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmStockRegister;
         
         /// <summary>
-        /// logo control.
+        /// drpPartyName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image logo;
+        protected global::System.Web.UI.WebControls.DropDownList drpPartyName;
         
         /// <summary>
-        /// HomePageURL control.
+        /// drpReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HomePageURL;
+        protected global::System.Web.UI.WebControls.DropDownList drpReport;
         
         /// <summary>
-        /// AddClientURL control.
+        /// btnShow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AddClientURL;
+        protected global::System.Web.UI.WebControls.Button btnShow;
         
         /// <summary>
-        /// AddProductURL control.
+        /// divCurrentStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AddProductURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCurrentStatus;
         
         /// <summary>
-        /// StockRegisterURL control.
+        /// txtCurrentStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink StockRegisterURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtCurrentStatus;
         
         /// <summary>
-        /// CurrentBalanceURL control.
+        /// txtDueBalance control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CurrentBalanceURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDueBalance;
         
         /// <summary>
-        /// InChallanURL control.
+        /// txtDueBills control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink InChallanURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDueBills;
         
         /// <summary>
-        /// OutChallanURL control.
+        /// divBill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink OutChallanURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divBill;
         
         /// <summary>
-        /// PrintChallanURL control.
+        /// headerBill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PrintChallanURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl headerBill;
         
         /// <summary>
-        /// BillURL control.
+        /// btnBill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink BillURL;
+        protected global::System.Web.UI.WebControls.Button btnBill;
         
         /// <summary>
-        /// PrintBillURL control.
+        /// dgvBill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PrintBillURL;
+        protected global::System.Web.UI.WebControls.GridView dgvBill;
         
         /// <summary>
-        /// CashMemoURL control.
+        /// divCashMemo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CashMemoURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCashMemo;
         
         /// <summary>
-        /// LedgerURL control.
+        /// headerCashMemo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LedgerURL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl headerCashMemo;
         
         /// <summary>
-        /// body control.
+        /// btnCashMemo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder body;
+        protected global::System.Web.UI.WebControls.Button btnCashMemo;
+        
+        /// <summary>
+        /// dgvCashMemo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvCashMemo;
+        
+        /// <summary>
+        /// divLedger control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLedger;
+        
+        /// <summary>
+        /// headerLedger control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl headerLedger;
+        
+        /// <summary>
+        /// btnLedger control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLedger;
+        
+        /// <summary>
+        /// dgvLedger control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvLedger;
     }
 }

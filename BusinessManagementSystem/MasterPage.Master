@@ -70,8 +70,8 @@
                         <asp:HyperLink ID="CashMemoURL" runat="server" NavigateUrl="~/UI/CashMemo.aspx" Text="Cash Memo" CssClass="dropdown-item"></asp:HyperLink>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Ladger</a>
+                <li class="nav-item active dropdown">
+                    <asp:HyperLink ID="LedgerURL" runat="server" NavigateUrl="~/UI/Ledger.aspx" Text="Ledger" CssClass="nav-link"></asp:HyperLink>
                 </li>
             </ul>
         </div>

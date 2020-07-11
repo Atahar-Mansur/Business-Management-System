@@ -33,13 +33,13 @@ namespace BusinessManagementSystem.BLL
             try
             {
                 updateCashMemoTableAdapter adp = new updateCashMemoTableAdapter();
-                //sprInsertStockRegisterTableAdapter adp2 = new sprInsertStockRegisterTableAdapter();
+                tblLedgerTableAdapter adp2 = new tblLedgerTableAdapter();
 
                 foreach (var x in records)
                 {
                     if(x.monDue == 0) adp.UpdateCashMemo(intCashMemoID, dteCashMemoDate, strChequeNo, dteChequeIssueDate, x.monPaid, x.monTAX, x.monDiscount, x.monDue, false, x.intBillId, strPartyName);
                     else adp.UpdateCashMemo(intCashMemoID, dteCashMemoDate, strChequeNo, dteChequeIssueDate, x.monPaid, x.monTAX, x.monDiscount, x.monDue, true, x.intBillId, strPartyName);
-                    //adp2.PutBalanceData(1, intChallanID, strPartyName, dteDate, x.strDetails, x.intQuantity, x.strRemarks);
+                    adp2.PutLedgerData(intCashMemoID, x.intBillId, strPartyName, dteCashMemoDate, strChequeNo, dteChequeIssueDate, x.monPaid, x.monTAX, x.monDiscount, x.monPaid + x.monTAX + x.monDiscount, x.monDue, "CASH");
                 }
 
                 return "Cash Memo is created Successfully.";
