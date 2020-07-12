@@ -84,6 +84,7 @@
     <Content Include="UI\PrintBill.aspx" />
     <Content Include="UI\PrintChallan.aspx" />
     <Content Include="UI\Product.aspx" />
+    <Content Include="UI\Production.aspx" />
     <Content Include="UI\StockRegister.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -98,6 +99,7 @@
     <Compile Include="BLL\BLL_NewProduct.cs" />
     <Compile Include="BLL\BLL_PrintBill.cs" />
     <Compile Include="BLL\BLL_PrintChallan.cs" />
+    <Compile Include="BLL\BLL_Production.cs" />
     <Compile Include="BLL\BLL_StockRegister.cs" />
     <Compile Include="DAL\DAL_Bill.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -143,6 +145,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DAL_PrintChallan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_Production.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL_Production.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_Products.cs">
+      <DependentUpon>DAL_Products.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL_Products.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -245,6 +255,13 @@
     </Compile>
     <Compile Include="UI\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Production.aspx.cs">
+      <DependentUpon>Production.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Production.aspx.designer.cs">
+      <DependentUpon>Production.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\StockRegister.aspx.cs">
       <DependentUpon>StockRegister.aspx</DependentUpon>
@@ -356,6 +373,17 @@
     </None>
     <Content Include="DAL\DAL_PrintChallan.xss">
       <DependentUpon>DAL_PrintChallan.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\DAL_Production.xsc">
+      <DependentUpon>DAL_Production.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\DAL_Production.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAL_Production.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\DAL_Production.xss">
+      <DependentUpon>DAL_Production.xsd</DependentUpon>
     </Content>
     <None Include="DAL\DAL_Products.xsd">
       <SubType>Designer</SubType>

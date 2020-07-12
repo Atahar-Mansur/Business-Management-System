@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PerfectPointDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerfectPointDBConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PerfectPointDBConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
@@ -56,7 +56,7 @@ ORDER BY T1.strDetails</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="intBalance" msprop:Generator_ColumnVarNameInTable="columnintBalance" msprop:Generator_ColumnPropNameInRow="intBalance" msprop:Generator_ColumnPropNameInTable="intBalanceColumn" msprop:Generator_UserColumnName="intBalance" type="xs:long" minOccurs="0" />
-              <xs:element name="intChallanId" msprop:Generator_ColumnVarNameInTable="columnintChallanId" msprop:Generator_ColumnPropNameInRow="intChallanId" msprop:Generator_ColumnPropNameInTable="intChallanIdColumn" msprop:Generator_UserColumnName="intChallanId" type="xs:long" />
+              <xs:element name="intChallanId" msprop:Generator_ColumnVarNameInTable="columnintChallanId" msprop:Generator_ColumnPropNameInRow="intChallanId" msprop:Generator_ColumnPropNameInTable="intChallanIdColumn" msprop:Generator_UserColumnName="intChallanId" type="xs:long" minOccurs="0" />
               <xs:element name="strPartyName" msprop:Generator_ColumnVarNameInTable="columnstrPartyName" msprop:Generator_ColumnPropNameInRow="strPartyName" msprop:Generator_ColumnPropNameInTable="strPartyNameColumn" msprop:Generator_UserColumnName="strPartyName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

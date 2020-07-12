@@ -10,7 +10,7 @@
 namespace BusinessManagementSystem.UI {
     
     
-    public partial class Product {
+    public partial class Production {
         
         /// <summary>
         /// frmChallanIn control.
@@ -22,31 +22,40 @@ namespace BusinessManagementSystem.UI {
         protected global::System.Web.UI.HtmlControls.HtmlForm frmChallanIn;
         
         /// <summary>
-        /// txtName control.
+        /// txtProductionDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.TextBox txtProductionDate;
         
         /// <summary>
-        /// txtDetails control.
+        /// drpRowPro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDetails;
+        protected global::System.Web.UI.WebControls.DropDownList drpRowPro;
         
         /// <summary>
-        /// txtProductImageURL control.
+        /// txtRowRemark control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductImageURL;
+        protected global::System.Web.UI.WebControls.TextBox txtRowRemark;
+        
+        /// <summary>
+        /// drpDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpDetails;
         
         /// <summary>
         /// txtQuantity control.
@@ -58,31 +67,13 @@ namespace BusinessManagementSystem.UI {
         protected global::System.Web.UI.WebControls.TextBox txtQuantity;
         
         /// <summary>
-        /// drpUnit control.
+        /// txtRemark control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpUnit;
-        
-        /// <summary>
-        /// txtUnitPerKG control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUnitPerKG;
-        
-        /// <summary>
-        /// txtProductRemark control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductRemark;
+        protected global::System.Web.UI.WebControls.TextBox txtRemark;
         
         /// <summary>
         /// btnAdd control.
@@ -101,6 +92,24 @@ namespace BusinessManagementSystem.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView dgv;
+        
+        /// <summary>
+        /// divTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divTotal;
+        
+        /// <summary>
+        /// lblTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblTotal;
         
         /// <summary>
         /// btnCreateChallan control.

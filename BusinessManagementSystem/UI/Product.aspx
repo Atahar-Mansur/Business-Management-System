@@ -49,16 +49,25 @@
                     <div class="col-md-3">
                         <h3 class="text-center">First Stock In :</h3>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-5">
                         <asp:TextBox ID="txtQuantity" runat="server" TextMode="Number" CssClass="form-control" placeholder="Quantity"></asp:TextBox>
                     </div>
                     <div class="col-md-2">
                         <asp:DropDownList ID="drpUnit" runat="server" CssClass="form-control" placeholder="Unit"></asp:DropDownList>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
+                        <asp:TextBox ID="txtUnitPerKG" runat="server" TextMode="Number" CssClass="form-control" placeholder="Unit/KG"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"><br /></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"><br /></div>
+                    <div class="col-md-8">
                         <asp:TextBox ID="txtProductRemark" runat="server" TextMode="SingleLine" CssClass="form-control" placeholder="Remark(Bundle/Cartoon)"></asp:TextBox>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <asp:Button ID="btnAdd" runat="server" class="btn btn-info pr-5 pl-5 text-right" Text="ADD" OnClick="btnAdd_Click" />
                     </div>
                 </div>

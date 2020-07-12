@@ -52,6 +52,7 @@ namespace BusinessManagementSystem.UI
                 aProduct.strName = txtName.Text;
                 aProduct.strDetails = txtDetails.Text;
                 aProduct.strUnit = drpUnit.Text;
+                aProduct.decUnitPerKG = Convert.ToDouble(txtUnitPerKG.Text);
                 aProduct.strProductURL = txtProductImageURL.Text;
                 aProduct.intQuantity = Convert.ToInt32(txtQuantity.Text);
                 aProduct.strRemark = txtProductRemark.Text;
@@ -95,6 +96,7 @@ namespace BusinessManagementSystem.UI
             if (txtName.Text == "") return false;
             if (txtDetails.Text == "") return false;
             if (txtQuantity.Text == "") return false;
+            if (txtUnitPerKG.Text == "") return false;
             return true;
         }
 
@@ -104,6 +106,7 @@ namespace BusinessManagementSystem.UI
             txtDetails.Text = "";
             txtProductImageURL.Text = "";
             txtQuantity.Text = "";
+            txtUnitPerKG.Text = "";
             txtProductRemark.Text = "";
         }
     }

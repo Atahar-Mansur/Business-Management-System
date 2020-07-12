@@ -1598,10 +1598,9 @@ namespace BusinessManagementSystem.DAL.DAL_ChallanInTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"--declare @intChallanId int = 1,@strPartyName varchar(100) = 'Dip',@strPartyAddress varchar(100) = 'Dhaka',@strDetails varchar(100) = 'test',@intQuantity int = 50,@strRemarks varchar(100) = 'test', @dteChallanDate datetime = '02-04-2020'
-
-INSERT INTO [PerfectPoint].[dbo].[tblChallanIn] ([intChallanId],[strPartyName],[strPartyAddress],[dteChallanDate],[dteEntryDate],[strDetails],[intQuantity],[strRemarks],[ysnActive])
-VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate,GETDATE(),@strDetails,@intQuantity,@strRemarks,1)";
+            this._commandCollection[0].CommandText = @"INSERT INTO tblChallanIn
+                  (intChallanId, strPartyName, strPartyAddress, dteChallanDate, dteEntryDate, strDetails, intQuantity, strRemarks, ysnActive)
+VALUES (@intChallanId,@strPartyName,@strPartyAddress,@dteChallanDate, GETDATE(),@strDetails,@intQuantity,@strRemarks, 1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intChallanId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "intChallanId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@strPartyName", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "strPartyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

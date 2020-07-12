@@ -34,8 +34,8 @@ namespace BusinessManagementSystem.BLL
 
                 foreach (var x in records)
                 {
-                    if (x.strProductURL != "") adp.PutData(x.strName, x.strDetails, x.strUnit, x.strProductURL);
-                    else adp.PutData(x.strName, x.strDetails, x.strUnit, "http://localhost:53979/UI/ProductImage/defaultProduct.jpg");
+                    if (x.strProductURL != "") adp.PutData(x.strName, x.strDetails, x.strUnit, x.decUnitPerKG, x.strProductURL);
+                    else adp.PutData(x.strName, x.strDetails, x.strUnit, x.decUnitPerKG, "http://localhost:53979/UI/ProductImage/defaultProduct.jpg");
                 }
 
                 return "New Product Is Added Successfully.";
@@ -52,11 +52,12 @@ namespace BusinessManagementSystem.BLL
             try
             {
                 tblStockTableAdapter adp = new tblStockTableAdapter();
+                tblStockRegisterTableAdapter adp2 = new tblStockRegisterTableAdapter();
 
                 foreach (var x in records)
                 {
                     adp.PutStockData(x.strName, x.intQuantity, x.strRemark);
-                    adp.PutBalanceData(x.strName, x.intQuantity, x.strRemark);
+                    adp2.PutBalanceData(x.strName, x.intQuantity, x.strRemark);
                 }
 
                 return "New Product Is Added Successfully.";
